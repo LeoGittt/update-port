@@ -23,6 +23,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import ZoomBlurCard from "@/components/ZoomBlurCard";
 
 const projects = [
   {
@@ -267,33 +268,35 @@ export default function Portfolio() {
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Simplified Dark Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-black"></div>
-        {/* Simple Static Grid */}
+        {/* Fondo negro intenso con refuerzo */}
+        <div className="absolute inset-0 bg-black/95"></div>{" "}
+        {/* 95% de opacidad */}
+        {/* Rejilla extremadamente tenue (reducida a 3% de opacidad) */}
         <div
-          className="absolute inset-0 opacity-6" // subo de 4 a 6
+          className="absolute inset-0 opacity-3"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
-            filter: "blur(0.3px)",
+        linear-gradient(rgba(255,255,255,0.04) 0.5px, transparent 0.5px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 0.5px, transparent 0.5px)
+      `, // Líneas más finas (0.5px)
+            backgroundSize: "60px 60px", // Mayor espaciado
+            filter: "blur(0.2px)", // Menos desenfoque
           }}
         ></div>
-        {/* Subtle texture */}
+        {/* Textura casi imperceptible */}
         <div
-          className="absolute inset-0 opacity-3" // subo de 2 a 3
+          className="absolute inset-0 opacity-1" // Reducido a 1%
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: "10px 10px",
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.015) 0.3px, transparent 0.3px)
+      `, // Patrón de puntos en lugar de líneas
+            backgroundSize: "15px 15px",
           }}
         ></div>
-        {/* Dark depth gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>{" "}
-        // menos intenso
+        {/* Gradiente de profundidad reforzado */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80"></div>
+        {/* Capa adicional de oscuridad */}
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -379,7 +382,7 @@ export default function Portfolio() {
         {/* Enhanced Mobile-Optimized Hero Section */}
         <section
           id="inicio"
-          className={`px-4 sm:px-8 pt-24 sm:pt-28 pb-12 sm:pb-16 transition-all duration-1000 ${
+          className={`px-4 sm:px-8 pt-24 sm:pt-28 pb-12 sm:pb-16 transition-all duration-500 ${
             isVisible.inicio
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -530,7 +533,7 @@ export default function Portfolio() {
 
         {/* Enhanced Mobile-Optimized About Section */}
         <section
-          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-1000 delay-200 ${
+          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-500 delay-200 ${
             isVisible.inicio
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -574,7 +577,7 @@ export default function Portfolio() {
         {/* Enhanced Mobile-Optimized Projects Section */}
         <section
           id="proyectos"
-          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-1000 delay-300 ${
+          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-500 delay-100 ${
             isVisible.proyectos
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -589,67 +592,20 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
             {projects.map((project, index) => (
-              <Link
+              <ZoomBlurCard
                 key={project.id}
-                href={project.demoUrl}
-                target="_blank"
-                className="group"
-              >
-                <div
-                  className="bg-gray-900/20 border border-gray-800/30 rounded-2xl overflow-hidden hover:border-gray-700/50 hover:bg-gray-900/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-black/50"
-                  style={{
-                    animationDelay: `${index * 100}ms`,
-                  }}
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-
-                   
-
-                    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                      <div className="w-6 h-6 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/20">
-                        <ArrowUpRight className="w-3 h-3 text-white" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-3 sm:p-4">
-                    <h3 className="text-sm font-bold text-white mb-1 group-hover:text-gray-300 transition-colors leading-tight">
-                      {project.title}
-                    </h3>
-                    <p className="text-xs text-gray-400 leading-tight font-medium">
-                      {project.subtitle}
-                    </p>
-                  </div>
-                </div>
-              </Link>
+                title={project.title}
+                description={project.subtitle}
+                imageUrl={project.image}
+              />
             ))}
-          </div>
-
-          <div className="text-center">
-            <Button
-              asChild
-              variant="outline"
-              className="border-gray-700/50 text-gray-400 hover:text-white hover:border-gray-600/50 px-6 py-2 text-sm rounded-xl transition-all duration-300 hover:scale-105 min-h-[44px]"
-            >
-              <Link href="https://port-iota-three.vercel.app/" target="_blank">
-                Ver todos los proyectos
-                <ExternalLink className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
           </div>
         </section>
 
         {/* Enhanced Mobile-Optimized Experience Section */}
         <section
           id="experiencia"
-          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-1000 delay-400 ${
+          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-500 delay-200 ${
             isVisible.experiencia
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -707,7 +663,7 @@ export default function Portfolio() {
 
         {/* Enhanced Mobile-Optimized Education Section */}
         <section
-          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-1000 delay-500 ${
+          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-500 delay-300 ${
             isVisible.experiencia
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -772,7 +728,7 @@ export default function Portfolio() {
         {/* Enhanced Mobile-Optimized Contact Section */}
         <section
           id="contacto"
-          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-1000 delay-600 ${
+          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-500 delay-400 ${
             isVisible.contacto
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
