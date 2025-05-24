@@ -305,9 +305,9 @@ export default function Portfolio() {
           className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out w-full max-w-6xl px-4 sm:px-6 ${
             scrollY > 20
               ? "bg-black/85 backdrop-blur-xl border border-gray-700/40 rounded-none sm:rounded-2xl mt-0 sm:mt-4 shadow-2xl shadow-black/50"
-              : "mt-0 sm:mt-6"
+              : "bg-black/0 border-0 shadow-none mt-0 sm:mt-6"
           }`}
-          style={scrollY > 20 ? { borderColor: "#23272f" } : {}} // fuerza un borde gris oscuro
+          style={scrollY > 20 ? { borderColor: "#23272f" } : {}}
         >
           <div className="px-4 sm:px-8 py-4 sm:py-4">
             {/* Mobile Navigation */}
@@ -533,42 +533,66 @@ export default function Portfolio() {
 
         {/* Enhanced Mobile-Optimized About Section */}
         <section
-          className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-500 delay-200 ${
+          className={`px-4 sm:px-8 py-12 sm:py-16 border-t border-gray-800/30 transition-all duration-700 delay-200 ${
             isVisible.inicio
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-            <div className="space-y-4 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-3">
-                <div className="p-2 rounded-lg bg-gray-900/40">
-                  <User className="w-5 h-5 text-gray-400" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            {/* Encabezado con icono redondeado */}
+            <div className="space-y-5 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-3 group">
+                <div className="p-2.5 rounded-full bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-800/40 group-hover:border-emerald-500/30 transition-all duration-500">
+                  <User className="w-5 h-5 text-gray-400 group-hover:text-emerald-300 transition-colors duration-300" />
                 </div>
-                <h2 className="text-xl font-bold">Sobre mí</h2>
+                <h2 className="text-2xl font-bold text-gray-100 group-hover:text-white transition-colors duration-300">
+                  Sobre <span className="text-emerald-400">mí</span>
+                </h2>
               </div>
-              <p className="text-sm text-gray-400 leading-relaxed max-w-md mx-auto lg:mx-0">
-                Desarrollador con experiencia en tecnologías modernas, enfocado
-                en crear soluciones web escalables y eficientes.
+
+              <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-md mx-auto lg:mx-0 lg:pl-1">
+                Desarrollador especializado en tecnologías modernas, apasionado
+                por crear
+                <span className="text-emerald-300/90">
+                  {" "}
+                  soluciones web escalables
+                </span>
+                ,<span className="text-emerald-300/90"> eficientes</span> y con
+                <span className="text-emerald-300/90"> excelente UX</span>.
               </p>
             </div>
 
+            {/* Habilidades con efecto de icono redondeado */}
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
                 {skills.map((skill, index) => (
                   <div
                     key={skill}
-                    className="px-2 sm:px-3 py-2 rounded-lg bg-gray-900/30 border border-gray-800/30 text-xs text-center font-medium hover:bg-gray-800/40 hover:border-gray-700/40 transition-all duration-300 hover:scale-105"
+                    className={`relative px-3 py-2.5 rounded-xl bg-gray-900/40 backdrop-blur-sm border border-gray-800/40 text-xs sm:text-sm text-center font-medium transition-all duration-300 hover:scale-[1.03] hover:border-emerald-500/40 hover:bg-gray-800/50 hover:text-gray-100 shadow-sm hover:shadow-emerald-500/10 ${
+                      isVisible.inicio ? "animate-fade-in-up" : ""
+                    }`}
                     style={{
-                      animationDelay: `${index * 100}ms`,
+                      animationDelay: `${index * 50}ms`,
+                      transitionDelay: `${index * 30}ms`,
                     }}
                   >
+                    {/* Punto indicador redondeado */}
+                    <div className="absolute -left-1.5 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     {skill}
                   </div>
                 ))}
               </div>
-              <div className="text-2xl sm:text-3xl font-script text-gray-500 opacity-60 text-center lg:text-left">
-                ~ Leonel
+
+              {/* Firma con decoración redondeada */}
+              <div className="relative flex items-center gap-3">
+                <div className="hidden lg:block w-3 h-3 rounded-full bg-emerald-400/30 animate-pulse"></div>
+                <div className="text-3xl sm:text-4xl font-script text-gray-500/70 group">
+                  <span className="relative inline-block">
+                    <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-emerald-400 to-transparent group-hover:w-full transition-all duration-1000"></span>
+                    ~ Leonel
+                  </span>
+                </div>
               </div>
             </div>
           </div>
