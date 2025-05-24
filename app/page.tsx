@@ -30,23 +30,23 @@ const projects = [
     year: "2025",
     title: "S I M U",
     subtitle: "Sistema Municipal",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/fotos-proyectos/10.PNG?height=120&width=200",
     demoUrl: "https://reclamos-frontend.vercel.app/",
   },
   {
     id: 2,
     year: "2025",
-    title: "CarDev",
+    title: "AutoWeb",
     subtitle: "Concesionarias",
-    image: "/placeholder.svg?height=120&width=200",
-    demoUrl: "#",
+    image: "/fotos-proyectos/12.PNG?height=120&width=200",
+    demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
   },
   {
     id: 3,
     year: "2024",
     title: "EvenTop",
     subtitle: "Tickets",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/fotos-proyectos/1.PNG?height=120&width=200",
     demoUrl: "https://eventop-frontend.vercel.app/",
   },
   {
@@ -54,7 +54,7 @@ const projects = [
     year: "2024",
     title: "La Marina",
     subtitle: "Ecommerce",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/fotos-proyectos/3.PNG?height=120&width=200",
     demoUrl: "https://frontend-la-marina.vercel.app/",
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     year: "2024",
     title: "Boostly",
     subtitle: "Marketing",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/fotos-proyectos/7.PNG?height=120&width=200",
     demoUrl: "https://www.boostlyagency.online/",
   },
   {
@@ -70,15 +70,15 @@ const projects = [
     year: "2024",
     title: "Aura",
     subtitle: "Contable",
-    image: "/placeholder.svg?height=120&width=200",
-    demoUrl: "https://auracontables.vercel.app/",
+    image: "/fotos-proyectos/6.PNG?height=120&width=200",
+    demoUrl: "https://contables.vercel.app/",
   },
   {
     id: 7,
     year: "2024",
     title: "BYAS",
     subtitle: "Ingeniería",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/fotos-proyectos/8.PNG?height=120&width=200",
     demoUrl: "https://byas.vercel.app/",
   },
   {
@@ -86,24 +86,73 @@ const projects = [
     year: "2024",
     title: "Mueblito",
     subtitle: "Muebles",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/fotos-proyectos/9.PNG?height=120&width=200",
     demoUrl: "https://art-ydeisgn.vercel.app/",
+  },
+  // {
+  //   id: 9,
+  //   year: "2024",
+  //   title: "Colorshop",
+  //   subtitle: "Gestion de Remitos",
+  //   image: "/fotos-proyectos/8.PNG?height=120&width=200",
+  //   demoUrl: "https://byas.vercel.app/",
+  // },
+  {
+    id: 10,
+    year: "2024",
+    title: "Colorshop",
+    subtitle: "Gestion de Remitos",
+    image: "/fotos-proyectos/4.PNG?height=120&width=200",
+    demoUrl: "https://v0-colorshop-remitos-jdu4ku.vercel.app/",
+  },
+  {
+    id: 11,
+    year: "2024",
+    title: "Souls Digitals",
+    subtitle: "Agencia de Marketing",
+    image: "/fotos-proyectos/5.PNG?height=120&width=200",
+    demoUrl: "https://www.soulsdigitals.blog/",
+  },
+  {
+    id: 12,
+    year: "2024",
+    title: "ServiSplit",
+    subtitle: "Servicio Tecnico",
+    image: "/fotos-proyectos/15.PNG?height=120&width=200",
+    demoUrl: "https://servisplit.vercel.app/",
+  },
+  {
+    id: 13,
+    year: "2025",
+    title: "ISR ",
+    subtitle: "Servicios Automotriz",
+    image: "/fotos-proyectos/14.PNG?height=120&width=200",
+    demoUrl: "https://isr-ebon.vercel.app/",
+  },
+  {
+    id: 14,
+    year: "2025",
+    title: "Cuatro A",
+    subtitle: "Estudio Contable",
+    image: "/fotos-proyectos/11.PNG?height=120&width=200",
+    demoUrl: "https://cuatro-aestudio.vercel.app/",
+  },
+  {
+    id: 15,
+    year: "2025",
+    title: "Clinica",
+    subtitle: "Clinica de Masajes",
+    image: "/fotos-proyectos/2.PNG?height=120&width=200",
+    demoUrl: "https://kzmgzmwe3mc3vfn7llk6.lite.vusercontent.net/",
   },
 ];
 
 const experiences = [
   {
     title: "Frontend Developer",
-    company: "S I M U",
+    company: "EmpreId",
     period: "Mar 2025 - Actual",
     description: "Desarrollo del sistema municipal con Next.js y TypeScript.",
-    current: true,
-  },
-  {
-    title: "Frontend Developer",
-    company: "CarDev",
-    period: "May 2025 - Actual",
-    description: "Sistema integral para concesionarias de autos.",
     current: true,
   },
   {
@@ -114,10 +163,24 @@ const experiences = [
     current: true,
   },
   {
+    title: "Frontend Developer",
+    company: "Boostly",
+    // period: "Dic 2024",
+    description: "Sistema integral para concesionarias de autos.",
+    current: false,
+  },
+  {
     title: "SEO Developer",
     company: "Easy Life (España)",
-    period: "Dic 2024 - Mar 2025",
+    // period: "Dic 2024 - Mar 2025",
     description: "Optimización técnica de sitios web empresariales.",
+    current: false,
+  },
+  {
+    title: "Frontend Developer",
+    company: "Soy Henry",
+    // period: "Dic 2024 - Mar 2025",
+    description: "Experiencia Academica",
     current: false,
   },
 ];
@@ -139,7 +202,7 @@ const contactInfo = [
     title: "Teléfono",
     value: "+54 264 584 1194",
     href: "tel:2645841194",
-    description: "Disponible 9:00 - 18:00",
+    // description: "Disponible 9:00 - 18:00",
   },
   {
     icon: Mail,
@@ -158,7 +221,6 @@ const contactInfo = [
 ];
 
 export default function Portfolio() {
-  const [isDark, setIsDark] = useState(true);
   const [activeSection, setActiveSection] = useState("inicio");
   const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -323,9 +385,13 @@ export default function Portfolio() {
               : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center lg:items-center"> {/* Cambié items-start por items-center */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center lg:items-center">
+            {" "}
+            {/* Cambié items-start por items-center */}
             {/* Mobile-First Profile Section */}
-            <div className="flex flex-col items-center lg:items-center space-y-6"> {/* lg:items-center para alinear verticalmente */}
+            <div className="flex flex-col items-center lg:items-center space-y-6">
+              {" "}
+              {/* lg:items-center para alinear verticalmente */}
               {/* Enhanced Avatar Mejorado */}
               <div className="relative group flex flex-col items-center">
                 <div className="w-40 sm:w-56 h-40 sm:h-56 rounded-full overflow-hidden shadow-2xl shadow-black/60 border-4 border-gray-900 bg-gray-900 flex items-center justify-center relative">
@@ -340,79 +406,121 @@ export default function Portfolio() {
                 </div>
                 <div className="absolute -top-3 -right-3 w-7 h-7 bg-green-500 rounded-full border-4 border-black shadow-lg animate-pulse"></div>
               </div>
-
-              {/* Enhanced Social Links - Mobile Optimized */}
-              <div className="flex flex-row lg:flex-col gap-3 lg:gap-3 w-full justify-center lg:justify-center"> {/* lg:justify-center */}
+              {/* Redes sociales mejoradas visualmente */}
+              <div className="flex flex-row lg:flex-col gap-3 lg:gap-3 w-full justify-center lg:justify-center">
                 {[
                   {
                     icon: Mail,
                     label: "Email",
                     href: "mailto:leonel.gonzalez.dev@gmail.com",
+                    color:
+                      "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 hover:via-green-700/50",
+                    border: "border-green-900/70 hover:border-green-700/60",
                   },
                   {
                     icon: Github,
                     label: "Github",
                     href: "https://bit.ly/3NMKOVe",
+                    color:
+                      "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 hover:via-gray-600/50",
+                    border: "border-gray-900/70 hover:border-gray-600/60",
                   },
                   {
                     icon: Linkedin,
                     label: "LinkedIn",
                     href: "https://bit.ly/40vJTjP",
+                    color:
+                      "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 hover:via-blue-800/50",
+                    border: "border-blue-900/70 hover:border-blue-700/60",
                   },
-                ].map(({ icon: Icon, label, href }) => (
+                ].map(({ icon: Icon, label, href, color, border }) => (
                   <Link
                     key={label}
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
-                    className="flex items-center justify-center lg:justify-start space-x-0 lg:space-x-3 text-sm text-gray-400 hover:text-white transition-all duration-300 group min-h-[44px] min-w-[44px] lg:min-h-auto lg:min-w-auto"
+                    className="flex items-center justify-center lg:justify-start group min-h-[44px] min-w-[44px] lg:min-h-auto lg:min-w-auto"
                   >
-                    <div className="p-2 sm:p-2 rounded-lg bg-gray-900/30 group-hover:bg-gray-800/50 transition-all duration-300">
-                      <Icon className="w-4 h-4 sm:w-4 sm:h-4" />
+                    <div
+                      className={`relative p-2.5 rounded-xl transition-all duration-500 group-hover:scale-[1.08] overflow-hidden ${color} ${border} border`}
+                    >
+                      <Icon className="relative z-10 w-4 h-4 sm:w-5 sm:h-5 text-gray-300 group-hover:text-white drop-shadow-lg" />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
                     </div>
-                    <span className="font-medium hidden lg:block">{label}</span>
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1 hidden lg:block" />
+                    <span className="font-medium hidden lg:block ml-3 text-gray-400 group-hover:text-gray-200 transition-colors text-sm tracking-wide">
+                      {label}
+                    </span>
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-1 group-hover:-translate-y-1 hidden lg:block ml-2 text-gray-400 group-hover:text-white" />
                   </Link>
                 ))}
               </div>
             </div>
-
             {/* Mobile-Optimized Content */}
-            <div className="lg:col-span-2 flex flex-col justify-center space-y-6 text-center lg:text-left h-full"> {/* justify-center y h-full para centrar verticalmente */}
-              <div className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
-                  Hola, soy{" "}
-                  <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-                    Leonel
-                  </span>
-                </h1>
+            <div className="lg:col-span-2 flex flex-col justify-center space-y-6 text-center lg:text-left h-full">
+              {" "}
+              {/* justify-center y h-full para centrar verticalmente */}
+              <div className="space-y-6">
+                <div className="relative group">
+                  {/* Línea vertical sutil solo en desktop */}
+                  <div className="hidden lg:block absolute -left-3 top-3 h-5 w-px bg-gray-600 group-hover:bg-gray-400 transition-all duration-700"></div>
 
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Desarrollador frontend especializado en React, Next.js y
-                  TypeScript. Creo interfaces elegantes y funcionales que
-                  combinan diseño limpio con código escalable.
+                  <h1 className="text-3xl sm:text-4xl font-light tracking-tight text-gray-100 lg:pl-2">
+                    Hola, soy{" "}
+                    <span className="font-normal relative">
+                      <span className="absolute -bottom-1 left-0 h-px w-full bg-gradient-to-r from-transparent via-gray-600 to-transparent group-hover:via-white transition-all duration-500"></span>
+                      <span className="relative hover:text-white transition-colors duration-300">
+                        Leonel
+                      </span>
+                    </span>
+                  </h1>
+
+                  {/* Línea divisoria con efecto hover */}
+                  <div className="h-[0.5px] bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 w-full max-w-2xl mt-4 group-hover:via-gray-400 transition-all duration-1000"></div>
+                </div>
+
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-2xl lg:pl-3">
+                  Desarrollador frontend con experiencia en{" "}
+                  <span className="text-gray-300 font-medium hover:text-white transition-colors duration-200">
+                    React
+                  </span>
+                  ,{" "}
+                  <span className="text-gray-300 font-medium hover:text-white transition-colors duration-200">
+                    Next.js
+                  </span>{" "}
+                  y{" "}
+                  <span className="text-gray-300 font-medium hover:text-white transition-colors duration-200">
+                    TypeScript
+                  </span>
+                  .
                 </p>
 
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Estudiante de Programación en UTN, graduado del bootcamp de
-                  Soy Henry. Apasionado por resolver problemas complejos con
-                  soluciones simples y efectivas.
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed max-w-2xl lg:pl-3 italic">
+                  Estudiante de Programación en UTN. Apasionado por crear
+                  soluciones web eficientes y elegantes.
                 </p>
               </div>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-                <div className="px-4 py-2 rounded-xl bg-gray-900/40 border border-gray-800/40 text-sm flex items-center space-x-3 backdrop-blur-sm">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-300 font-medium">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-5">
+                {/* Badge de disponibilidad - Versión mejorada */}
+                <div className="px-5 py-2.5 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-900/30 border border-gray-700/50 text-sm flex items-center space-x-3 backdrop-blur-md hover:border-gray-600/60 transition-all duration-300 group">
+                  <div className="relative">
+                    <div className="w-2.5 h-2.5 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full animate-pulse group-hover:animate-none"></div>
+                    <div className="absolute inset-0 rounded-full bg-emerald-500/30 group-hover:animate-ping group-hover:opacity-0 transition-all duration-1000"></div>
+                  </div>
+                  <span className="text-gray-200 font-medium group-hover:text-white transition-colors">
                     Disponible para proyectos
                   </span>
                 </div>
+
+                {/* Botón de contacto - Versión premium */}
                 <Button
                   asChild
-                  className="bg-white text-black hover:bg-gray-100 px-6 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20 min-h-[44px]"
+                  className="relative overflow-hidden bg-white text-gray-900 hover:bg-gray-50 px-7 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-md hover:shadow-white/10 min-h-[48px] group"
                 >
                   <Link href="#contacto">
-                    Contactar
-                    <ArrowUpRight className="ml-2 w-4 h-4" />
+                    <span className="relative z-10 flex items-center">
+                      Contactar
+                      <ArrowUpRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
+                    <span className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                   </Link>
                 </Button>
               </div>
@@ -502,11 +610,7 @@ export default function Portfolio() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
 
-                    <div className="absolute top-3 left-3">
-                      <div className="px-2 sm:px-3 py-1 rounded-lg bg-black/60 backdrop-blur-sm text-xs text-white font-semibold border border-white/10">
-                        {project.year}
-                      </div>
-                    </div>
+                   
 
                     <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
                       <div className="w-6 h-6 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/20">
