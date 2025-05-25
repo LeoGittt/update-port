@@ -147,6 +147,14 @@ const projects = [
     image: "/fotos-proyectos/2.PNG?height=120&width=200",
     demoUrl: "https://kzmgzmwe3mc3vfn7llk6.lite.vusercontent.net/",
   },
+  {
+    id: 16,
+    year: "2025",
+    title: "Mar de Azúcar",
+    subtitle: "Cafeteria",
+    image: "/fotos-proyectos/16.PNG?height=120&width=200",
+    demoUrl: "https://mardeazucar.mitiendanube.com/",
+  },
 ];
 
 const experiences = [
@@ -600,12 +608,31 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
             {projects.map((project, index) => (
-              <ZoomBlurCard
-                key={project.id}
-                title={project.title}
-                description={project.subtitle}
-                imageUrl={project.image}
-              />
+              <div key={project.id} className="relative group overflow-hidden rounded-2xl">
+                <ZoomBlurCard
+                  title={project.title}
+                  description={project.subtitle}
+                  imageUrl={project.image}
+                />
+                {/* Botón minimalista, pequeño y dark, centrado y solo visible en hover */}
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pointer-events-auto"
+                  tabIndex={-1}
+                  aria-label={`Ver proyecto ${project.title}`}
+                >
+                  <div className="absolute rounded-md inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                    <Button
+                      size="sm"
+                      className="px-3 py-1.5 text-xs rounded-xl font-medium bg-gray-900/80 hover:bg-emerald-600 text-gray-200 hover:text-white shadow-none border border-gray-800/60 transition-all duration-200"
+                    >
+                      Ver proyecto
+                    </Button>
+                  </div>
+                </a>
+              </div>
             ))}
           </div>
         </section>
