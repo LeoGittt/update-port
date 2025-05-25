@@ -17,6 +17,7 @@ import {
   Award,
   Menu,
   X,
+  Download,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -315,16 +316,18 @@ export default function Portfolio() {
               <div className="text-sm font-semibold text-white tracking-wide">
                 Leonel González
               </div>
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-xl bg-gray-900/40 hover:bg-gray-800/60 transition-all duration-300"
-              >
-                {isMobileMenuOpen ? (
-                  <X className="w-4 h-4" />
-                ) : (
-                  <Menu className="w-4 h-4" />
-                )}
-              </button>
+              {typeof window !== "undefined" && window.innerWidth >= 640 && (
+                <button
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="p-2 rounded-xl bg-gray-900/40 hover:bg-gray-800/60 transition-all duration-300"
+                >
+                  {isMobileMenuOpen ? (
+                    <X className="w-4 h-4" />
+                  ) : (
+                    <Menu className="w-4 h-4" />
+                  )}
+                </button>
+              )}
             </div>
 
             {/* Desktop Navigation */}
@@ -355,177 +358,158 @@ export default function Portfolio() {
             </div>
 
             {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-              <div className="sm:hidden mt-4 pb-4 border-t border-gray-800/40 pt-4">
-                <div className="flex flex-col space-y-3">
-                  {["inicio", "proyectos", "experiencia", "contacto"].map(
-                    (section) => (
-                      <button
-                        key={section}
-                        onClick={() => scrollToSection(section)}
-                        className={`text-left text-sm font-medium transition-all duration-300 capitalize py-2 px-3 rounded-lg ${
-                          activeSection === section
-                            ? "text-white bg-gray-900/40"
-                            : "text-gray-400 hover:text-white hover:bg-gray-900/20"
-                        }`}
-                      >
-                        {section}
-                      </button>
-                    )
-                  )}
+            {isMobileMenuOpen &&
+              typeof window !== "undefined" &&
+              window.innerWidth >= 640 && (
+                <div className="sm:hidden mt-4 pb-4 border-t border-gray-800/40 pt-4">
+                  <div className="flex flex-col space-y-3">
+                    {["inicio", "proyectos", "experiencia", "contacto"].map(
+                      (section) => (
+                        <button
+                          key={section}
+                          onClick={() => scrollToSection(section)}
+                          className={`text-left text-sm font-medium transition-all duration-300 capitalize py-2 px-3 rounded-lg ${
+                            activeSection === section
+                              ? "text-white bg-gray-900/40"
+                              : "text-gray-400 hover:text-white hover:bg-gray-900/20"
+                          }`}
+                        >
+                          {section}
+                        </button>
+                      )
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
           </div>
         </nav>
 
         {/* Enhanced Mobile-Optimized Hero Section */}
         <section
           id="inicio"
-          className={`px-4 sm:px-8 pt-24 sm:pt-28 pb-12 sm:pb-16 transition-all duration-500 ${
-            isVisible.inicio
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-8"
+          className={`px-8 sm:px-16 lg:px-24 pt-32 sm:pt-40 pb-20 transition-opacity duration-500 flex items-center justify-center min-h-[70vh] ${
+            isVisible.inicio ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center lg:items-center">
-            {" "}
-            {/* Cambié items-start por items-center */}
-            {/* Mobile-First Profile Section */}
-            <div className="flex flex-col items-center lg:items-center space-y-6">
-              {" "}
-              {/* lg:items-center para alinear verticalmente */}
-              {/* Enhanced Avatar Mejorado */}
-              <div className="relative group flex flex-col items-center">
-                <div className="w-40 sm:w-56 h-40 sm:h-56 rounded-full overflow-hidden shadow-2xl shadow-black/60 border-4 border-gray-900 bg-gray-900 flex items-center justify-center relative">
-                  <Image
-                    src="/foto.jpg"
-                    alt="Foto de Leonel González"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent"></div>
-                </div>
-                <div className="absolute -top-3 -right-3 w-7 h-7 bg-green-500 rounded-full border-4 border-black shadow-lg animate-pulse"></div>
+          <div className="max-w-4xl mx-auto w-full">
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-center justify-center gap-8 mb-14 text-center sm:text-left">
+              {/* Profile Image - Más pequeña y minimalista */}
+              <div className="w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden bg-zinc-800 flex-shrink-0 mx-auto sm:mx-0 relative">
+                <Image
+                  src="/foto.jpg"
+                  alt="Leonel González"
+                  width={320}
+                  height={320}
+                  className="w-full h-full object-cover"
+                  priority
+                  quality={100}
+                />
+                {/* Filtro oscuro sutil */}
+                <div className="absolute inset-0 bg-black/15 pointer-events-none" />
               </div>
-              {/* Redes sociales mejoradas visualmente */}
-              <div className="flex flex-row lg:flex-col gap-3 lg:gap-3 w-full justify-center lg:justify-center">
-                {[
-                  {
-                    icon: Mail,
-                    label: "Email",
-                    href: "mailto:leonel.gonzalez.dev@gmail.com",
-                    color:
-                      "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 hover:via-green-700/50",
-                    border: "border-green-900/70 hover:border-green-700/60",
-                  },
-                  {
-                    icon: Github,
-                    label: "Github",
-                    href: "https://bit.ly/3NMKOVe",
-                    color:
-                      "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 hover:via-gray-600/50",
-                    border: "border-gray-900/70 hover:border-gray-600/60",
-                  },
-                  {
-                    icon: Linkedin,
-                    label: "LinkedIn",
-                    href: "https://bit.ly/40vJTjP",
-                    color:
-                      "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 hover:via-blue-800/50",
-                    border: "border-blue-900/70 hover:border-blue-700/60",
-                  },
-                ].map(({ icon: Icon, label, href, color, border }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    target={href.startsWith("http") ? "_blank" : undefined}
-                    className="flex items-center justify-center lg:justify-start group min-h-[44px] min-w-[44px] lg:min-h-auto lg:min-w-auto"
-                  >
-                    <div
-                      className={`relative p-2.5 rounded-xl transition-all duration-500 group-hover:scale-[1.08] overflow-hidden ${color} ${border} border`}
-                    >
-                      <Icon className="relative z-10 w-4 h-4 sm:w-5 sm:h-5 text-gray-300 group-hover:text-white drop-shadow-lg" />
-                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
-                    </div>
-                    <span className="font-medium hidden lg:block ml-3 text-gray-400 group-hover:text-gray-200 transition-colors text-sm tracking-wide">
-                      {label}
-                    </span>
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-1 group-hover:-translate-y-1 hidden lg:block ml-2 text-gray-400 group-hover:text-white" />
-                  </Link>
-                ))}
-              </div>
-            </div>
-            {/* Mobile-Optimized Content */}
-            <div className="lg:col-span-2 flex flex-col justify-center space-y-6 text-center lg:text-left h-full">
-              {" "}
-              {/* justify-center y h-full para centrar verticalmente */}
-              <div className="space-y-6">
-                <div className="relative group">
-                  {/* Línea vertical sutil solo en desktop */}
-                  <div className="hidden lg:block absolute -left-3 top-3 h-5 w-px bg-gray-600 group-hover:bg-gray-400 transition-all duration-700"></div>
 
-                  <h1 className="text-3xl sm:text-4xl font-light tracking-tight text-gray-100 lg:pl-2">
-                    Hola, soy{" "}
-                    <span className="font-normal relative">
-                      <span className="absolute -bottom-1 left-0 h-px w-full bg-gradient-to-r from-transparent via-gray-600 to-transparent group-hover:via-white transition-all duration-500"></span>
-                      <span className="relative hover:text-white transition-colors duration-300">
-                        Leonel
-                      </span>
+              {/* Info */}
+              <div className="flex-1 space-y-5 flex flex-col items-center sm:items-start justify-center">
+                <div>
+                  <h1 className="text-3xl sm:text-4xl font-light text-white mb-2 flex items-center gap-2">
+                    Hola, soy
+                    <span className="relative ml-2 font-normal">
+                      <span className="text-white z-10 relative">Leonel</span>
+                      <span
+                        className="absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent rounded-full animate-[grow_1.2s_ease-in-out]"
+                        style={{ animationFillMode: "forwards" }}
+                      ></span>
                     </span>
                   </h1>
-
-                  {/* Línea divisoria con efecto hover */}
-                  <div className="h-[0.5px] bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 w-full max-w-2xl mt-4 group-hover:via-gray-400 transition-all duration-1000"></div>
+                  <p className="text-emerald-400 text-sm font-medium">
+                    Frontend Developer
+                  </p>
                 </div>
 
-                <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-2xl lg:pl-3">
-                  Desarrollador frontend con experiencia en{" "}
-                  <span className="text-gray-300 font-medium hover:text-white transition-colors duration-200">
-                    React
-                  </span>
-                  ,{" "}
-                  <span className="text-gray-300 font-medium hover:text-white transition-colors duration-200">
-                    Next.js
-                  </span>{" "}
-                  y{" "}
-                  <span className="text-gray-300 font-medium hover:text-white transition-colors duration-200">
-                    TypeScript
-                  </span>
-                  .
+                {/* Contact */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-zinc-400 hover:text-white text-sm transition-colors justify-center sm:justify-start">
+                    <MapPin className="w-4 h-4 text-emerald-500" />
+                    <span>Argentina</span>
+                  </div>
+
+                  <Link
+                    href="mailto:leonel.gonzalez.dev@gmail.com"
+                    className="flex items-center gap-2 text-zinc-400 hover:text-white text-sm transition-colors justify-center sm:justify-start"
+                  >
+                    <Mail className="w-4 h-4 text-emerald-500" />
+                    <span>leonel.gonzalez.dev@gmail.com</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* About */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-16 mb-16">
+              <div className="lg:col-span-1">
+                <h2 className="text-white text-sm font-medium tracking-wider">
+                  SOBRE MÍ
+                </h2>
+              </div>
+
+              <div className="lg:col-span-3 space-y-4">
+                <p className="text-zinc-300 text-sm leading-relaxed">
+                  Desarrollador frontend especializado en{" "}
+                  <span className="text-emerald-400">React</span>,{" "}
+                  <span className="text-emerald-400">Next.js</span> y
+                  <span className="text-emerald-400"> TypeScript</span>.
+                  Enfocado en crear interfaces web modernas y eficientes con
+                  excelente experiencia de usuario.
                 </p>
 
-                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed max-w-2xl lg:pl-3 italic">
-                  Estudiante de Programación en UTN. Apasionado por crear
-                  soluciones web eficientes y elegantes.
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  Estudiante de Programación en UTN. Apasionado por las
+                  tecnologías web y el desarrollo de soluciones elegantes y
+                  escalables.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-5">
-                {/* Badge de disponibilidad - Versión mejorada */}
-                <div className="px-5 py-2.5 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-900/30 border border-gray-700/50 text-sm flex items-center space-x-3 backdrop-blur-md hover:border-gray-600/60 transition-all duration-300 group">
-                  <div className="relative">
-                    <div className="w-2.5 h-2.5 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full animate-pulse group-hover:animate-none"></div>
-                    <div className="absolute inset-0 rounded-full bg-emerald-500/30 group-hover:animate-ping group-hover:opacity-0 transition-all duration-1000"></div>
-                  </div>
-                  <span className="text-gray-200 font-medium group-hover:text-white transition-colors">
-                    Disponible para proyectos
-                  </span>
-                </div>
+            </div>
 
-                {/* Botón de contacto - Versión premium */}
-                <Button
-                  asChild
-                  className="relative overflow-hidden bg-white text-gray-900 hover:bg-gray-50 px-7 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-md hover:shadow-white/10 min-h-[48px] group"
-                >
-                  <Link href="#contacto">
-                    <span className="relative z-10 flex items-center">
-                      Contactar
-                      <ArrowUpRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </span>
-                    <span className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                  </Link>
-                </Button>
+            {/* Links */}
+            <div className="flex flex-wrap gap-6 text-sm">
+              <Link
+                href="https://bit.ly/3NMKOVe"
+                target="_blank"
+                className="flex items-center gap-2 text-zinc-400 hover:text-emerald-400 transition-colors group"
+              >
+                <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span>GitHub</span>
+              </Link>
+
+              <Link
+                href="https://bit.ly/40vJTjP"
+                target="_blank"
+                className="flex items-center gap-2 text-zinc-400 hover:text-emerald-400 transition-colors group"
+              >
+                <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span>LinkedIn</span>
+              </Link>
+
+              <Link
+                href="/CV-LEONEL-GONZALEZ.pdf"
+                download
+                target="_blank"
+                className="flex items-center gap-2 text-zinc-400 hover:text-emerald-400 transition-colors group"
+              >
+                <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span>Descargar CV</span>
+              </Link>
+            </div>
+
+            {/* Status */}
+            <div className="mt-16 pt-8 border-t border-zinc-800/50">
+              <div className="flex items-center gap-3 text-sm text-zinc-400">
+                <div className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </div>
+                <span>Disponible para proyectos freelance</span>
               </div>
             </div>
           </div>
