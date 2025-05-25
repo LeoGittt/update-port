@@ -155,6 +155,14 @@ const projects = [
     image: "/fotos-proyectos/16.PNG?height=120&width=200",
     demoUrl: "https://mardeazucar.mitiendanube.com/",
   },
+  {
+    id: 17,
+    year: "2025",
+    title: "Space Burguer",
+    subtitle: "Menu Hamburgueseria",
+    image: "/fotos-proyectos/17.PNG?height=120&width=200",
+    demoUrl: "https://menu-hamurguesa.vercel.app/",
+  },
 ];
 
 const experiences = [
