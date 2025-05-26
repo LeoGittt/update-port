@@ -171,6 +171,14 @@ const projects = [
     image: "/fotos-proyectos/18.PNG?height=120&width=200",
     demoUrl: "https://v0-seo-osppm1n6y44-t4tbw2.vercel.app/",
   },
+  {
+    id: 19,
+    year: "2025",
+    title: "Reglas Del Truco",
+    subtitle: "Cansado de no saber jugar al truco",
+    image: "/fotos-proyectos/19.PNG?height=120&width=200",
+    demoUrl: "https://truco-ten.vercel.app/",
+  },
 ];
 
 const experiences = [
