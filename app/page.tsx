@@ -163,6 +163,14 @@ const projects = [
     image: "/fotos-proyectos/17.PNG?height=120&width=200",
     demoUrl: "https://menu-hamurguesa.vercel.app/",
   },
+  {
+    id: 18,
+    year: "2025",
+    title: "Amigos",
+    subtitle: "Control de gastos entre amigos",
+    image: "/fotos-proyectos/17.PNG?height=120&width=200",
+    demoUrl: "https://v0-seo-osppm1n6y44-t4tbw2.vercel.app/",
+  },
 ];
 
 const experiences = [
