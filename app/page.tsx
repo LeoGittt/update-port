@@ -36,6 +36,14 @@ const projects = [
     demoUrl: "https://reclamos-frontend.vercel.app/",
     description:
       "Sistema integral para municipios que permite a los ciudadanos gestionar reclamos y seguir trámites en tiempo real. Incluye un panel administrativo completo para funcionarios.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
   {
     id: 2,
@@ -46,6 +54,14 @@ const projects = [
     demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
     description:
       "Plataforma digital para concesionarias de autos. Permite mostrar vehículos, administrar stock y generar contactos con potenciales compradores de forma ágil.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 3,
@@ -56,6 +72,14 @@ const projects = [
     demoUrl: "https://eventop-frontend.vercel.app/",
     description:
       "App para la venta y gestión de entradas a eventos. Facilita la creación de eventos, control de asistencia y compra segura de tickets.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
   {
     id: 4,
@@ -66,6 +90,14 @@ const projects = [
     demoUrl: "https://frontend-la-marina.vercel.app/",
     description:
       "Tienda online especializada en productos marinos. Incluye catálogo digital, carrito de compras, pagos integrados y gestión de stock.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 5,
@@ -76,6 +108,14 @@ const projects = [
     demoUrl: "https://boostly-t749.vercel.app/",
     description:
       "Sitio para una agencia de marketing digital centrada en SEO y redes sociales. Permite gestionar campañas, analizar resultados y captar nuevos clientes.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
   {
     id: 6,
@@ -86,6 +126,14 @@ const projects = [
     demoUrl: "https://contables.vercel.app/",
     description:
       "Sistema contable para estudios y empresas. Gestiona facturación, gastos, clientes e informes financieros de manera ordenada y profesional.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 7,
@@ -96,6 +144,14 @@ const projects = [
     demoUrl: "https://byas.vercel.app/",
     description:
       "Herramienta digital para ingenieros civiles. Permite administrar proyectos, almacenar cálculos y organizar documentación técnica.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
   {
     id: 8,
@@ -106,6 +162,14 @@ const projects = [
     demoUrl: "https://art-ydeisgn.vercel.app/",
     description:
       "Ecommerce de muebles artesanales. Catálogo dinámico con productos personalizados y sistema de pedidos a medida.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 10,
@@ -116,6 +180,14 @@ const projects = [
     demoUrl: "https://v0-colorshop-remitos-jdu4ku.vercel.app/",
     description:
       "Sistema de remitos para tiendas de pintura. Facilita el control de entregas, stock e historial de pedidos.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
   {
     id: 11,
@@ -126,6 +198,14 @@ const projects = [
     demoUrl: "https://www.soulsdigitals.blog/",
     description:
       "Landing page para agencia digital. Destaca servicios de contenido, posicionamiento y blog corporativo optimizado para SEO.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 12,
@@ -136,6 +216,14 @@ const projects = [
     demoUrl: "https://servisplit.vercel.app/",
     description:
       "Gestión de servicios técnicos de aire acondicionado. Agenda de visitas, historial de clientes y seguimiento de reparaciones.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
   {
     id: 13,
@@ -146,6 +234,14 @@ const projects = [
     demoUrl: "https://isr-ebon.vercel.app/",
     description:
       "Sistema para talleres mecánicos. Controla turnos, servicios realizados, clientes y repuestos utilizados.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 14,
@@ -156,6 +252,14 @@ const projects = [
     demoUrl: "https://cuatro-aestudio.vercel.app/",
     description:
       "Sitio institucional para estudio contable. Gestión documental, atención a clientes y administración tributaria.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
   {
     id: 15,
@@ -166,6 +270,14 @@ const projects = [
     demoUrl: "https://kzmgzmwe3mc3vfn7llk6.lite.vusercontent.net/",
     description:
       "Sistema de turnos y gestión de pacientes para una clínica de masajes. Permite agendar citas y llevar el historial de tratamientos.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 16,
@@ -176,6 +288,10 @@ const projects = [
     demoUrl: "https://mardeazucar.mitiendanube.com/",
     description:
       "Ecommerce para una cafetería boutique. Catálogo con productos destacados, promociones y pedidos personalizados.",
+    technologies: [
+      "Tienda Nube",
+      
+    ],
   },
   {
     id: 17,
@@ -186,6 +302,14 @@ const projects = [
     demoUrl: "https://menu-hamurguesa.vercel.app/",
     description:
       "Menú interactivo para hamburguesería. Diseño atractivo y funcional con sistema de pedidos online.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 18,
@@ -196,6 +320,14 @@ const projects = [
     demoUrl: "https://v0-seo-osppm1n6y44-t4tbw2.vercel.app/",
     description:
       "Aplicación para dividir y llevar el control de gastos entre amigos. Ideal para viajes, salidas y proyectos compartidos.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
   {
     id: 19,
@@ -206,6 +338,14 @@ const projects = [
     demoUrl: "https://truco-ten.vercel.app/",
     description:
       "Guía digital para aprender a jugar al truco. Reglas explicadas, jugadas y práctica interactiva para nuevos jugadores.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+    ],
   },
   {
     id: 20,
@@ -216,9 +356,16 @@ const projects = [
     demoUrl: "https://www.boostlyagency.online/",
     description:
       "Sitio corporativo para una fábrica de software. Presenta servicios, proyectos y enfoque profesional de desarrollo.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
   },
 ];
-
 
 const experiences = [
   {
@@ -688,28 +835,27 @@ export default function Portfolio() {
                   <h3 className="text-lg font-semibold text-white mb-2">
                     {project.title}
                   </h3>
-                  {/* <p className="text-sm text-gray-300 text-center mb-4">
-                    {project.subtitle}
-                  </p> */}
                   <div className="flex flex-col gap-2 w-full">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full"
+                    <Button
+                      size="sm"
+                      className="w-full px-3 py-1.5 text-xs rounded-xl font-medium bg-emerald-600 hover:bg-emerald-700 text-white transition-all duration-200"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        window.open(project.demoUrl, "_blank");
+                      }}
                     >
-                      <Button
-                        size="sm"
-                        className="w-full px-3 py-1.5 text-xs rounded-xl font-medium bg-emerald-600 hover:bg-emerald-700 text-white transition-all duration-200"
-                      >
-                        Ver Demo
-                      </Button>
-                    </a>
+                      Ver Demo
+                    </Button>
                     <Button
                       size="sm"
                       variant="outline"
                       className="w-full px-3 py-1.5 text-xs rounded-xl font-medium border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white transition-all duration-200"
-                      onClick={() => setSelectedProject(project)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setSelectedProject(project);
+                      }}
                     >
                       Ver Detalles
                     </Button>
@@ -991,10 +1137,15 @@ export default function Portfolio() {
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-2.5">
-                    <Badge className="bg-zinc-900 text-zinc-200 border border-zinc-800 text-xs px-3 py-1.5 rounded-lg">
-                      {selectedProject.subtitle}
-                    </Badge>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.technologies.map((tech, index) => (
+                      <Badge
+                        key={index}
+                        className="bg-black text-zinc-400 border border-zinc-800 text-xs px-3 py-1 rounded-full font-light hover:text-emerald-300 transition-colors duration-150"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
                   </div>
 
                   <div className="pt-4 border-t border-zinc-800">
