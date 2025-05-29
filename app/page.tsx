@@ -65,7 +65,7 @@ const projects = [
     title: "Boostly",
     subtitle: "Marketing",
     image: "/fotos-proyectos/7.PNG?height=120&width=200",
-    demoUrl: "https://www.boostlyagency.online/",
+    demoUrl: "https://boostly-t749.vercel.app/",
   },
   {
     id: 6,
@@ -178,6 +178,14 @@ const projects = [
     subtitle: "Cansado de no saber jugar al truco",
     image: "/fotos-proyectos/19.PNG?height=120&width=200",
     demoUrl: "https://truco-ten.vercel.app/",
+  },
+  {
+    id: 20,
+    year: "2024",
+    title: "EmpreId",
+    subtitle: "Software Factory",
+    image: "/fotos-proyectos/20.PNG?height=120&width=200",
+    demoUrl: "https://www.boostlyagency.online/",
   },
 ];
 
@@ -632,7 +640,10 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
             {projects.map((project, index) => (
-              <div key={project.id} className="relative group overflow-hidden rounded-2xl">
+              <div
+                key={project.id}
+                className="relative group overflow-hidden rounded-2xl"
+              >
                 <ZoomBlurCard
                   title={project.title}
                   description={project.subtitle}
