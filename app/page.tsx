@@ -34,6 +34,8 @@ const projects = [
     subtitle: "Sistema Municipal",
     image: "/fotos-proyectos/10.PNG?height=120&width=200",
     demoUrl: "https://reclamos-frontend.vercel.app/",
+    description:
+      "Sistema integral para municipios que permite a los ciudadanos gestionar reclamos y seguir trámites en tiempo real. Incluye un panel administrativo completo para funcionarios.",
   },
   {
     id: 2,
@@ -42,6 +44,8 @@ const projects = [
     subtitle: "Concesionarias",
     image: "/fotos-proyectos/12.PNG?height=120&width=200",
     demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
+    description:
+      "Plataforma digital para concesionarias de autos. Permite mostrar vehículos, administrar stock y generar contactos con potenciales compradores de forma ágil.",
   },
   {
     id: 3,
@@ -50,6 +54,8 @@ const projects = [
     subtitle: "Tickets",
     image: "/fotos-proyectos/1.PNG?height=120&width=200",
     demoUrl: "https://eventop-frontend.vercel.app/",
+    description:
+      "App para la venta y gestión de entradas a eventos. Facilita la creación de eventos, control de asistencia y compra segura de tickets.",
   },
   {
     id: 4,
@@ -58,6 +64,8 @@ const projects = [
     subtitle: "Ecommerce",
     image: "/fotos-proyectos/3.PNG?height=120&width=200",
     demoUrl: "https://frontend-la-marina.vercel.app/",
+    description:
+      "Tienda online especializada en productos marinos. Incluye catálogo digital, carrito de compras, pagos integrados y gestión de stock.",
   },
   {
     id: 5,
@@ -66,6 +74,8 @@ const projects = [
     subtitle: "Marketing",
     image: "/fotos-proyectos/7.PNG?height=120&width=200",
     demoUrl: "https://boostly-t749.vercel.app/",
+    description:
+      "Sitio para una agencia de marketing digital centrada en SEO y redes sociales. Permite gestionar campañas, analizar resultados y captar nuevos clientes.",
   },
   {
     id: 6,
@@ -74,6 +84,8 @@ const projects = [
     subtitle: "Contable",
     image: "/fotos-proyectos/6.PNG?height=120&width=200",
     demoUrl: "https://contables.vercel.app/",
+    description:
+      "Sistema contable para estudios y empresas. Gestiona facturación, gastos, clientes e informes financieros de manera ordenada y profesional.",
   },
   {
     id: 7,
@@ -82,6 +94,8 @@ const projects = [
     subtitle: "Ingeniería",
     image: "/fotos-proyectos/8.PNG?height=120&width=200",
     demoUrl: "https://byas.vercel.app/",
+    description:
+      "Herramienta digital para ingenieros civiles. Permite administrar proyectos, almacenar cálculos y organizar documentación técnica.",
   },
   {
     id: 8,
@@ -90,22 +104,18 @@ const projects = [
     subtitle: "Muebles",
     image: "/fotos-proyectos/9.PNG?height=120&width=200",
     demoUrl: "https://art-ydeisgn.vercel.app/",
+    description:
+      "Ecommerce de muebles artesanales. Catálogo dinámico con productos personalizados y sistema de pedidos a medida.",
   },
-  // {
-  //   id: 9,
-  //   year: "2024",
-  //   title: "Colorshop",
-  //   subtitle: "Gestion de Remitos",
-  //   image: "/fotos-proyectos/8.PNG?height=120&width=200",
-  //   demoUrl: "https://byas.vercel.app/",
-  // },
   {
     id: 10,
     year: "2024",
     title: "Colorshop",
-    subtitle: "Gestion de Remitos",
+    subtitle: "Gestión de Remitos",
     image: "/fotos-proyectos/4.PNG?height=120&width=200",
     demoUrl: "https://v0-colorshop-remitos-jdu4ku.vercel.app/",
+    description:
+      "Sistema de remitos para tiendas de pintura. Facilita el control de entregas, stock e historial de pedidos.",
   },
   {
     id: 11,
@@ -114,22 +124,28 @@ const projects = [
     subtitle: "Agencia de Marketing",
     image: "/fotos-proyectos/5.PNG?height=120&width=200",
     demoUrl: "https://www.soulsdigitals.blog/",
+    description:
+      "Landing page para agencia digital. Destaca servicios de contenido, posicionamiento y blog corporativo optimizado para SEO.",
   },
   {
     id: 12,
     year: "2024",
     title: "ServiSplit",
-    subtitle: "Servicio Tecnico",
+    subtitle: "Servicio Técnico",
     image: "/fotos-proyectos/15.PNG?height=120&width=200",
     demoUrl: "https://servisplit.vercel.app/",
+    description:
+      "Gestión de servicios técnicos de aire acondicionado. Agenda de visitas, historial de clientes y seguimiento de reparaciones.",
   },
   {
     id: 13,
     year: "2025",
-    title: "ISR ",
+    title: "ISR",
     subtitle: "Servicios Automotriz",
     image: "/fotos-proyectos/14.PNG?height=120&width=200",
     demoUrl: "https://isr-ebon.vercel.app/",
+    description:
+      "Sistema para talleres mecánicos. Controla turnos, servicios realizados, clientes y repuestos utilizados.",
   },
   {
     id: 14,
@@ -138,46 +154,58 @@ const projects = [
     subtitle: "Estudio Contable",
     image: "/fotos-proyectos/11.PNG?height=120&width=200",
     demoUrl: "https://cuatro-aestudio.vercel.app/",
+    description:
+      "Sitio institucional para estudio contable. Gestión documental, atención a clientes y administración tributaria.",
   },
   {
     id: 15,
     year: "2025",
-    title: "Clinica",
-    subtitle: "Clinica de Masajes",
+    title: "Clínica",
+    subtitle: "Masajes Terapéuticos",
     image: "/fotos-proyectos/2.PNG?height=120&width=200",
     demoUrl: "https://kzmgzmwe3mc3vfn7llk6.lite.vusercontent.net/",
+    description:
+      "Sistema de turnos y gestión de pacientes para una clínica de masajes. Permite agendar citas y llevar el historial de tratamientos.",
   },
   {
     id: 16,
     year: "2025",
     title: "Mar de Azúcar",
-    subtitle: "Cafeteria",
+    subtitle: "Cafetería",
     image: "/fotos-proyectos/16.PNG?height=120&width=200",
     demoUrl: "https://mardeazucar.mitiendanube.com/",
+    description:
+      "Ecommerce para una cafetería boutique. Catálogo con productos destacados, promociones y pedidos personalizados.",
   },
   {
     id: 17,
     year: "2025",
     title: "Space Burguer",
-    subtitle: "Menu Hamburgueseria",
+    subtitle: "Menú Digital",
     image: "/fotos-proyectos/17.PNG?height=120&width=200",
     demoUrl: "https://menu-hamurguesa.vercel.app/",
+    description:
+      "Menú interactivo para hamburguesería. Diseño atractivo y funcional con sistema de pedidos online.",
   },
   {
     id: 18,
     year: "2025",
     title: "Amigos",
-    subtitle: "Control de gastos entre amigos",
+    subtitle: "Control de Gastos",
     image: "/fotos-proyectos/18.PNG?height=120&width=200",
     demoUrl: "https://v0-seo-osppm1n6y44-t4tbw2.vercel.app/",
+    description:
+      "Aplicación para dividir y llevar el control de gastos entre amigos. Ideal para viajes, salidas y proyectos compartidos.",
   },
   {
     id: 19,
     year: "2025",
-    title: "Reglas Del Truco",
-    subtitle: "Cansado de no saber jugar al truco",
+    title: "Reglas del Truco",
+    subtitle: "Juego de Cartas",
     image: "/fotos-proyectos/19.PNG?height=120&width=200",
     demoUrl: "https://truco-ten.vercel.app/",
+    description:
+      "Guía digital para aprender a jugar al truco. Reglas explicadas, jugadas y práctica interactiva para nuevos jugadores.",
   },
   {
     id: 20,
@@ -186,8 +214,11 @@ const projects = [
     subtitle: "Software Factory",
     image: "/fotos-proyectos/20.PNG?height=120&width=200",
     demoUrl: "https://www.boostlyagency.online/",
+    description:
+      "Sitio corporativo para una fábrica de software. Presenta servicios, proyectos y enfoque profesional de desarrollo.",
   },
 ];
+
 
 const experiences = [
   {
@@ -267,6 +298,9 @@ export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof projects)[0] | null
+  >(null);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -649,24 +683,38 @@ export default function Portfolio() {
                   description={project.subtitle}
                   imageUrl={project.image}
                 />
-                {/* Botón minimalista, pequeño y dark, centrado y solo visible en hover */}
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="pointer-events-auto"
-                  tabIndex={-1}
-                  aria-label={`Ver proyecto ${project.title}`}
-                >
-                  <div className="absolute rounded-md inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                {/* Overlay con botones */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/80 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 p-4">
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {project.title}
+                  </h3>
+                  {/* <p className="text-sm text-gray-300 text-center mb-4">
+                    {project.subtitle}
+                  </p> */}
+                  <div className="flex flex-col gap-2 w-full">
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full"
+                    >
+                      <Button
+                        size="sm"
+                        className="w-full px-3 py-1.5 text-xs rounded-xl font-medium bg-emerald-600 hover:bg-emerald-700 text-white transition-all duration-200"
+                      >
+                        Ver Demo
+                      </Button>
+                    </a>
                     <Button
                       size="sm"
-                      className="px-3 py-1.5 text-xs rounded-xl font-medium bg-gray-900/80 hover:bg-emerald-600 text-gray-200 hover:text-white shadow-none border border-gray-800/60 transition-all duration-200"
+                      variant="outline"
+                      className="w-full px-3 py-1.5 text-xs rounded-xl font-medium border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white transition-all duration-200"
+                      onClick={() => setSelectedProject(project)}
                     >
-                      Ver proyecto
+                      Ver Detalles
                     </Button>
                   </div>
-                </a>
+                </div>
               </div>
             ))}
           </div>
@@ -896,6 +944,76 @@ export default function Portfolio() {
           </p>
         </footer>
       </div>
+
+      {/* Modal de Detalles del Proyecto */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4">
+          <div className="bg-zinc-900/95 border border-black/40 rounded-xl max-w-lg w-full max-h-[80vh] overflow-y-auto relative shadow-2xl shadow-black/50">
+            {/* Botón de cerrar */}
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-3 right-3 p-2 rounded-full bg-emerald-400 hover:bg-zinc-700 transition-all duration-300 border border-gray-900 hover:border-zinc-600 shadow-lg shadow-black/50 z-10"
+            >
+              <X className="w-4 h-4 text-gray-900 hover:text-white" />
+            </button>
+
+            {/* Contenido del modal */}
+            <div className="p-6 bg-black rounded-xl">
+              <div className="relative w-full h-52 mb-6 rounded-xl overflow-hidden border border-black/30 shadow-lg">
+                <Image
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
+              </div>
+
+              <div className="space-y-5">
+                <div>
+                  <h2 className="text-2xl font-light text-white mb-1.5 tracking-tight">
+                    {selectedProject.title}
+                  </h2>
+                  <p className="text-emerald-400 text-sm font-medium">
+                    {selectedProject.subtitle}
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-xs uppercase tracking-widest text-zinc-400 mb-2.5 font-medium">
+                      Descripción
+                    </h3>
+                    <p className="text-zinc-300 text-sm leading-relaxed tracking-wide">
+                      {selectedProject.description}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2.5">
+                    <Badge className="bg-zinc-900 text-zinc-200 border border-zinc-800 text-xs px-3 py-1.5 rounded-lg">
+                      {selectedProject.subtitle}
+                    </Badge>
+                  </div>
+
+                  <div className="pt-4 border-t border-zinc-800">
+                    <a
+                      href={selectedProject.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+                    >
+                      Ver demo en vivo
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
