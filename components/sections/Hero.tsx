@@ -10,7 +10,7 @@ export default function Hero({ isVisible }: HeroProps) {
   return (
     <section
       id="inicio"
-      className={`px-8 sm:px-16 lg:px-24 pt-32 sm:pt-40 pb-20 transition-opacity duration-500 flex items-center justify-center min-h-[70vh] ${
+      className={`px-8 sm:px-16 lg:px-24 pt-16 sm:pt-20 pb-16 transition-opacity duration-500 flex items-center justify-center min-h-[60vh] ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -50,18 +50,20 @@ export default function Hero({ isVisible }: HeroProps) {
             </div>
 
             {/* Contact */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-zinc-400 hover:text-white text-sm transition-colors justify-center sm:justify-start">
-                <MapPin className="w-4 h-4 text-emerald-500" />
-                <span>Argentina</span>
+            <div className="space-y-3">
+              <div className="flex items-center gap-2.5 text-gray-400 text-sm justify-center sm:justify-start">
+                <MapPin className="w-4 h-4 text-emerald-400" />
+                <span>San Juan, Argentina</span>
               </div>
 
               <Link
                 href="mailto:leonel.gonzalez.dev@gmail.com"
-                className="flex items-center gap-2 text-zinc-400 hover:text-white text-sm transition-colors justify-center sm:justify-start"
+                className="flex items-center gap-2.5 text-gray-400 hover:text-gray-100 text-sm transition-colors duration-200 justify-center sm:justify-start"
               >
-                <Mail className="w-4 h-4 text-emerald-500" />
-                <span>leonel.gonzalez.dev@gmail.com</span>
+                <Mail className="w-4 h-4 text-emerald-400" />
+                <span className="text-gray-300">
+                  leonel.gonzalez.dev@gmail.com
+                </span>
               </Link>
             </div>
           </div>
@@ -81,8 +83,8 @@ export default function Hero({ isVisible }: HeroProps) {
               <span className="text-emerald-400">React</span>,{" "}
               <span className="text-emerald-400">Next.js</span> y
               <span className="text-emerald-400"> TypeScript</span>. Enfocado en
-              crear interfaces web modernas y eficientes con excelente experiencia
-              de usuario.
+              crear interfaces web modernas y eficientes con excelente
+              experiencia de usuario.
             </p>
 
             <p className="text-zinc-400 text-sm leading-relaxed">
@@ -136,4 +138,4 @@ export default function Hero({ isVisible }: HeroProps) {
       </div>
     </section>
   );
-} 
+}

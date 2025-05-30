@@ -14,8 +14,8 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
     <nav
       className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out w-full max-w-6xl px-4 sm:px-6 ${
         scrollY > 20
-          ? "bg-black/85 backdrop-blur-xl border border-gray-700/40 rounded-none sm:rounded-2xl mt-0 sm:mt-4 shadow-2xl shadow-black/50"
-          : "bg-black/0 border-0 shadow-none mt-0 sm:mt-6"
+          ? "bg-black/85 backdrop-blur-xl border border-gray-700/40 rounded-none sm:rounded-2xl mt-0 sm:mt-2 shadow-2xl shadow-black/50"
+          : "bg-black/0 border-0 shadow-none mt-0 sm:mt-2"
       }`}
       style={scrollY > 20 ? { borderColor: "#23272f" } : {}}
     >

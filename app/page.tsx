@@ -156,10 +156,7 @@ export default function Portfolio() {
 
         {/* Footer */}
         <footer className="px-4 sm:px-8 py-6 sm:py-8 border-t border-gray-800/40 text-center">
-          <p className="text-xs sm:text-sm text-gray-500">
-            © 2025 Leonel González • Hecho con{" "}
-            <span className="text-red-500 animate-pulse">🖤</span> en Argentina
-          </p>
+          
         </footer>
       </div>
 
