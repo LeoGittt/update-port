@@ -18,8 +18,8 @@ export default function Projects({ isVisible, projects, setSelectedProject }: Pr
       }`}
     >
       <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
-        <div className="p-2 rounded-lg bg-gray-900/40">
-          <Code className="w-5 h-5 text-gray-400" />
+        <div className="p-2 rounded-lg ">
+          <Code className="w-5 h-5 text-emerald-600" />
         </div>
         <h2 className="text-xl font-bold">Proyectos</h2>
       </div>

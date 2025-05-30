@@ -1,6 +1,6 @@
 import { Briefcase } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Experience } from "@/types/experience";
+import type { Experience } from "@/types/experience";
 
 interface ExperienceProps {
   isVisible: boolean;
@@ -16,8 +16,8 @@ export default function Experience({ isVisible, experiences }: ExperienceProps) 
       }`}
     >
       <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
-        <div className="p-2 rounded-lg bg-gray-900/40">
-          <Briefcase className="w-5 h-5 text-gray-400" />
+        <div className="p-2 rounded-lg ">
+          <Briefcase className="w-5 h-5 text-emerald-600" />
         </div>
         <h2 className="text-xl font-bold">Experiencia</h2>
       </div>
