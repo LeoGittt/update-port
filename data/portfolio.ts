@@ -15,7 +15,7 @@ export const skills = [
   "PostgreSQL",
   "Express",
   "Jest",
-  "Cypress"
+  "Cypress",
 ];
 
 export const projects: Project[] = [
@@ -280,10 +280,7 @@ export const projects: Project[] = [
     demoUrl: "https://mardeazucar.mitiendanube.com/",
     description:
       "Ecommerce para una cafetería boutique. Catálogo con productos destacados, promociones y pedidos personalizados.",
-    technologies: [
-      "Tienda Nube",
-      
-    ],
+    technologies: ["Tienda Nube"],
   },
   {
     id: 17,
@@ -358,112 +355,43 @@ export const projects: Project[] = [
     ],
   },
 ];
-// export const projects: Project[] = [
-//   {
-//     id: 1,
-//     year: "2025",
-//     title: "S I M U",
-//     subtitle: "Sistema Municipal",
-//     image: "/fotos-proyectos/10.PNG?height=120&width=200",
-//     demoUrl: "https://reclamos-frontend.vercel.app/",
-//     description:
-//       "Sistema integral para municipios que permite a los ciudadanos gestionar reclamos y seguir trámites en tiempo real. Incluye un panel administrativo completo para funcionarios.",
-//     technologies: [
-//       "Next.js",
-//       "React",
-//       "TypeScript",
-//       "Tailwind",
-//       "Shadcn",
-//       "Axios",
-//     ],
-//   },
-//   {
-//     id: 2,
-//     year: "2024",
-//     title: "Henry Cars",
-//     subtitle: "E-commerce de Autos",
-//     image: "/fotos-proyectos/1.PNG?height=120&width=200",
-//     demoUrl: "https://henry-cars.vercel.app/",
-//     description:
-//       "Plataforma de comercio electrónico especializada en la venta de automóviles. Incluye filtros avanzados, sistema de búsqueda y gestión de usuarios.",
-//     technologies: [
-//       "React",
-//       "Redux",
-//       "Node.js",
-//       "Express",
-//       "PostgreSQL",
-//       "Sequelize",
-//     ],
-//   },
-//   {
-//     id: 3,
-//     year: "2024",
-//     title: "Henry Food",
-//     subtitle: "App de Comidas",
-//     image: "/fotos-proyectos/2.PNG?height=120&width=200",
-//     demoUrl: "https://henry-food.vercel.app/",
-//     description:
-//       "Aplicación web para pedidos de comida con sistema de pagos integrado, seguimiento de pedidos en tiempo real y panel de administración.",
-//     technologies: [
-//       "React",
-//       "Redux",
-//       "Node.js",
-//       "Express",
-//       "PostgreSQL",
-//       "Sequelize",
-//     ],
-//   },
-//   {
-//     id: 4,
-//     year: "2024",
-//     title: "Henry Weather",
-//     subtitle: "App del Clima",
-//     image: "/fotos-proyectos/3.PNG?height=120&width=200",
-//     demoUrl: "https://henry-weather.vercel.app/",
-//     description:
-//       "Aplicación web para consultar el clima en tiempo real de cualquier ciudad del mundo. Incluye pronóstico extendido y mapas interactivos.",
-//     technologies: [
-//       "React",
-//       "Redux",
-//       "Node.js",
-//       "Express",
-//       "MongoDB",
-//       "Mongoose",
-//     ],
-//   }
-// ];
 
 export const experiences: Experience[] = [
   {
     title: "Frontend Developer",
     company: "EmpreId",
     period: "Mar 2025 - Actual",
-    description: "Desarrollo del sistema municipal con Next.js y TypeScript.",
+    description:
+      "Desarrollo de un sistema de gestión municipal utilizando Next.js y TypeScript. La plataforma incluye módulos para reclamos ciudadanos, administración de beneficios municipales, gestión de eventos y control de acceso según distintos roles de usuario.",
     current: true,
   },
   {
     title: "Frontend Developer",
     company: "Nexium Solutions",
     period: "May 2025 - Actual",
-    description: "Sitios web estáticos para clientes empresariales.",
+    description:
+      "Desarrollo y mantenimiento de sitios web estáticos para clientes empresariales, enfocados en diseño responsivo, optimización de rendimiento y buenas prácticas de accesibilidad.",
     current: true,
   },
   {
     title: "Frontend Developer",
     company: "Boostly",
-    description: "Sistema integral para concesionarias de autos.",
+    description:
+      "Desarrollo de un sistema integral para concesionarias de autos, con funcionalidades para la gestión de vehículos, clientes, ventas, servicios, empleados y otras operaciones administrativas.",
     current: false,
   },
   {
     title: "SEO Developer",
     company: "Easy Life (España)",
-    description: "Optimización técnica de sitios web empresariales.",
+    description:
+      "Responsable de la optimización técnica de sitios web empresariales para mejorar su posicionamiento en buscadores. Adicionalmente, desarrollé soluciones internas utilizando Microsoft PowerApps para automatizar procesos y mejorar la eficiencia operativa.",
     current: false,
   },
   {
     title: "Frontend Developer",
     company: "Soy Henry",
-    description: "Experiencia Academica",
+    description:
+      "Experiencia académica intensiva enfocada en el desarrollo web. Durante este período, diseñé y desarrollé dos aplicaciones fullstack, aplicando tecnologías modernas tanto del lado del cliente como del servidor.",
     current: false,
   },
 ];
@@ -480,13 +408,11 @@ export const contactInfo: ContactInfo[] = [
     title: "Email",
     value: "leonel.gonzalez.dev@gmail.com",
     href: "mailto:leonel.gonzalez.dev@gmail.com",
-    
   },
   {
     icon: MapPin,
     title: "Ubicación",
     value: "San Juan, Argentina",
     href: "#",
-    
   },
-]; 
+];
