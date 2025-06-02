@@ -15,21 +15,21 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="fixed inset-0 bg-black/95 backdrop-blur-md z-50 flex items-center justify-center p-2 sm:p-3">
-      <div className="bg-black border border-black rounded-xl max-w-sm w-full max-h-[80vh] overflow-y-auto relative shadow-2xl shadow-black/50">
+    <div className="fixed inset-0 bg-black/95 backdrop-blur-md z-50 flex items-center justify-center p-1 sm:p-3">
+      <div className="bg-black border border-black rounded-xl max-w-[85%] sm:max-w-sm w-full max-h-[60vh] sm:max-h-[80vh] overflow-y-auto relative shadow-2xl shadow-black/50">
         {/* Botón de cerrar */}
-        <div className="sticky top-0 right-0 p-2 z-10 flex justify-end bg-black/80 backdrop-blur-sm">
+        <div className="sticky top-0 right-0 p-1.5 sm:p-2 z-10 flex justify-end bg-black/80 backdrop-blur-sm">
           <button
             onClick={onClose}
-            className="p-1 rounded-full bg-emerald-400 hover:bg-zinc-800 transition-all duration-300 border border-zinc-900 hover:border-zinc-700 shadow-lg shadow-black/50 flex items-center justify-center"
+            className="p-0.5 sm:p-1 rounded-full bg-emerald-400 hover:bg-zinc-800 transition-all duration-300 border border-zinc-900 hover:border-zinc-700 shadow-lg shadow-black/50 flex items-center justify-center"
           >
-            <X className="w-3 h-3 text-zinc-900 hover:text-white" />
+            <X className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-zinc-900 hover:text-white" />
           </button>
         </div>
 
         {/* Contenido del modal */}
-        <div className="p-2 sm:p-3">
-          <div className="relative w-full h-32 sm:h-36 mb-2 sm:mb-3 rounded-xl overflow-hidden border border-black shadow-lg">
+        <div className="p-1.5 sm:p-3">
+          <div className="relative w-full h-28 sm:h-36 mb-2 sm:mb-3 rounded-xl overflow-hidden border border-black shadow-lg">
             <Image
               src={project.image}
               alt={project.title}
@@ -42,20 +42,20 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
           <div className="space-y-3">
             <div>
-              <h2 className="text-lg font-light text-white mb-0.5 tracking-tight">
+              <h2 className="text-base sm:text-lg font-light text-white mb-0.5 tracking-tight">
                 {project.title}
               </h2>
-              <p className="text-emerald-400 text-sm font-medium">
+              <p className="text-emerald-400 text-xs sm:text-sm font-medium">
                 {project.subtitle}
               </p>
             </div>
 
             <div className="space-y-2">
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-medium">
+                <h3 className="text-[10px] sm:text-xs uppercase tracking-widest text-zinc-500 mb-0.5 sm:mb-1 font-medium">
                   Descripción
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed tracking-wide">
+                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed tracking-wide">
                   {project.description}
                 </p>
               </div>
