@@ -26,8 +26,19 @@ export const projects: Project[] = [
     subtitle: "Sistema Municipal",
     image: "/fotos-proyectos/10.PNG?height=120&width=200",
     demoUrl: "https://reclamos-frontend.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/simu-frontend",
     description:
       "Sistema integral para municipios que permite a los ciudadanos gestionar reclamos y seguir trámites en tiempo real. Incluye un panel administrativo completo para funcionarios.",
+    challenges: "Desarrollar un sistema que maneje múltiples tipos de reclamos, notificaciones en tiempo real y un panel administrativo complejo con diferentes niveles de acceso.",
+    solutions: "Implementé un sistema de roles y permisos, integración con servicios de notificación push, y un dashboard interactivo con gráficos y estadísticas en tiempo real.",
+    features: [
+      "Sistema de autenticación y autorización",
+      "Gestión de reclamos con seguimiento en tiempo real",
+      "Panel administrativo con estadísticas y métricas",
+      "Notificaciones push y por correo electrónico",
+      "Sistema de categorización de reclamos",
+      "Reportes y exportación de datos"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -44,8 +55,19 @@ export const projects: Project[] = [
     subtitle: "Concesionarias",
     image: "/fotos-proyectos/12.PNG?height=120&width=200",
     demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/auto-web",
     description:
       "Plataforma digital para concesionarias de autos. Permite mostrar vehículos, administrar stock y generar contactos con potenciales compradores de forma ágil.",
+    challenges: "Crear una interfaz intuitiva para mostrar vehículos con múltiples filtros y características, además de implementar un sistema de gestión de stock en tiempo real.",
+    solutions: "Desarrollé un sistema de filtros avanzados, galería de imágenes optimizada, y un panel de administración con gestión de inventario en tiempo real.",
+    features: [
+      "Catálogo de vehículos con filtros avanzados",
+      "Galería de imágenes optimizada",
+      "Sistema de contacto directo",
+      "Panel de administración de stock",
+      "Gestión de características y especificaciones",
+      "Sistema de favoritos y comparación"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -62,8 +84,19 @@ export const projects: Project[] = [
     subtitle: "Tickets",
     image: "/fotos-proyectos/1.PNG?height=120&width=200",
     demoUrl: "https://eventop-frontend.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/eventop-frontend",
     description:
       "App para la venta y gestión de entradas a eventos. Facilita la creación de eventos, control de asistencia y compra segura de tickets.",
+    challenges: "Implementar un sistema de pagos seguro, gestión de asientos y validación de tickets en tiempo real, además de manejar múltiples eventos simultáneos.",
+    solutions: "Desarrollé un sistema de reservas con bloqueo temporal, integración con pasarela de pagos, y generación de códigos QR únicos para cada ticket.",
+    features: [
+      "Sistema de reserva de asientos",
+      "Integración con pasarela de pagos",
+      "Generación de tickets con QR",
+      "Panel de administración de eventos",
+      "Control de asistencia en tiempo real",
+      "Estadísticas de ventas y asistencia"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -80,8 +113,19 @@ export const projects: Project[] = [
     subtitle: "Ecommerce",
     image: "/fotos-proyectos/3.PNG?height=120&width=200",
     demoUrl: "https://frontend-la-marina.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/la-marina-frontend",
     description:
       "Tienda online especializada en productos marinos. Incluye catálogo digital, carrito de compras, pagos integrados y gestión de stock.",
+    challenges: "Crear una experiencia de compra fluida con múltiples categorías de productos, sistema de inventario en tiempo real y gestión de envíos.",
+    solutions: "Implementé un sistema de filtros avanzados, carrito de compras persistente, y un panel de administración con control de stock y pedidos.",
+    features: [
+      "Catálogo con filtros avanzados",
+      "Carrito de compras persistente",
+      "Sistema de búsqueda inteligente",
+      "Gestión de inventario en tiempo real",
+      "Panel de administración de pedidos",
+      "Integración con pasarela de pagos"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -98,8 +142,19 @@ export const projects: Project[] = [
     subtitle: "Marketing",
     image: "/fotos-proyectos/7.PNG?height=120&width=200",
     demoUrl: "https://boostly-t749.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/boostly-frontend",
     description:
       "Sitio para una agencia de marketing digital centrada en SEO y redes sociales. Permite gestionar campañas, analizar resultados y captar nuevos clientes.",
+    challenges: "Desarrollar un sistema que muestre métricas de marketing de forma clara y atractiva, además de facilitar la captación de leads.",
+    solutions: "Creé un dashboard interactivo con gráficos en tiempo real, formularios de contacto optimizados y un sistema de seguimiento de leads.",
+    features: [
+      "Dashboard con métricas en tiempo real",
+      "Sistema de captación de leads",
+      "Blog optimizado para SEO",
+      "Portafolio de casos de éxito",
+      "Formularios de contacto inteligentes",
+      "Integración con herramientas de análisis"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -116,8 +171,19 @@ export const projects: Project[] = [
     subtitle: "Contable",
     image: "/fotos-proyectos/6.PNG?height=120&width=200",
     demoUrl: "https://contables.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/aura-frontend",
     description:
       "Sistema contable para estudios y empresas. Gestiona facturación, gastos, clientes e informes financieros de manera ordenada y profesional.",
+    challenges: "Implementar un sistema que maneje múltiples tipos de documentos contables, cálculos complejos y generación de informes personalizados.",
+    solutions: "Desarrollé un sistema modular de gestión contable con plantillas personalizables, cálculos automáticos y exportación de informes en múltiples formatos.",
+    features: [
+      "Gestión de facturación y gastos",
+      "Cálculos contables automáticos",
+      "Generación de informes personalizados",
+      "Sistema de recordatorios y alertas",
+      "Gestión de clientes y proveedores",
+      "Exportación de datos en múltiples formatos"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -134,8 +200,19 @@ export const projects: Project[] = [
     subtitle: "Ingeniería",
     image: "/fotos-proyectos/8.PNG?height=120&width=200",
     demoUrl: "https://byas.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/byas-frontend",
     description:
       "Herramienta digital para ingenieros civiles. Permite administrar proyectos, almacenar cálculos y organizar documentación técnica.",
+    challenges: "Crear un sistema que maneje documentación técnica compleja, cálculos especializados y seguimiento de proyectos de ingeniería.",
+    solutions: "Implementé un sistema de gestión documental con versionado, calculadora de fórmulas de ingeniería y seguimiento de proyectos con Gantt.",
+    features: [
+      "Gestión de documentación técnica",
+      "Calculadora de fórmulas de ingeniería",
+      "Seguimiento de proyectos con Gantt",
+      "Almacenamiento de planos y especificaciones",
+      "Sistema de versionado de documentos",
+      "Reportes técnicos personalizados"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -152,8 +229,19 @@ export const projects: Project[] = [
     subtitle: "Muebles",
     image: "/fotos-proyectos/9.PNG?height=120&width=200",
     demoUrl: "https://art-ydeisgn.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/mueblito-frontend",
     description:
       "Ecommerce de muebles artesanales. Catálogo dinámico con productos personalizados y sistema de pedidos a medida.",
+    challenges: "Desarrollar un sistema que permita mostrar productos personalizables y gestionar pedidos a medida con múltiples opciones de personalización.",
+    solutions: "Creé un configurador de productos interactivo, sistema de presupuestos automáticos y seguimiento de pedidos personalizados.",
+    features: [
+      "Configurador de productos interactivo",
+      "Sistema de presupuestos automáticos",
+      "Catálogo con filtros avanzados",
+      "Seguimiento de pedidos personalizados",
+      "Galería de proyectos realizados",
+      "Sistema de consultas técnicas"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -170,8 +258,19 @@ export const projects: Project[] = [
     subtitle: "Gestión de Remitos",
     image: "/fotos-proyectos/4.PNG?height=120&width=200",
     demoUrl: "https://v0-colorshop-remitos-jdu4ku.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/colorshop-frontend",
     description:
       "Sistema de remitos para tiendas de pintura. Facilita el control de entregas, stock e historial de pedidos.",
+    challenges: "Implementar un sistema que maneje múltiples tipos de productos, control de stock en tiempo real y generación de remitos personalizados.",
+    solutions: "Desarrollé un sistema de gestión de inventario con alertas de stock, generación de remitos con códigos únicos y seguimiento de entregas.",
+    features: [
+      "Gestión de inventario en tiempo real",
+      "Generación de remitos con códigos únicos",
+      "Sistema de alertas de stock",
+      "Historial de pedidos y entregas",
+      "Reportes de ventas y stock",
+      "Gestión de clientes frecuentes"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -188,8 +287,19 @@ export const projects: Project[] = [
     subtitle: "Agencia de Marketing",
     image: "/fotos-proyectos/5.PNG?height=120&width=200",
     demoUrl: "https://www.soulsdigitals.blog/",
+    githubUrl: "https://github.com/leonelgonzalezdev/souls-digitals-frontend",
     description:
       "Landing page para agencia digital. Destaca servicios de contenido, posicionamiento y blog corporativo optimizado para SEO.",
+    challenges: "Crear una landing page atractiva que muestre los servicios de marketing digital de forma clara y genere leads de calidad.",
+    solutions: "Implementé un diseño moderno con animaciones suaves, blog optimizado para SEO y formularios de contacto inteligentes.",
+    features: [
+      "Diseño moderno y responsivo",
+      "Blog optimizado para SEO",
+      "Formularios de contacto inteligentes",
+      "Portafolio de casos de éxito",
+      "Sección de servicios interactiva",
+      "Integración con herramientas de análisis"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -206,8 +316,19 @@ export const projects: Project[] = [
     subtitle: "Servicio Técnico",
     image: "/fotos-proyectos/15.PNG?height=120&width=200",
     demoUrl: "https://servisplit.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/servisplit-frontend",
     description:
       "Gestión de servicios técnicos de aire acondicionado. Agenda de visitas, historial de clientes y seguimiento de reparaciones.",
+    challenges: "Desarrollar un sistema que maneje múltiples técnicos, agenda de visitas y seguimiento de reparaciones en tiempo real.",
+    solutions: "Implementé un sistema de gestión de turnos, seguimiento de reparaciones y notificaciones automáticas para clientes y técnicos.",
+    features: [
+      "Sistema de gestión de turnos",
+      "Seguimiento de reparaciones",
+      "Historial de clientes",
+      "Notificaciones automáticas",
+      "Reportes de servicio",
+      "Gestión de técnicos y zonas"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -224,8 +345,19 @@ export const projects: Project[] = [
     subtitle: "Servicios Automotriz",
     image: "/fotos-proyectos/14.PNG?height=120&width=200",
     demoUrl: "https://isr-ebon.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/isr-frontend",
     description:
       "Sistema para talleres mecánicos. Controla turnos, servicios realizados, clientes y repuestos utilizados.",
+    challenges: "Crear un sistema que maneje múltiples servicios automotrices, inventario de repuestos y seguimiento de reparaciones.",
+    solutions: "Desarrollé un sistema integral con gestión de turnos, control de inventario y seguimiento de servicios en tiempo real.",
+    features: [
+      "Gestión de turnos y servicios",
+      "Control de inventario de repuestos",
+      "Historial de clientes y vehículos",
+      "Seguimiento de reparaciones",
+      "Reportes de servicios",
+      "Gestión de técnicos y especialidades"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -242,8 +374,19 @@ export const projects: Project[] = [
     subtitle: "Estudio Contable",
     image: "/fotos-proyectos/11.PNG?height=120&width=200",
     demoUrl: "https://cuatro-aestudio.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/cuatro-a-frontend",
     description:
       "Sitio institucional para estudio contable. Gestión documental, atención a clientes y administración tributaria.",
+    challenges: "Desarrollar un sistema que facilite la comunicación con clientes y la gestión de documentación contable de forma segura.",
+    solutions: "Implementé un portal de clientes con acceso seguro, sistema de mensajería interna y gestión documental organizada.",
+    features: [
+      "Portal de clientes seguro",
+      "Sistema de mensajería interna",
+      "Gestión documental organizada",
+      "Calendario de vencimientos",
+      "Notificaciones automáticas",
+      "Acceso a documentación histórica"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -260,8 +403,19 @@ export const projects: Project[] = [
     subtitle: "Masajes Terapéuticos",
     image: "/fotos-proyectos/2.PNG?height=120&width=200",
     demoUrl: "https://kzmgzmwe3mc3vfn7llk6.lite.vusercontent.net/",
+    githubUrl: "https://github.com/leonelgonzalezdev/clinica-frontend",
     description:
       "Sistema de turnos y gestión de pacientes para una clínica de masajes. Permite agendar citas y llevar el historial de tratamientos.",
+    challenges: "Implementar un sistema de turnos que maneje múltiples terapeutas, diferentes tipos de tratamientos y seguimiento de pacientes.",
+    solutions: "Desarrollé un sistema de reservas online, historial de tratamientos y seguimiento de evolución de pacientes.",
+    features: [
+      "Sistema de reservas online",
+      "Historial de tratamientos",
+      "Seguimiento de pacientes",
+      "Gestión de terapeutas",
+      "Recordatorios automáticos",
+      "Reportes de asistencia"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -280,6 +434,16 @@ export const projects: Project[] = [
     demoUrl: "https://mardeazucar.mitiendanube.com/",
     description:
       "Ecommerce para una cafetería boutique. Catálogo con productos destacados, promociones y pedidos personalizados.",
+    challenges: "Crear una tienda online que refleje la identidad de la cafetería y permita gestionar pedidos especiales y promociones.",
+    solutions: "Implementé una tienda con diseño personalizado, sistema de pedidos especiales y gestión de promociones.",
+    features: [
+      "Catálogo de productos destacados",
+      "Sistema de pedidos especiales",
+      "Gestión de promociones",
+      "Blog de recetas y novedades",
+      "Programa de fidelización",
+      "Pedidos para eventos"
+    ],
     technologies: ["Tienda Nube"],
   },
   {
@@ -289,8 +453,19 @@ export const projects: Project[] = [
     subtitle: "Menú Digital",
     image: "/fotos-proyectos/17.PNG?height=120&width=200",
     demoUrl: "https://menu-hamurguesa.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/space-burguer-frontend",
     description:
       "Menú interactivo para hamburguesería. Diseño atractivo y funcional con sistema de pedidos online.",
+    challenges: "Crear un menú digital atractivo que facilite la selección de productos y personalización de pedidos.",
+    solutions: "Desarrollé un menú interactivo con animaciones suaves, sistema de personalización de productos y pedidos online.",
+    features: [
+      "Menú interactivo con animaciones",
+      "Sistema de personalización de productos",
+      "Pedidos online",
+      "Galería de productos",
+      "Sistema de promociones",
+      "Integración con delivery"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -307,8 +482,19 @@ export const projects: Project[] = [
     subtitle: "Control de Gastos",
     image: "/fotos-proyectos/18.PNG?height=120&width=200",
     demoUrl: "https://v0-seo-osppm1n6y44-t4tbw2.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/amigos-frontend",
     description:
       "Aplicación para dividir y llevar el control de gastos entre amigos. Ideal para viajes, salidas y proyectos compartidos.",
+    challenges: "Implementar un sistema que permita dividir gastos de forma justa y llevar un control claro de deudas entre usuarios.",
+    solutions: "Desarrollé un sistema de división de gastos automático, seguimiento de deudas y notificaciones de pagos.",
+    features: [
+      "División automática de gastos",
+      "Seguimiento de deudas",
+      "Notificaciones de pagos",
+      "Historial de gastos",
+      "Estadísticas de gastos",
+      "Exportación de reportes"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -325,8 +511,19 @@ export const projects: Project[] = [
     subtitle: "Juego de Cartas",
     image: "/fotos-proyectos/19.PNG?height=120&width=200",
     demoUrl: "https://truco-ten.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/truco-frontend",
     description:
       "Guía digital para aprender a jugar al truco. Reglas explicadas, jugadas y práctica interactiva para nuevos jugadores.",
+    challenges: "Crear una guía interactiva que explique las reglas del truco de forma clara y permita practicar jugadas.",
+    solutions: "Implementé una guía paso a paso con ejemplos visuales, práctica de jugadas y explicaciones detalladas.",
+    features: [
+      "Guía paso a paso",
+      "Ejemplos visuales de jugadas",
+      "Práctica interactiva",
+      "Glosario de términos",
+      "Trucos y consejos",
+      "Modo offline"
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -343,8 +540,19 @@ export const projects: Project[] = [
     subtitle: "Software Factory",
     image: "/fotos-proyectos/20.PNG?height=120&width=200",
     demoUrl: "https://www.boostlyagency.online/",
+    githubUrl: "https://github.com/leonelgonzalezdev/empreid-frontend",
     description:
       "Sitio corporativo para una fábrica de software. Presenta servicios, proyectos y enfoque profesional de desarrollo.",
+    challenges: "Crear un sitio que muestre la capacidad técnica y profesional de la empresa, además de facilitar la captación de clientes.",
+    solutions: "Desarrollé un sitio corporativo moderno con portafolio de proyectos, blog técnico y sistema de contacto.",
+    features: [
+      "Portafolio de proyectos",
+      "Blog técnico",
+      "Sistema de contacto",
+      "Presentación de servicios",
+      "Equipo de desarrollo",
+      "Casos de éxito"
+    ],
     technologies: [
       "Next.js",
       "React",

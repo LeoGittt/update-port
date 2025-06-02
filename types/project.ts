@@ -7,4 +7,8 @@ export interface Project {
   demoUrl: string;
   description: string;
   technologies: string[];
+  githubUrl?: string;
+  challenges?: string;
+  solutions?: string;
+  features?: string[];
 } 
