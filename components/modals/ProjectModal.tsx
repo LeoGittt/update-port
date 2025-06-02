@@ -18,12 +18,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     <div className="fixed inset-0 bg-black/95 backdrop-blur-md z-50 flex items-center justify-center p-2 sm:p-3">
       <div className="bg-black border border-black rounded-xl max-w-sm w-full max-h-[80vh] overflow-y-auto relative shadow-2xl shadow-black/50">
         {/* Botón de cerrar */}
-        <button
-          onClick={onClose}
-          className="absolute top-1.5 right-1.5 p-1 rounded-full bg-emerald-400 hover:bg-zinc-800 transition-all duration-300 border border-zinc-900 hover:border-zinc-700 shadow-lg shadow-black/50 z-10 flex items-center justify-center"
-        >
-          <X className="w-3 h-3 text-zinc-900 hover:text-white" />
-        </button>
+        <div className="sticky top-0 right-0 p-2 z-10 flex justify-end bg-black/80 backdrop-blur-sm">
+          <button
+            onClick={onClose}
+            className="p-1 rounded-full bg-emerald-400 hover:bg-zinc-800 transition-all duration-300 border border-zinc-900 hover:border-zinc-700 shadow-lg shadow-black/50 flex items-center justify-center"
+          >
+            <X className="w-3 h-3 text-zinc-900 hover:text-white" />
+          </button>
+        </div>
 
         {/* Contenido del modal */}
         <div className="p-2 sm:p-3">
