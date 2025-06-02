@@ -23,217 +23,257 @@ export const projects: Project[] = [
     id: 1,
     year: "2025",
     title: "S I M U",
-    subtitle: "Sistema Municipal",
+    subtitle: "Sistema Municipal Integral",
     image: "/fotos-proyectos/10.PNG?height=120&width=200",
     demoUrl: "https://reclamos-frontend.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/simu-frontend",
     description:
-      "Sistema integral para municipios que permite a los ciudadanos gestionar reclamos y seguir trámites en tiempo real. Incluye un panel administrativo completo para funcionarios.",
-    challenges: "Desarrollar un sistema que maneje múltiples tipos de reclamos, notificaciones en tiempo real y un panel administrativo complejo con diferentes niveles de acceso.",
-    solutions: "Implementé un sistema de roles y permisos, integración con servicios de notificación push, y un dashboard interactivo con gráficos y estadísticas en tiempo real.",
+      "Plataforma municipal integral, desarrollada bajo metodologías ágiles (SCRUM), que permite a los vecinos registrar y seguir reclamos, mientras los distintos roles administrativos gestionan usuarios, beneficios, eventos, estadísticas y acceso a módulos desde dashboards personalizados.",
+    challenges:
+      "Diseñar una arquitectura escalable con múltiples roles, permitir gestión granular de usuarios y módulos, y mantener una experiencia fluida en todo tipo de dispositivo.",
+    solutions:
+      "Implementé autenticación segura con login y registro, gestión completa de usuarios (crear, editar, banear, eliminar), control de acceso a módulos por parte del Superadmin y dashboards dinámicos por rol. Se utilizó SCRUM para organizar las tareas en sprints y facilitar la colaboración en equipo. Además, se incorporaron animaciones con Framer Motion y notificaciones en tiempo real.",
     features: [
-      "Sistema de autenticación y autorización",
-      "Gestión de reclamos con seguimiento en tiempo real",
-      "Panel administrativo con estadísticas y métricas",
+      "Desarrollo ágil con metodología SCRUM",
+      "Autenticación y registro de usuarios",
+      "Gestión de usuarios: alta, edición, baneo y eliminación",
+      "Sistema de roles: Superadmin, Admin Municipal, Vecino, Responsable de Área, Gestor",
+      "Bloqueo y habilitación de módulos por parte del Superadmin",
+      "Panel de reclamos con seguimiento por estado y categoría",
+      "Módulos de beneficios y eventos administrables",
+      "Dashboards personalizados con estadísticas y gráficos en tiempo real",
       "Notificaciones push y por correo electrónico",
-      "Sistema de categorización de reclamos",
-      "Reportes y exportación de datos"
+      "Exportación de reportes e informes",
+      "Animaciones fluidas con Framer Motion",
+      "Diseño completamente responsive para desktop y mobile"
     ],
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
+      "Tailwind CSS",
+      "Shadcn UI",
       "Axios",
+      "Framer Motion"
     ],
   },
   {
     id: 2,
     year: "2025",
     title: "AutoWeb",
-    subtitle: "Concesionarias",
+    subtitle: "Plataforma para Concesionarias",
     image: "/fotos-proyectos/12.PNG?height=120&width=200",
     demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/auto-web",
     description:
-      "Plataforma digital para concesionarias de autos. Permite mostrar vehículos, administrar stock y generar contactos con potenciales compradores de forma ágil.",
-    challenges: "Crear una interfaz intuitiva para mostrar vehículos con múltiples filtros y características, además de implementar un sistema de gestión de stock en tiempo real.",
-    solutions: "Desarrollé un sistema de filtros avanzados, galería de imágenes optimizada, y un panel de administración con gestión de inventario en tiempo real.",
+      "Sitio web para concesionarias diseñado para exhibir vehículos, gestionar stock y captar clientes potenciales. El foco principal fue lograr una estética refinada y funcional, alineada con los requerimientos de un cliente exigente.",
+    challenges:
+      "Afrontar las exigencias estéticas de un cliente con visión detallista, logrando un diseño atractivo, claro y funcional. Además, implementar un sistema de administración de vehículos y stock sin comprometer la experiencia visual.",
+    solutions:
+      "Me enfoqué en desarrollar una UI moderna, con diseño responsive, animaciones suaves mediante Framer Motion, íconos consistentes con Lucide-React y una galería visualmente impactante. También implementé filtros avanzados, gestión de inventario y contacto directo desde la plataforma.",
     features: [
-      "Catálogo de vehículos con filtros avanzados",
-      "Galería de imágenes optimizada",
-      "Sistema de contacto directo",
-      "Panel de administración de stock",
-      "Gestión de características y especificaciones",
-      "Sistema de favoritos y comparación"
+      "Catálogo interactivo de vehículos con filtros por marca, modelo y precio",
+      "Diseño refinado con alto cuidado estético",
+      "Galería de imágenes optimizada y visualmente atractiva",
+      "Sistema de contacto directo para generar leads",
+      "Panel de administración de stock y especificaciones",
+      "Sistema de favoritos y comparación de vehículos",
+      "Animaciones e interacciones con Framer Motion",
+      "Íconos modernos y consistentes con Lucide React",
+      "Diseño 100% responsive para desktop y mobile"
     ],
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
+      "Tailwind CSS",
+      "Shadcn UI",
       "Framer Motion",
+      "Lucide React"
     ],
   },
   {
     id: 3,
     year: "2024",
     title: "EvenTop",
-    subtitle: "Tickets",
+    subtitle: "Gestión y Venta de Tickets",
     image: "/fotos-proyectos/1.PNG?height=120&width=200",
     demoUrl: "https://eventop-frontend.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/eventop-frontend",
     description:
-      "App para la venta y gestión de entradas a eventos. Facilita la creación de eventos, control de asistencia y compra segura de tickets.",
-    challenges: "Implementar un sistema de pagos seguro, gestión de asientos y validación de tickets en tiempo real, además de manejar múltiples eventos simultáneos.",
-    solutions: "Desarrollé un sistema de reservas con bloqueo temporal, integración con pasarela de pagos, y generación de códigos QR únicos para cada ticket.",
+      "Aplicación para la gestión y venta de entradas a eventos. Permite crear eventos, controlar la asistencia y vender tickets de forma segura y escalable. Se utilizó Auth0 para autenticación y un enfoque centrado en la experiencia del usuario.",
+    challenges:
+      "Implementar autenticación flexible, control de roles, gestión dinámica de stock de entradas y validación de tickets en tiempo real. Adaptarse a flujos complejos como compra con Google, notificaciones automáticas y comunicación eficiente con los usuarios.",
+    solutions:
+      "Integré Auth0 con soporte para registro y login con Google, un sistema de roles (organizador, usuario, admin), control de acceso, gestión de stock y eventos. También incorporé Nodemailer para notificaciones por email, un chatbot integrado, diseño 100% responsive y generación de tickets únicos con QR.",
     features: [
-      "Sistema de reserva de asientos",
-      "Integración con pasarela de pagos",
-      "Generación de tickets con QR",
-      "Panel de administración de eventos",
-      "Control de asistencia en tiempo real",
-      "Estadísticas de ventas y asistencia"
+      "Login, registro y autenticación vía Auth0 (incluyendo Google)",
+      "Sistema de roles (admin, organizador, usuario)",
+      "Creación, edición y eliminación de eventos",
+      "Gestión de stock de entradas en tiempo real",
+      "Ban y administración de usuarios",
+      "Generación de tickets con código QR único",
+      "Integración con pasarela de pagos segura",
+      "Control de asistencia en vivo",
+      "Nodemailer para envío de correos (confirmación, recordatorios, etc.)",
+      "Chatbot integrado para soporte automatizado",
+      "Dashboard administrativo con estadísticas de ventas y asistencia",
+      "Diseño completamente responsive"
     ],
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
+      "Tailwind CSS",
+      "Shadcn UI",
       "Axios",
+      "Auth0",
+      "Framer Motion",
+      "Nodemailer"
     ],
   },
   {
     id: 4,
     year: "2024",
     title: "La Marina",
-    subtitle: "Ecommerce",
+    subtitle: "Ecommerce de Bazar y Limpieza",
     image: "/fotos-proyectos/3.PNG?height=120&width=200",
     demoUrl: "https://frontend-la-marina.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/la-marina-frontend",
     description:
-      "Tienda online especializada en productos marinos. Incluye catálogo digital, carrito de compras, pagos integrados y gestión de stock.",
-    challenges: "Crear una experiencia de compra fluida con múltiples categorías de productos, sistema de inventario en tiempo real y gestión de envíos.",
-    solutions: "Implementé un sistema de filtros avanzados, carrito de compras persistente, y un panel de administración con control de stock y pedidos.",
+      "Tienda online de productos de bazar y limpieza. Ofrece una experiencia de compra clara y atractiva, con funcionalidades completas para administración, stock, usuarios y notificaciones por email.",
+    challenges:
+      "Lograr una estética profesional para un cliente exigente, junto con la implementación de un sistema completo de ecommerce con gestión de productos, stock, usuarios y pagos.",
+    solutions:
+      "Diseñé una interfaz moderna y responsive, desarrollé funcionalidades para crear, editar y eliminar productos/categorías, integración con pasarela de pagos, gestión de stock, login/registro con control de roles, bloqueo de usuarios y notificaciones automáticas por email usando Nodemailer.",
     features: [
-      "Catálogo con filtros avanzados",
+      "Diseño visual atractivo y 100% responsive",
+      "Login, registro y sistema de roles (admin/usuario)",
+      "Gestión completa de productos y categorías (CRUD)",
+      "Visualización detallada de productos",
       "Carrito de compras persistente",
-      "Sistema de búsqueda inteligente",
-      "Gestión de inventario en tiempo real",
-      "Panel de administración de pedidos",
-      "Integración con pasarela de pagos"
+      "Gestión de stock en tiempo real",
+      "Integración con pasarela de pagos",
+      "Panel administrativo completo",
+      "Bloqueo y control de usuarios",
+      "Notificaciones por email (Nodemailer)",
+      "Filtros por categoría y búsqueda inteligente"
     ],
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
+      "Tailwind CSS",
+      "Shadcn UI",
       "Framer Motion",
-    ],
+      "Nodemailer"
+    ]
   },
   {
     id: 5,
     year: "2024",
     title: "Boostly",
-    subtitle: "Marketing",
+    subtitle: "Agencia de Marketing Digital",
     image: "/fotos-proyectos/7.PNG?height=120&width=200",
     demoUrl: "https://boostly-t749.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/boostly-frontend",
     description:
-      "Sitio para una agencia de marketing digital centrada en SEO y redes sociales. Permite gestionar campañas, analizar resultados y captar nuevos clientes.",
-    challenges: "Desarrollar un sistema que muestre métricas de marketing de forma clara y atractiva, además de facilitar la captación de leads.",
-    solutions: "Creé un dashboard interactivo con gráficos en tiempo real, formularios de contacto optimizados y un sistema de seguimiento de leads.",
+      "Sitio web para agencia de marketing digital especializada en SEO y redes sociales, con estética minimalista black & white inspirada en Vercel.",
+    challenges:
+      "Diseñar una interfaz elegante y moderna, logrando una difícil armonía y elección de colores en una paleta black & white, además de mostrar métricas claras y facilitar la captación de leads.",
+    solutions:
+      "Desarrollé un dashboard interactivo con gráficos en tiempo real, formularios optimizados para captación y un portafolio visual de casos de éxito, todo con una estética sobria y moderna.",
     features: [
-      "Dashboard con métricas en tiempo real",
-      "Sistema de captación de leads",
+      "Dashboard con métricas y gráficos en tiempo real",
+      "Sistema eficiente para captación de leads",
       "Blog optimizado para SEO",
-      "Portafolio de casos de éxito",
-      "Formularios de contacto inteligentes",
-      "Integración con herramientas de análisis"
+      "Portafolio visual de casos de éxito",
+      "Formularios de contacto inteligentes"
     ],
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
-      "Axios",
-    ],
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Axios"
+    ]
   },
   {
     id: 6,
     year: "2024",
     title: "Aura",
-    subtitle: "Contable",
+    subtitle: "Web Contable",
     image: "/fotos-proyectos/6.PNG?height=120&width=200",
     demoUrl: "https://contables.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/aura-frontend",
     description:
-      "Sistema contable para estudios y empresas. Gestiona facturación, gastos, clientes e informes financieros de manera ordenada y profesional.",
-    challenges: "Implementar un sistema que maneje múltiples tipos de documentos contables, cálculos complejos y generación de informes personalizados.",
-    solutions: "Desarrollé un sistema modular de gestión contable con plantillas personalizables, cálculos automáticos y exportación de informes en múltiples formatos.",
+      "Web para estudios y empresas contables, que presenta información sobre facturación, gastos, clientes e informes financieros de manera ordenada y profesional.",
+    challenges:
+      "Primera vez trabajando con una paleta de colores entregada por diseñadora gráfica, sincronizando tonos especiales para lograr un diseño elegante pero con mucha información clara y accesible.",
+    solutions:
+      "Desarrollé una web modular con contenidos organizados, plantillas personalizables y diseño armonioso que facilita la lectura de información compleja.",
     features: [
-      "Gestión de facturación y gastos",
-      "Cálculos contables automáticos",
-      "Generación de informes personalizados",
+      "Presentación de facturación y gastos",
+      "Visualización de informes personalizados",
       "Sistema de recordatorios y alertas",
-      "Gestión de clientes y proveedores",
+      "Gestión visual de clientes y proveedores",
       "Exportación de datos en múltiples formatos"
     ],
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
-      "Framer Motion",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Framer Motion"
     ],
   },
   {
     id: 7,
     year: "2024",
     title: "BYAS",
-    subtitle: "Ingeniería",
+    subtitle: "Web de Ingeniería",
     image: "/fotos-proyectos/8.PNG?height=120&width=200",
     demoUrl: "https://byas.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/byas-frontend",
     description:
-      "Herramienta digital para ingenieros civiles. Permite administrar proyectos, almacenar cálculos y organizar documentación técnica.",
-    challenges: "Crear un sistema que maneje documentación técnica compleja, cálculos especializados y seguimiento de proyectos de ingeniería.",
-    solutions: "Implementé un sistema de gestión documental con versionado, calculadora de fórmulas de ingeniería y seguimiento de proyectos con Gantt.",
+      "Web para un estudio de ingeniería civil que presenta más de 50 años de experiencia, proyectos, servicios y documentación técnica de forma clara y organizada.",
+    challenges:
+      "El mayor desafío fue organizar y mantener toda la información acumulada en 50 años, incluyendo numerosos proyectos, servicios y documentación técnica, en una web accesible y bien estructurada.",
+    solutions:
+      "Diseñé una estructura modular con gestión documental, visualización de proyectos, calculadora de fórmulas y seguimiento mediante diagramas tipo Gantt, facilitando el acceso a información compleja.",
     features: [
-      "Gestión de documentación técnica",
+      "Presentación de proyectos y servicios",
+      "Gestión de documentación técnica con versionado",
       "Calculadora de fórmulas de ingeniería",
       "Seguimiento de proyectos con Gantt",
       "Almacenamiento de planos y especificaciones",
-      "Sistema de versionado de documentos",
       "Reportes técnicos personalizados"
     ],
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
-      "Axios",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Axios"
     ],
   },
   {
     id: 8,
     year: "2024",
     title: "Mueblito",
-    subtitle: "Muebles",
+    subtitle: "Web de Muebles",
     image: "/fotos-proyectos/9.PNG?height=120&width=200",
     demoUrl: "https://art-ydeisgn.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/mueblito-frontend",
     description:
-      "Ecommerce de muebles artesanales. Catálogo dinámico con productos personalizados y sistema de pedidos a medida.",
-    challenges: "Desarrollar un sistema que permita mostrar productos personalizables y gestionar pedidos a medida con múltiples opciones de personalización.",
-    solutions: "Creé un configurador de productos interactivo, sistema de presupuestos automáticos y seguimiento de pedidos personalizados.",
+      "Tienda online familiar de muebles artesanales, con catálogo dinámico de productos personalizados y sistema de pedidos a medida.",
+    challenges:
+      "Diseñar una web con estilo diferente a mis proyectos previos, integrando un configurador de productos personalizado que reflejara el cariño y experiencia familiar.",
+    solutions:
+      "Implementé un configurador interactivo, presupuesto automático y un sistema de seguimiento para pedidos personalizados, logrando una experiencia fluida y cercana.",
     features: [
       "Configurador de productos interactivo",
       "Sistema de presupuestos automáticos",
@@ -246,11 +286,12 @@ export const projects: Project[] = [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
-      "Framer Motion",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Framer Motion"
     ],
-  },
+  }
+  ,
   {
     id: 10,
     year: "2024",
@@ -260,9 +301,11 @@ export const projects: Project[] = [
     demoUrl: "https://v0-colorshop-remitos-jdu4ku.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/colorshop-frontend",
     description:
-      "Sistema de remitos para tiendas de pintura. Facilita el control de entregas, stock e historial de pedidos.",
-    challenges: "Implementar un sistema que maneje múltiples tipos de productos, control de stock en tiempo real y generación de remitos personalizados.",
-    solutions: "Desarrollé un sistema de gestión de inventario con alertas de stock, generación de remitos con códigos únicos y seguimiento de entregas.",
+      "Sistema de gestión de remitos para tiendas de pintura, que facilita el control de entregas, stock y el historial de pedidos entre sucursales y empresas.",
+    challenges:
+      "Diseñar un sistema que maneje múltiples productos, control de stock en tiempo real y generación de remitos personalizados con códigos únicos, manteniendo una estética limpia y funcional.",
+    solutions:
+      "Implementé gestión de inventario con alertas, generación de remitos con códigos únicos y seguimiento detallado de entregas y pedidos.",
     features: [
       "Gestión de inventario en tiempo real",
       "Generación de remitos con códigos únicos",
@@ -275,9 +318,9 @@ export const projects: Project[] = [
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Shadcn",
-      "Axios",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Axios"
     ],
   },
   {
