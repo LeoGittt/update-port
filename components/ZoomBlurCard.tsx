@@ -41,6 +41,7 @@ const TextReveal: React.FC<TextRevealProps> = ({
         className
       )}
       style={{ lineHeight }}
+      aria-hidden="true"
     >
       <motion.div>
         {children.split("").map((letter, index) => (
@@ -97,33 +98,31 @@ const ZoomBlurCard: React.FC<ZoomBlurCardProps> = ({
   const cardContent = (
     <motion.div
       className={clsx(
-        "relative w-full h-52 rounded-2xl overflow-hidden group border border-white/10 shadow-sm", // bordes más redondeados y sutil borde
+        "relative w-full h-52 rounded-2xl overflow-hidden group border border-white/10 shadow-sm",
         "transition-all duration-500 ease-out",
         className
       )}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       initial={false}
+      role="article"
+      aria-labelledby={`card-title-${title}`}
     >
       {/* Imagen de fondo con efecto de zoom y blur */}
       <div className="absolute inset-0 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-950 rounded-2xl">
-        {" "}
-        {/* bordes redondeados */}
         <Image
           src={imageUrl}
-          alt={title}
+          alt={`Imagen del proyecto ${title}`}
           fill
           className={clsx(
-            "object-cover transition-all duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] rounded-2xl", // bordes redondeados
+            "object-cover transition-all duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] rounded-2xl",
             isHovered
               ? "scale-110 opacity-70 blur-[1px]"
               : "scale-100 opacity-60 blur-0"
           )}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        {/* Overlay de gradiente */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent rounded-2xl" />{" "}
-        {/* bordes redondeados */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent rounded-2xl" aria-hidden="true" />
       </div>
 
       {/* Contenido */}
@@ -133,19 +132,19 @@ const ZoomBlurCard: React.FC<ZoomBlurCardProps> = ({
           className="self-end"
           animate={{
             rotate: isHovered ? 45 : 0,
-            scale: isHovered ? 1.1 : 1, // escala más sutil
+            scale: isHovered ? 1.1 : 1,
           }}
           transition={{ type: "spring", stiffness: 300, damping: 15 }}
+          aria-hidden="true"
         >
-          <FaArrowRightLong className="w-4 h-4 opacity-80" />{" "}
-          {/* icono más pequeño */}
+          <FaArrowRightLong className="w-4 h-4 opacity-80" />
         </motion.div>
 
         {/* Sección inferior - texto */}
-        <div className="space-y-1"> {/* menos espacio entre título y descripción */}
+        <div className="space-y-1">
           {/* Tags */}
           {tags.length > 0 && (
-            <div className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-1" role="list" aria-label="Tecnologías utilizadas">
               {tags.slice(0, 3).map((tag, index) => (
                 <motion.span
                   key={index}
@@ -156,6 +155,7 @@ const ZoomBlurCard: React.FC<ZoomBlurCardProps> = ({
                   }}
                   transition={{ delay: index * 0.05 }}
                   className="px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-black/40 backdrop-blur-sm border border-white/10"
+                  role="listitem"
                 >
                   {tag}
                 </motion.span>
@@ -163,7 +163,7 @@ const ZoomBlurCard: React.FC<ZoomBlurCardProps> = ({
             </div>
           )}
           {/* Título con animación */}
-          <h3 className="overflow-hidden">
+          <h3 className="overflow-hidden" id={`card-title-${title}`}>
             <TextReveal
               isHovered={true}
               className="text-base font-bold mb-0.5 tracking-tight text-white drop-shadow-sm"
@@ -192,10 +192,11 @@ const ZoomBlurCard: React.FC<ZoomBlurCardProps> = ({
 
       {/* Overlay hover */}
       <motion.div
-        className="absolute inset-0 bg-indigo-500/10 pointer-events-none rounded-2xl" // bordes redondeados
+        className="absolute inset-0 bg-indigo-500/10 pointer-events-none rounded-2xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
+        aria-hidden="true"
       />
     </motion.div>
   );
@@ -206,6 +207,7 @@ const ZoomBlurCard: React.FC<ZoomBlurCardProps> = ({
       target="_blank"
       rel="noopener noreferrer"
       className="block hover:cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50 rounded-xl"
+      aria-label={`Ver proyecto ${title}`}
     >
       {cardContent}
     </a>

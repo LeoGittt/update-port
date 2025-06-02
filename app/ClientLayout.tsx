@@ -1,0 +1,45 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Navbar from "@/components/layout/Navbar";
+import SkipToContent from "@/components/ui/SkipToContent";
+import HighContrastToggle from "@/components/ui/HighContrastToggle";
+import ScrollToTop from "@/components/ui/ScrollToTop";
+
+export default function ClientLayout({ children }: { children: React.ReactNode }) {
+  const [activeSection, setActiveSection] = useState("");
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
+    }
+  };
+
+  return (
+    <>
+      <SkipToContent />
+      <Navbar 
+        activeSection={activeSection} 
+        scrollY={scrollY} 
+        scrollToSection={scrollToSection} 
+      />
+      <HighContrastToggle />
+      <main id="main-content" tabIndex={-1}>
+        {children}
+      </main>
+      <ScrollToTop />
+    </>
+  );
+} 

@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { metadata } from "./metadata";
+import ClientLayout from "./ClientLayout";
 
-export const metadata: Metadata = {
-  title: "Leonel Gonzalez | Frontend Developer",
-  description: "Portfolio profesional de Leonel Gonzalez, desarrollador frontend especializado en React, Next.js y TypeScript",
-  keywords: ["desarrollador frontend", "React", "Next.js", "TypeScript", "JavaScript", "web development"],
-  authors: [{ name: "Leonel Gonzalez" }],
-  viewport: "width=device-width, initial-scale=1",
-  robots: "index, follow",
-};
+const inter = Inter({ subsets: ["latin"] });
+
+export { metadata };
 
 export default function RootLayout({
   children,
@@ -16,18 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <head>
-        <meta name="theme-color" content="#000000" />
-        <link rel="canonical" href="https://tu-dominio.com" />
-      </head>
-      <body>
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-black focus:text-white">
-          Saltar al contenido principal
-        </a>
-        <main id="main-content" role="main">
-          {children}
-        </main>
+    <html lang="es" className="scroll-smooth">
+      <body className={`${inter.className} bg-[#0a0a0a] text-white antialiased`}>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

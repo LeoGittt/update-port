@@ -13,6 +13,7 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
   return (
     <section
       id="contacto"
+      aria-label="Sección de contacto"
       className={`px-4 py-12 ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
       <div className="text-center mb-10">
@@ -22,11 +23,19 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10">
+      <div 
+        className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10"
+        role="list"
+        aria-label="Información de contacto"
+      >
         {contactInfo.map(({ icon: Icon, title, value, href, description }) => (
-          <Card key={title} className="bg-gray-900/5 rounded-lg border border-gray-800/10">
+          <Card 
+            key={title} 
+            className="bg-gray-900/5 rounded-lg border border-gray-800/10"
+            role="listitem"
+          >
             <CardContent className="p-4 text-center">
-              <div className="flex justify-center mb-3">
+              <div className="flex justify-center mb-3" aria-hidden="true">
                 <Icon className="w-4 h-4 text-gray-300" />
               </div>
               <h3 className="text-sm font-normal mb-1 text-gray-200">{title}</h3>
@@ -37,8 +46,11 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
                   variant="ghost"
                   className="text-xs p-0 h-auto text-gray-500"
                 >
-                  <Link href={href}>
-                    Contactar <ArrowUpRight className="ml-1 w-3 h-3" />
+                  <Link 
+                    href={href}
+                    aria-label={`Contactar por ${title}`}
+                  >
+                    Contactar <ArrowUpRight className="ml-1 w-3 h-3" aria-hidden="true" />
                   </Link>
                 </Button>
               )}
@@ -47,13 +59,20 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
         ))}
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-center gap-2">
+      <div 
+        className="flex flex-col sm:flex-row justify-center gap-2"
+        role="navigation"
+        aria-label="Enlaces de contacto rápido"
+      >
         <Button
           asChild
           className="bg-white/90 text-black px-5 py-2 text-xs rounded-full"
         >
-          <Link href="mailto:leonel.gonzalez.dev@gmail.com">
-            <Mail className="mr-1 h-3 w-3" /> Email
+          <Link 
+            href="mailto:leonel.gonzalez.dev@gmail.com"
+            aria-label="Enviar correo electrónico"
+          >
+            <Mail className="mr-1 h-3 w-3" aria-hidden="true" /> Email
           </Link>
         </Button>
         <Button
@@ -61,8 +80,13 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
           variant="ghost"
           className="text-gray-300 px-5 py-2 text-xs rounded-full"
         >
-          <Link href="https://bit.ly/40vJTjP" target="_blank">
-            <Linkedin className="mr-1 h-3 w-3" /> LinkedIn
+          <Link 
+            href="https://bit.ly/40vJTjP" 
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar perfil de LinkedIn"
+          >
+            <Linkedin className="mr-1 h-3 w-3" aria-hidden="true" /> LinkedIn
           </Link>
         </Button>
         <Button
@@ -70,8 +94,13 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
           variant="ghost"
           className="text-gray-300 px-5 py-2 text-xs rounded-full"
         >
-          <Link href="https://bit.ly/3NMKOVe" target="_blank">
-            <Github className="mr-1 h-3 w-3" /> GitHub
+          <Link 
+            href="https://bit.ly/3NMKOVe" 
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar perfil de GitHub"
+          >
+            <Github className="mr-1 h-3 w-3" aria-hidden="true" /> GitHub
           </Link>
         </Button>
       </div>

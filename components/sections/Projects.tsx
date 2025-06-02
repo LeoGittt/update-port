@@ -13,22 +13,28 @@ export default function Projects({ isVisible, projects, setSelectedProject }: Pr
   return (
     <section
       id="proyectos"
+      aria-label="Sección de proyectos"
       className={`px-4 sm:px-8 py-8 sm:py-12 border-t border-gray-800/40 transition-all duration-500 delay-100 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
       <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
-        <div className="p-2 rounded-lg ">
+        <div className="p-2 rounded-lg" aria-hidden="true">
           <Code className="w-5 h-5 text-emerald-600" />
         </div>
         <h2 className="text-xl font-bold">Proyectos</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
+      <div 
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8"
+        role="list"
+        aria-label="Lista de proyectos"
+      >
         {projects.map((project) => (
           <div
             key={project.id}
             className="relative group overflow-hidden rounded-2xl"
+            role="listitem"
           >
             <ZoomBlurCard
               title={project.title}
@@ -36,7 +42,11 @@ export default function Projects({ isVisible, projects, setSelectedProject }: Pr
               imageUrl={project.image}
             />
             {/* Overlay con botones */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/80 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 p-4">
+            <div 
+              className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/80 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 p-4"
+              role="group"
+              aria-label={`Acciones para el proyecto ${project.title}`}
+            >
               <h3 className="text-lg font-semibold text-white mb-2">
                 {project.title}
               </h3>
@@ -49,6 +59,7 @@ export default function Projects({ isVisible, projects, setSelectedProject }: Pr
                     e.stopPropagation();
                     window.open(project.demoUrl, "_blank");
                   }}
+                  aria-label={`Ver demo del proyecto ${project.title}`}
                 >
                   Ver Demo
                 </Button>
@@ -61,6 +72,7 @@ export default function Projects({ isVisible, projects, setSelectedProject }: Pr
                     e.stopPropagation();
                     setSelectedProject(project);
                   }}
+                  aria-label={`Ver detalles del proyecto ${project.title}`}
                 >
                   Ver Detalles
                 </Button>

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -9,6 +11,23 @@ interface NavbarProps {
 
 export default function Navbar({ activeSection, scrollY, scrollToSection }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    // Verificar al montar el componente
+    checkIfMobile();
+
+    // Verificar cuando cambia el tamaño de la ventana
+    window.addEventListener('resize', checkIfMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
 
   return (
     <nav
@@ -17,39 +36,37 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
       className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out w-full max-w-6xl px-4 sm:px-6 ${
         scrollY > 20
           ? "bg-black/85 backdrop-blur-xl border border-gray-700/40 rounded-none sm:rounded-2xl mt-0 sm:mt-2 shadow-2xl shadow-black/50"
-          : "bg-black/0 border-0 shadow-none mt-0 sm:mt-2"
+          : "bg-black/40 backdrop-blur-md border border-gray-700/20 rounded-none sm:rounded-2xl mt-0 sm:mt-2 shadow-lg shadow-black/30"
       }`}
-      style={scrollY > 20 ? { borderColor: "#23272f" } : {}}
+      style={scrollY > 20 ? { borderColor: "#23272f" } : { borderColor: "#23272f40" }}
     >
       <div className="px-4 sm:px-8 py-4 sm:py-4">
         {/* Mobile Navigation */}
         <div className="flex items-center justify-between sm:hidden">
-          <div className="text-sm font-semibold text-white tracking-wide" role="banner">
+          <div className="text-sm font-semibold text-white tracking-wide bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent" role="banner">
             Leonel González
           </div>
-          {typeof window !== "undefined" && window.innerWidth >= 640 && (
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-xl bg-gray-900/40 hover:bg-gray-800/60 transition-all duration-300"
-              aria-expanded={isMobileMenuOpen}
-              aria-controls="mobile-menu"
-              aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-4 h-4" aria-hidden="true" />
-              ) : (
-                <Menu className="w-4 h-4" aria-hidden="true" />
-              )}
-            </button>
-          )}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 rounded-xl  transition-all duration-300 hover:scale-105 active:scale-95"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-4 h-4 text-white" aria-hidden="true" />
+            ) : (
+              <Menu className="w-4 h-4 text-white" aria-hidden="true" />
+            )}
+          </button>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden sm:flex items-center justify-between">
-          <div className="text-sm font-semibold text-white tracking-wide" role="banner">
+          <div className="text-sm font-semibold tracking-wide bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent" role="banner">
             Leonel González
           </div>
-          <div className="flex items-center space-x-6" role="menubar">
+          <div className="flex items-center space-x-8" role="menubar">
             {["inicio", "proyectos", "experiencia", "contacto"].map(
               (section) => (
                 <button
@@ -57,7 +74,7 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
                   onClick={() => scrollToSection(section)}
                   role="menuitem"
                   aria-current={activeSection === section ? "page" : undefined}
-                  className={`text-xs font-medium transition-all duration-300 relative capitalize ${
+                  className={`text-xs font-medium transition-all duration-300 relative capitalize hover:scale-105 ${
                     activeSection === section
                       ? "text-white"
                       : "text-gray-400 hover:text-white"
@@ -65,7 +82,7 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
                 >
                   {section}
                   {activeSection === section && (
-                    <div className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" aria-hidden="true"></div>
+                    <div className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent animate-pulse" aria-hidden="true"></div>
                   )}
                 </button>
               )
@@ -74,36 +91,37 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen &&
-          typeof window !== "undefined" &&
-          window.innerWidth >= 640 && (
-            <div 
-              id="mobile-menu"
-              className="sm:hidden mt-4 pb-4 border-t border-gray-800/40 pt-4"
-              role="menu"
-              aria-label="Menú móvil"
-            >
-              <div className="flex flex-col space-y-3">
-                {["inicio", "proyectos", "experiencia", "contacto"].map(
-                  (section) => (
-                    <button
-                      key={section}
-                      onClick={() => scrollToSection(section)}
-                      role="menuitem"
-                      aria-current={activeSection === section ? "page" : undefined}
-                      className={`text-left text-sm font-medium transition-all duration-300 capitalize py-2 px-3 rounded-lg ${
-                        activeSection === section
-                          ? "text-white bg-gray-900/40"
-                          : "text-gray-400 hover:text-white hover:bg-gray-900/20"
-                      }`}
-                    >
-                      {section}
-                    </button>
-                  )
-                )}
-              </div>
+        {isMobileMenuOpen && (
+          <div 
+            id="mobile-menu"
+            className="sm:hidden mt-4 pb-4 border-t border-gray-800/40 pt-4 animate-fadeIn bg-black/30 backdrop-blur-sm rounded-xl"
+            role="menu"
+            aria-label="Menú móvil"
+          >
+            <div className="flex flex-col space-y-3">
+              {["inicio", "proyectos", "experiencia", "contacto"].map(
+                (section) => (
+                  <button
+                    key={section}
+                    onClick={() => {
+                      scrollToSection(section);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    role="menuitem"
+                    aria-current={activeSection === section ? "page" : undefined}
+                    className={`text-left text-sm font-medium transition-all duration-300 capitalize py-2.5 px-4 rounded-lg hover:scale-[1.02] active:scale-[0.98] ${
+                      activeSection === section
+                        ? "text-white bg-gradient-to-r from-gray-900/60 to-gray-800/60 shadow-lg"
+                        : "text-gray-400 hover:text-white hover:bg-gray-900/40"
+                    }`}
+                  >
+                    {section}
+                  </button>
+                )
+              )}
             </div>
-          )}
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -92,3 +92,123 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Estilos base */
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+/* Estilos de alto contraste */
+.high-contrast {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+  --accent-color: 255, 255, 0;
+  --link-color: 0, 255, 255;
+  --text-color: 255, 255, 255;
+  --border-color: 255, 255, 255;
+}
+
+.high-contrast body {
+  background-color: rgb(var(--background-rgb)) !important;
+  color: rgb(var(--text-color)) !important;
+}
+
+.high-contrast a {
+  color: rgb(var(--link-color)) !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast button,
+.high-contrast [role="button"] {
+  border: 2px solid rgb(var(--border-color)) !important;
+  background-color: transparent !important;
+  color: rgb(var(--text-color)) !important;
+}
+
+.high-contrast button:hover,
+.high-contrast [role="button"]:hover {
+  background-color: rgb(var(--accent-color)) !important;
+  color: rgb(var(--background-rgb)) !important;
+}
+
+.high-contrast img {
+  filter: contrast(1.2) !important;
+}
+
+.high-contrast .text-emerald-400,
+.high-contrast .text-emerald-500,
+.high-contrast .text-emerald-600 {
+  color: rgb(var(--accent-color)) !important;
+}
+
+.high-contrast .text-gray-400,
+.high-contrast .text-gray-300,
+.high-contrast .text-gray-200 {
+  color: rgb(var(--text-color)) !important;
+}
+
+.high-contrast .bg-emerald-400,
+.high-contrast .bg-emerald-500,
+.high-contrast .bg-emerald-600 {
+  background-color: rgb(var(--accent-color)) !important;
+  color: rgb(var(--background-rgb)) !important;
+}
+
+.high-contrast .border-gray-800,
+.high-contrast .border-gray-700 {
+  border-color: rgb(var(--border-color)) !important;
+}
+
+/* Mejoras de accesibilidad */
+:focus-visible {
+  outline: 3px solid rgb(var(--accent-color)) !important;
+  outline-offset: 2px !important;
+}
+
+/* Animaciones reducidas para usuarios que las prefieren */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mejoras de legibilidad */
+.text-sm {
+  line-height: 1.6;
+}
+
+.text-xs {
+  line-height: 1.5;
+}
+
+/* Mejoras de contraste */
+.text-gray-400 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-gray-300 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mejoras de interacción */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid rgb(var(--accent-color));
+  outline-offset: 2px;
+}
+
+/* Mejoras de navegación por teclado */
+:focus {
+  outline: 3px solid rgb(var(--accent-color));
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
