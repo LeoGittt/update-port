@@ -45,7 +45,7 @@ export const projects: Project[] = [
       "Notificaciones push y por correo electrónico",
       "Exportación de reportes e informes",
       "Animaciones fluidas con Framer Motion",
-      "Diseño completamente responsive para desktop y mobile"
+      "Diseño completamente responsive para desktop y mobile",
     ],
     technologies: [
       "Next.js",
@@ -54,7 +54,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "Shadcn UI",
       "Axios",
-      "Framer Motion"
+      "Framer Motion",
     ],
   },
   {
@@ -80,7 +80,7 @@ export const projects: Project[] = [
       "Sistema de favoritos y comparación de vehículos",
       "Animaciones e interacciones con Framer Motion",
       "Íconos modernos y consistentes con Lucide React",
-      "Diseño 100% responsive para desktop y mobile"
+      "Diseño 100% responsive para desktop y mobile",
     ],
     technologies: [
       "Next.js",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "Shadcn UI",
       "Framer Motion",
-      "Lucide React"
+      "Lucide React",
     ],
   },
   {
@@ -118,7 +118,7 @@ export const projects: Project[] = [
       "Nodemailer para envío de correos (confirmación, recordatorios, etc.)",
       "Chatbot integrado para soporte automatizado",
       "Dashboard administrativo con estadísticas de ventas y asistencia",
-      "Diseño completamente responsive"
+      "Diseño completamente responsive",
     ],
     technologies: [
       "Next.js",
@@ -129,7 +129,7 @@ export const projects: Project[] = [
       "Axios",
       "Auth0",
       "Framer Motion",
-      "Nodemailer"
+      "Nodemailer",
     ],
   },
   {
@@ -157,7 +157,7 @@ export const projects: Project[] = [
       "Panel administrativo completo",
       "Bloqueo y control de usuarios",
       "Notificaciones por email (Nodemailer)",
-      "Filtros por categoría y búsqueda inteligente"
+      "Filtros por categoría y búsqueda inteligente",
     ],
     technologies: [
       "Next.js",
@@ -166,8 +166,8 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "Shadcn UI",
       "Framer Motion",
-      "Nodemailer"
-    ]
+      "Nodemailer",
+    ],
   },
   {
     id: 5,
@@ -188,7 +188,7 @@ export const projects: Project[] = [
       "Sistema eficiente para captación de leads",
       "Blog optimizado para SEO",
       "Portafolio visual de casos de éxito",
-      "Formularios de contacto inteligentes"
+      "Formularios de contacto inteligentes",
     ],
     technologies: [
       "Next.js",
@@ -196,8 +196,8 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Shadcn UI",
-      "Axios"
-    ]
+      "Axios",
+    ],
   },
   {
     id: 6,
@@ -218,7 +218,7 @@ export const projects: Project[] = [
       "Visualización de informes personalizados",
       "Sistema de recordatorios y alertas",
       "Gestión visual de clientes y proveedores",
-      "Exportación de datos en múltiples formatos"
+      "Exportación de datos en múltiples formatos",
     ],
     technologies: [
       "Next.js",
@@ -226,7 +226,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Shadcn UI",
-      "Framer Motion"
+      "Framer Motion",
     ],
   },
   {
@@ -249,7 +249,7 @@ export const projects: Project[] = [
       "Calculadora de fórmulas de ingeniería",
       "Seguimiento de proyectos con Gantt",
       "Almacenamiento de planos y especificaciones",
-      "Reportes técnicos personalizados"
+      "Reportes técnicos personalizados",
     ],
     technologies: [
       "Next.js",
@@ -257,7 +257,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Shadcn UI",
-      "Axios"
+      "Axios",
     ],
   },
   {
@@ -280,7 +280,7 @@ export const projects: Project[] = [
       "Catálogo con filtros avanzados",
       "Seguimiento de pedidos personalizados",
       "Galería de proyectos realizados",
-      "Sistema de consultas técnicas"
+      "Sistema de consultas técnicas",
     ],
     technologies: [
       "Next.js",
@@ -288,10 +288,9 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Shadcn UI",
-      "Framer Motion"
+      "Framer Motion",
     ],
-  }
-  ,
+  },
   {
     id: 10,
     year: "2024",
@@ -312,7 +311,7 @@ export const projects: Project[] = [
       "Sistema de alertas de stock",
       "Historial de pedidos y entregas",
       "Reportes de ventas y stock",
-      "Gestión de clientes frecuentes"
+      "Gestión de clientes frecuentes",
     ],
     technologies: [
       "Next.js",
@@ -320,7 +319,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Shadcn UI",
-      "Axios"
+      "Axios",
     ],
   },
   {
@@ -333,15 +332,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/souls-digitals-frontend",
     description:
       "Landing page para agencia digital. Destaca servicios de contenido, posicionamiento y blog corporativo optimizado para SEO.",
-    challenges: "Crear una landing page atractiva que muestre los servicios de marketing digital de forma clara y genere leads de calidad.",
-    solutions: "Implementé un diseño moderno con animaciones suaves, blog optimizado para SEO y formularios de contacto inteligentes.",
+    challenges:
+      "Crear una landing page atractiva que muestre los servicios de marketing digital de forma clara y genere leads de calidad.",
+    solutions:
+      "Implementé un diseño moderno con animaciones suaves, blog optimizado para SEO y formularios de contacto inteligentes.",
     features: [
       "Diseño moderno y responsivo",
       "Blog optimizado para SEO",
       "Formularios de contacto inteligentes",
       "Portafolio de casos de éxito",
       "Sección de servicios interactiva",
-      "Integración con herramientas de análisis"
+      "Integración con herramientas de análisis",
     ],
     technologies: [
       "Next.js",
@@ -362,15 +363,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/servisplit-frontend",
     description:
       "Gestión de servicios técnicos de aire acondicionado. Agenda de visitas, historial de clientes y seguimiento de reparaciones.",
-    challenges: "Desarrollar un sistema que maneje múltiples técnicos, agenda de visitas y seguimiento de reparaciones en tiempo real.",
-    solutions: "Implementé un sistema de gestión de turnos, seguimiento de reparaciones y notificaciones automáticas para clientes y técnicos.",
+    challenges:
+      "Desarrollar un sistema que maneje múltiples técnicos, agenda de visitas y seguimiento de reparaciones en tiempo real.",
+    solutions:
+      "Implementé un sistema de gestión de turnos, seguimiento de reparaciones y notificaciones automáticas para clientes y técnicos.",
     features: [
       "Sistema de gestión de turnos",
       "Seguimiento de reparaciones",
       "Historial de clientes",
       "Notificaciones automáticas",
       "Reportes de servicio",
-      "Gestión de técnicos y zonas"
+      "Gestión de técnicos y zonas",
     ],
     technologies: [
       "Next.js",
@@ -391,15 +394,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/isr-frontend",
     description:
       "Sistema para talleres mecánicos. Controla turnos, servicios realizados, clientes y repuestos utilizados.",
-    challenges: "Crear un sistema que maneje múltiples servicios automotrices, inventario de repuestos y seguimiento de reparaciones.",
-    solutions: "Desarrollé un sistema integral con gestión de turnos, control de inventario y seguimiento de servicios en tiempo real.",
+    challenges:
+      "Crear un sistema que maneje múltiples servicios automotrices, inventario de repuestos y seguimiento de reparaciones.",
+    solutions:
+      "Desarrollé un sistema integral con gestión de turnos, control de inventario y seguimiento de servicios en tiempo real.",
     features: [
       "Gestión de turnos y servicios",
       "Control de inventario de repuestos",
       "Historial de clientes y vehículos",
       "Seguimiento de reparaciones",
       "Reportes de servicios",
-      "Gestión de técnicos y especialidades"
+      "Gestión de técnicos y especialidades",
     ],
     technologies: [
       "Next.js",
@@ -420,15 +425,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/cuatro-a-frontend",
     description:
       "Sitio institucional para estudio contable. Gestión documental, atención a clientes y administración tributaria.",
-    challenges: "Desarrollar un sistema que facilite la comunicación con clientes y la gestión de documentación contable de forma segura.",
-    solutions: "Implementé un portal de clientes con acceso seguro, sistema de mensajería interna y gestión documental organizada.",
+    challenges:
+      "Desarrollar un sistema que facilite la comunicación con clientes y la gestión de documentación contable de forma segura.",
+    solutions:
+      "Implementé un portal de clientes con acceso seguro, sistema de mensajería interna y gestión documental organizada.",
     features: [
       "Portal de clientes seguro",
       "Sistema de mensajería interna",
       "Gestión documental organizada",
       "Calendario de vencimientos",
       "Notificaciones automáticas",
-      "Acceso a documentación histórica"
+      "Acceso a documentación histórica",
     ],
     technologies: [
       "Next.js",
@@ -449,15 +456,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/clinica-frontend",
     description:
       "Sistema de turnos y gestión de pacientes para una clínica de masajes. Permite agendar citas y llevar el historial de tratamientos.",
-    challenges: "Implementar un sistema de turnos que maneje múltiples terapeutas, diferentes tipos de tratamientos y seguimiento de pacientes.",
-    solutions: "Desarrollé un sistema de reservas online, historial de tratamientos y seguimiento de evolución de pacientes.",
+    challenges:
+      "Implementar un sistema de turnos que maneje múltiples terapeutas, diferentes tipos de tratamientos y seguimiento de pacientes.",
+    solutions:
+      "Desarrollé un sistema de reservas online, historial de tratamientos y seguimiento de evolución de pacientes.",
     features: [
       "Sistema de reservas online",
       "Historial de tratamientos",
       "Seguimiento de pacientes",
       "Gestión de terapeutas",
       "Recordatorios automáticos",
-      "Reportes de asistencia"
+      "Reportes de asistencia",
     ],
     technologies: [
       "Next.js",
@@ -477,15 +486,17 @@ export const projects: Project[] = [
     demoUrl: "https://mardeazucar.mitiendanube.com/",
     description:
       "Ecommerce para una cafetería boutique. Catálogo con productos destacados, promociones y pedidos personalizados.",
-    challenges: "Crear una tienda online que refleje la identidad de la cafetería y permita gestionar pedidos especiales y promociones.",
-    solutions: "Implementé una tienda con diseño personalizado, sistema de pedidos especiales y gestión de promociones.",
+    challenges:
+      "Crear una tienda online que refleje la identidad de la cafetería y permita gestionar pedidos especiales y promociones.",
+    solutions:
+      "Implementé una tienda con diseño personalizado, sistema de pedidos especiales y gestión de promociones.",
     features: [
       "Catálogo de productos destacados",
       "Sistema de pedidos especiales",
       "Gestión de promociones",
       "Blog de recetas y novedades",
       "Programa de fidelización",
-      "Pedidos para eventos"
+      "Pedidos para eventos",
     ],
     technologies: ["Tienda Nube"],
   },
@@ -499,15 +510,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/space-burguer-frontend",
     description:
       "Menú interactivo para hamburguesería. Diseño atractivo y funcional con sistema de pedidos online.",
-    challenges: "Crear un menú digital atractivo que facilite la selección de productos y personalización de pedidos.",
-    solutions: "Desarrollé un menú interactivo con animaciones suaves, sistema de personalización de productos y pedidos online.",
+    challenges:
+      "Crear un menú digital atractivo que facilite la selección de productos y personalización de pedidos.",
+    solutions:
+      "Desarrollé un menú interactivo con animaciones suaves, sistema de personalización de productos y pedidos online.",
     features: [
       "Menú interactivo con animaciones",
       "Sistema de personalización de productos",
       "Pedidos online",
       "Galería de productos",
       "Sistema de promociones",
-      "Integración con delivery"
+      "Integración con delivery",
     ],
     technologies: [
       "Next.js",
@@ -528,15 +541,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/amigos-frontend",
     description:
       "Aplicación para dividir y llevar el control de gastos entre amigos. Ideal para viajes, salidas y proyectos compartidos.",
-    challenges: "Implementar un sistema que permita dividir gastos de forma justa y llevar un control claro de deudas entre usuarios.",
-    solutions: "Desarrollé un sistema de división de gastos automático, seguimiento de deudas y notificaciones de pagos.",
+    challenges:
+      "Implementar un sistema que permita dividir gastos de forma justa y llevar un control claro de deudas entre usuarios.",
+    solutions:
+      "Desarrollé un sistema de división de gastos automático, seguimiento de deudas y notificaciones de pagos.",
     features: [
       "División automática de gastos",
       "Seguimiento de deudas",
       "Notificaciones de pagos",
       "Historial de gastos",
       "Estadísticas de gastos",
-      "Exportación de reportes"
+      "Exportación de reportes",
     ],
     technologies: [
       "Next.js",
@@ -557,15 +572,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/truco-frontend",
     description:
       "Guía digital para aprender a jugar al truco. Reglas explicadas, jugadas y práctica interactiva para nuevos jugadores.",
-    challenges: "Crear una guía interactiva que explique las reglas del truco de forma clara y permita practicar jugadas.",
-    solutions: "Implementé una guía paso a paso con ejemplos visuales, práctica de jugadas y explicaciones detalladas.",
+    challenges:
+      "Crear una guía interactiva que explique las reglas del truco de forma clara y permita practicar jugadas.",
+    solutions:
+      "Implementé una guía paso a paso con ejemplos visuales, práctica de jugadas y explicaciones detalladas.",
     features: [
       "Guía paso a paso",
       "Ejemplos visuales de jugadas",
       "Práctica interactiva",
       "Glosario de términos",
       "Trucos y consejos",
-      "Modo offline"
+      "Modo offline",
     ],
     technologies: [
       "Next.js",
@@ -586,15 +603,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/leonelgonzalezdev/empreid-frontend",
     description:
       "Sitio corporativo para una fábrica de software. Presenta servicios, proyectos y enfoque profesional de desarrollo.",
-    challenges: "Crear un sitio que muestre la capacidad técnica y profesional de la empresa, además de facilitar la captación de clientes.",
-    solutions: "Desarrollé un sitio corporativo moderno con portafolio de proyectos, blog técnico y sistema de contacto.",
+    challenges:
+      "Crear un sitio que muestre la capacidad técnica y profesional de la empresa, además de facilitar la captación de clientes.",
+    solutions:
+      "Desarrollé un sitio corporativo moderno con portafolio de proyectos, blog técnico y sistema de contacto.",
     features: [
       "Portafolio de proyectos",
       "Blog técnico",
       "Sistema de contacto",
       "Presentación de servicios",
       "Equipo de desarrollo",
-      "Casos de éxito"
+      "Casos de éxito",
     ],
     technologies: [
       "Next.js",
@@ -603,6 +622,37 @@ export const projects: Project[] = [
       "Tailwind",
       "Shadcn",
       "Axios",
+    ],
+  },
+  {
+    id: 21,
+    year: "2024",
+    title: "Permay",
+    subtitle: "Catálogo Web de Perfumería",
+    image: "/fotos-proyectos/22.PNG?height=120&width=200",
+    demoUrl: "https://perfumeria-tau.vercel.app/",
+    githubUrl: "https://github.com/leonelgonzalezdev/empreid-frontend",
+    description:
+      "Sitio web diseñado para mostrar el catálogo completo de la perfumería Permay. Presenta los productos de forma clara, visual y categorizada, sin funciones de compra.",
+    challenges:
+      "Organizar un catálogo extenso de perfumes de manera intuitiva y atractiva, con acceso fácil a información clave como notas olfativas, familia, género y presentación.",
+    solutions:
+      "Desarrollé una interfaz clara y responsive que permite navegar por categorías, visualizar detalles del producto y acceder rápidamente a información útil sin sobrecargar al usuario.",
+    features: [
+      "Catálogo dinámico de perfumes",
+      "Detalle de productos con notas olfativas",
+      "Filtros por género, familia y presentación",
+      "Diseño responsive para móviles",
+      "Estructura modular para escalar el contenido",
+      "Identidad visual acorde a la marca",
+    ],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Zustand",
     ],
   },
 ];
