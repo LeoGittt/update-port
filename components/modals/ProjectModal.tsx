@@ -138,7 +138,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
                 >
-                  Ver demo en vivo
+                  Ver Proyecto
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
