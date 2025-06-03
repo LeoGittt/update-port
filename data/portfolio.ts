@@ -629,7 +629,7 @@ export const projects: Project[] = [
     year: "2024",
     title: "Permay",
     subtitle: "Catálogo Web de Perfumería",
-    image: "/fotos-proyectos/22.PNG?height=120&width=200",
+    image: "/fotos-proyectos/21.PNG?height=120&width=200",
     demoUrl: "https://perfumeria-tau.vercel.app/",
     githubUrl: "https://github.com/leonelgonzalezdev/empreid-frontend",
     description:
