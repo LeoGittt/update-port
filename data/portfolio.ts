@@ -235,7 +235,7 @@ export const projects: Project[] = [
     title: "BYAS",
     subtitle: "Web de Ingeniería",
     image: "/fotos-proyectos/8.PNG?height=120&width=200",
-    demoUrl: "https://byas.vercel.app/",
+    demoUrl: "https://www.byas.com.ar/",
     githubUrl: "https://github.com/leonelgonzalezdev/byas-frontend",
     description:
       "Web para un estudio de ingeniería civil que presenta más de 50 años de experiencia, proyectos, servicios y documentación técnica de forma clara y organizada.",
