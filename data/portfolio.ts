@@ -655,6 +655,42 @@ export const projects: Project[] = [
       "Zustand",
     ],
   },
+  {
+    id: 22,
+    year: "2025",
+    title: "AutoDev",
+    subtitle: "Sistema de Gestión para Concesionaria de Autos",
+    image: "/fotos-proyectos/22.png?height=120&width=200",
+    demoUrl: "#",
+    githubUrl: "https://github.com/leonelgonzalezdev/autodev-frontend",
+    description:
+      "AutoDev es una plataforma integral diseñada para gestionar todos los aspectos operativos de una concesionaria de autos. Desde la administración de vehículos y mantenimiento hasta el control de empleados y sueldos, todo centralizado en un sistema con roles diferenciados y respaldado por un backend robusto en Nest.js.",
+    challenges:
+      "Crear una solución robusta full stack que permita a los administradores controlar eficientemente la operación diaria de la concesionaria, mientras que los clientes puedan consultar vehículos y su estado de forma segura y clara.",
+    solutions:
+      "Se desarrolló una arquitectura escalable con Next.js y Nest.js. El backend gestiona lógica de negocio, autenticación y operaciones CRUD con alta eficiencia, mientras que el frontend ofrece una interfaz intuitiva y responsive. Se implementó control de accesos por rol, formularios dinámicos y un módulo especializado para mantenimiento vehicular.",
+    features: [
+      "Roles diferenciados: Administrador y Cliente",
+      "Gestión completa de vehículos: alta, edición y baja",
+      "Panel de administración de empleados y sueldos",
+      "Historial y seguimiento de mantenimientos vehiculares",
+      "Dashboard con métricas clave y actividades recientes",
+      "Diseño moderno, responsive y centrado en la usabilidad",
+    ],
+    technologies: [
+      "Next.js",
+      "Nest.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Zustand",
+      "Prisma",
+      "PostgreSQL",
+      "Framer Motion",
+    ],
+  }
+  
 ];
 
 export const experiences: Experience[] = [
