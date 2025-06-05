@@ -689,8 +689,39 @@ export const projects: Project[] = [
       "PostgreSQL",
       "Framer Motion",
     ],
-  }
-  
+  },
+  {
+    id: 23,
+    year: "2025",
+    title: "El Club del Pancho",
+    subtitle: "Catálogo interactivo de panchos artesanales",
+    image: "/fotos-proyectos/23.PNG?height=120&width=200",
+    demoUrl: "https://elclubdelpancho.vercel.app/",
+    githubUrl: "https://github.com/tuusuario/el-club-del-pancho",
+    description:
+      "El Club del Pancho es un catálogo digital pensado para destacar los panchos artesanales y combinaciones únicas de una panchería gourmet. Ofrece una experiencia visual atractiva y simple para que los clientes puedan explorar el menú, conocer los ingredientes y personalizar su pedido.",
+    challenges:
+      "Diseñar una plataforma atractiva y dinámica que permita mostrar productos gastronómicos con gran impacto visual, incluyendo la posibilidad de organizar categorías, destacar ingredientes y facilitar la navegación en móviles.",
+    solutions:
+      "Se implementó un sistema con Next.js para el frontend y una arquitectura pensada para escalar con nuevos productos y categorías. La interfaz es 100% responsive, centrada en imágenes y descripciones claras, con soporte para navegación por filtros y futuras integraciones con sistemas de pedidos online.",
+    features: [
+      "Catálogo visual de panchos por categoría",
+      "Detalle de ingredientes y sugerencias de acompañamiento",
+      "Buscador y filtros por tipo de pancho o ingrediente",
+      "Interfaz moderna, clara y responsiva",
+      "Preparado para integración con sistema de pedidos",
+      "Optimizado para dispositivos móviles",
+    ],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Zustand",
+      "Framer Motion",
+    ],
+  },
 ];
 
 export const experiences: Experience[] = [
