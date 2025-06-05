@@ -660,7 +660,7 @@ export const projects: Project[] = [
     year: "2025",
     title: "AutoDev",
     subtitle: "Sistema de Gestión para Concesionaria de Autos",
-    image: "/fotos-proyectos/22.png?height=120&width=200",
+    image: "/fotos-proyectos/22.PNG?height=120&width=200",
     demoUrl: "#",
     githubUrl: "https://github.com/leonelgonzalezdev/autodev-frontend",
     description:
