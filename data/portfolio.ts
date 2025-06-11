@@ -722,6 +722,37 @@ export const projects: Project[] = [
       "Framer Motion",
     ],
   },
+  {
+  id: 24,
+  year: "2025",
+  title: "SOMA",
+  subtitle: "Centro de kinesiología y bienestar integral",
+  image: "/fotos-proyectos/24.PNG?height=120&width=200",
+  demoUrl: "https://soma-kinesiologia.vercel.app/",
+  githubUrl: "https://github.com/tuusuario/soma-kinesiologia",
+  description:
+    "SOMA es un sitio web diseñado para un centro de kinesiología que busca promover el bienestar físico y emocional de sus pacientes. Ofrece información clara sobre los servicios, profesionales y enfoque terapéutico, con un diseño moderno y cercano.",
+  challenges:
+    "Crear una plataforma informativa, estética y funcional que represente la identidad del centro, comunique confianza y facilite el contacto con nuevos pacientes.",
+  solutions:
+    "Se desarrolló un sitio responsive con Next.js que permite mostrar los servicios, profesionales y filosofía de SOMA de forma clara y atractiva. Se incorporaron animaciones suaves, diseño pastel y navegación intuitiva pensada para todos los dispositivos.",
+  features: [
+    "Sección de servicios con descripciones detalladas",
+    "Perfil del equipo profesional con especialidades",
+    "Formulario de contacto",
+    "Diseño moderno, cálido y responsivo",
+    "Optimización para SEO local y Google Maps",
+  ],
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Framer Motion",
+    "EmailJS",
+  ],
+}
 ];
 
 export const experiences: Experience[] = [
