@@ -752,7 +752,36 @@ export const projects: Project[] = [
     "Framer Motion",
     "EmailJS",
   ],
+},
+{
+  id: 25,
+  year: "2025",
+  title: "Doble G",
+  subtitle: "Tienda de cortinas a medida",
+  image: "/fotos-proyectos/25.PNG?height=120&width=200",
+  demoUrl: "https://ditiero4.sg-host.com/", // Reemplazar con la URL real si la tenés
+  githubUrl: "", // Como es WordPress, podés dejarlo vacío o quitarlo si no aplica
+  description:
+    "Doble G es una tienda especializada en cortinas a medida. Su sitio web busca ofrecer una experiencia visual atractiva, clara y funcional, mostrando los estilos, telas y servicios disponibles, junto con un canal de contacto directo para consultas.",
+  challenges:
+    "Representar la variedad de productos y estilos de forma visual y accesible, mantener una estética moderna y cálida, y facilitar el contacto de los usuarios interesados.",
+  solutions:
+    "Se desarrolló una web responsive con WordPress, integrando HTML, CSS y JavaScript personalizados. Se priorizó el diseño visual, la facilidad de navegación y la experiencia en dispositivos móviles. También se incorporó un botón de WhatsApp para atención directa.",
+  features: [
+    "Catálogo visual de cortinas por estilo y tela",
+    "Sección de servicios personalizados",
+    "Botón de WhatsApp para consultas rápidas",
+    "Diseño moderno, limpio y adaptable a móviles",
+    "Formulario de contacto y mapa de ubicación",
+  ],
+  technologies: [
+    "WordPress",
+    "HTML",
+    "CSS",
+    "JavaScript",
+  ],
 }
+
 ];
 
 export const experiences: Experience[] = [
