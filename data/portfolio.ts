@@ -780,6 +780,59 @@ export const projects: Project[] = [
     "CSS",
     "JavaScript",
   ],
+},
+{
+  id: 26,
+  year: "2025",
+  title: "Cardio Medic",
+  subtitle: "Empresa de ambulancias",
+  image: "/fotos-proyectos/26.PNG?height=120&width=200",
+  demoUrl: "https://cardio-medic.netlify.app/",
+  githubUrl: "",
+  description:
+    "Cardio Medic es una empresa de ambulancias y servicios de salud. La web, desarrollada con **Next.js**, fue diseñada para ser ultrarrápida, escalable y SEO-friendly. El estilo se creó utilizando **Tailwind CSS**, lo que permitió un desarrollo ágil y una gran personalización de cada componente, manteniendo una estética profesional y moderna. El uso de **Framer Motion** aportó animaciones suaves que mejoran la experiencia de usuario, proyectando confianza y modernidad. El sitio informa de manera clara sobre sus servicios, priorizando la facilidad de contacto en situaciones críticas.",
+  challenges:
+    "Transmitir la seriedad y urgencia de los servicios médicos, organizar la información de forma intuitiva para que los usuarios la encuentren rápidamente en una emergencia, y optimizar el sitio para una carga casi instantánea. Otro desafío fue gestionar un desarrollo robusto y escalable con **TypeScript** y mantener una consistencia de diseño eficiente en todo el sitio, lo cual se abordó con el enfoque de utilidad de **Tailwind CSS**.",
+  solutions:
+    "Se utilizó un stack moderno, con **Next.js** para el rendimiento y la optimización. **TypeScript** aseguró un desarrollo libre de errores y fácil de mantener. El diseño se centró en una interfaz limpia y profesional, con una navegación sencilla y botones de contacto prominentes, todo estilizado con las clases de utilidad de **Tailwind CSS**, lo que aceleró significativamente el proceso de diseño y prototipado. Las transiciones y efectos visuales se crearon con **Framer Motion**, aportando un toque de profesionalidad.",
+  features: [
+    "Información detallada de servicios: traslados, emergencias y atenciones",
+    "Botones de contacto directos para llamadas y WhatsApp",
+    "Animaciones fluidas con Framer Motion para una UI/UX moderna",
+    "Diseño con sistema de utilidad (utility-first) gracias a Tailwind CSS",
+    "Rendimiento optimizado y SEO-friendly con Next.js",
+    "Desarrollo robusto y seguro con TypeScript",
+  ],
+  technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+},
+{
+  id: 27,
+  year: "2025",
+  title: "PM Portones",
+  subtitle: "Portones y motores automáticos",
+  image: "/fotos-proyectos/27.PNG?height=120&width=200",
+  demoUrl: "https://pm-portones.vercel.app/",
+  githubUrl: "",
+  description:
+    "PM Portones es una empresa especializada en la venta, instalación y reparación de portones y motores automáticos. El sitio web se desarrolló como una **web estática** con **Next.js**, priorizando la velocidad de carga y un alto rendimiento para showcasing sus productos y servicios de manera clara y profesional.",
+  challenges:
+    "El principal desafío fue organizar un catálogo de productos complejo de forma intuitiva y presentar los servicios de instalación y reparación de manera clara y confiable en un formato estático, asegurando que toda la información fuera fácilmente accesible para el usuario.",
+  solutions:
+    "Se optó por una arquitectura de sitio estático, utilizando **Next.js** para construir cada página. El diseño se basó en el sistema de utilidades de **Tailwind CSS** para un desarrollo ágil y consistente. Además, se usó **TypeScript** para asegurar la robustez del código y **Framer Motion** para las animaciones, proporcionando una experiencia de usuario fluida y moderna.",
+  features: [
+    "Catálogo de productos detallado y fijo",
+    "Información detallada sobre servicios de instalación y reparación",
+    "Galería de proyectos realizados para mostrar el trabajo",
+    "Formulario de contacto y botones de llamada/WhatsApp",
+    "Animaciones fluidas con Framer Motion",
+    "Rendimiento optimizado y SEO-friendly con Next.js",
+  ],
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+  ],
 }
 
 ];
