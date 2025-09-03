@@ -122,7 +122,7 @@ export default function Hero({ isVisible }: HeroProps) {
           </Link>
 
           <Link
-            href="/CV-LEONEL-GONZALEZ.pdf"
+            href="/CV_LEONEL_GONZALEZ.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
