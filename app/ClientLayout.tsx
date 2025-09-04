@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
 import SkipToContent from "@/components/ui/SkipToContent";
-import HighContrastToggle from "@/components/ui/HighContrastToggle";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
@@ -35,7 +34,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         scrollY={scrollY} 
         scrollToSection={scrollToSection} 
       />
-      <HighContrastToggle />
       <main id="main-content" tabIndex={-1}>
         {children}
       </main>

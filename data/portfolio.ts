@@ -840,39 +840,50 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     title: "Frontend Developer",
-    company: "EmpreId",
-    period: "Mar 2025 - Actual",
-    description:
-      "Desarrollo de un sistema de gestión municipal utilizando Next.js y TypeScript. La plataforma incluye módulos para reclamos ciudadanos, administración de beneficios municipales, gestión de eventos y control de acceso según distintos roles de usuario.",
-    current: true,
-  },
-  {
-    title: "Frontend Developer",
-    company: "Nexium Solutions",
-    period: "May 2025 - Actual",
-    description:
-      "Desarrollo y mantenimiento de sitios web estáticos para clientes empresariales, enfocados en diseño responsivo, optimización de rendimiento y buenas prácticas de accesibilidad.",
-    current: true,
-  },
-  {
-    title: "Frontend Developer",
     company: "Boostly",
+    period: "Jun. 2025 – Ago. 2025",
     description:
-      "Desarrollo de un sistema integral para concesionarias de autos, con funcionalidades para la gestión de vehículos, clientes, ventas, servicios, empleados y otras operaciones administrativas.",
+      "Proyecto GesDev (Sistema de Gestión). Diseñé y construí la arquitectura y la lógica desde cero para un sistema de gestión modular, centrado en la escalabilidad y las buenas prácticas de código. Implementé funcionalidades clave como gestión de roles, facturación, geolocalización, y la creación de contratos, servicios y clientes. Utilicé componentes, hooks personalizados y servicios para una gestión de estado eficiente y un código limpio.",
+    current: false,
+  },
+  {
+    title: "Frontend Developer",
+    company: "EmpreId",
+    period: "Mar. 2025 – Jun. 2025",
+    description:
+      "Proyecto SIMU (Sistema Integral Municipal Unificado). Lideré la implementación del frontend, diseñando la arquitectura de un sistema que procesa miles de reportes diarios. Desarrollé la interfaz de usuario con Next.js, React.js y TypeScript, lo que simplificó la gestión de reclamos y mejoró la eficiencia del personal municipal.",
     current: false,
   },
   {
     title: "SEO Developer",
     company: "Easy Life (España)",
+    period: "Dic. 2024 – Feb. 2025",
     description:
-      "Responsable de la optimización técnica de sitios web empresariales para mejorar su posicionamiento en buscadores. Adicionalmente, desarrollé soluciones internas utilizando Microsoft PowerApps para automatizar procesos y mejorar la eficiencia operativa.",
+      "Desarrollé y optimicé sitios web y e-commerce en plataformas como WordPress, Tienda Nube y Shopify. Creé plugins personalizados y realicé integraciones con PHP y JavaScript para ampliar la funcionalidad de los sitios. Mejoré el rendimiento y el posicionamiento SEO de los sitios usando Google Search Console y PageSpeed Insights.",
     current: false,
   },
   {
     title: "Frontend Developer",
-    company: "Soy Henry",
+    company: "CarDev",
+    period: "Sep. 2024 – Mar. 2025",
     description:
-      "Experiencia académica intensiva enfocada en el desarrollo web. Durante este período, diseñé y desarrollé dos aplicaciones fullstack, aplicando tecnologías modernas tanto del lado del cliente como del servidor.",
+      "Proyecto CarDev (Sistema de Gestión de Concesionarias). Participé en el desarrollo de una solución integral de gestión de ventas y stock para concesionarias. Colaboré en la construcción de un sistema escalable utilizando Next.js, React.js y TypeScript.",
+    current: false,
+  },
+  {
+    title: "Frontend Developer Freelance",
+    company: "Nexium Solutions",
+    period: "Ene 2025 – Ago. 2025",
+    description:
+      "Desarrollé sitios web para clientes utilizando múltiples tecnologías y plataformas. Trabajé con WordPress creando temas personalizados e integraciones con PHP, desarrollé tiendas online en Tienda Nube, y construí aplicaciones web con código puro usando Next.js. Creé plugins personalizados para WordPress y realicé integraciones complejas para ampliar la funcionalidad de los sitios, siempre enfocado en diseño responsivo y presencia digital efectiva.",
+    current: true,
+  },
+  {
+    title: "Frontend Developer Freelance",
+    company: "La Marina",
+    period: "2024",
+    description:
+      "Lideré el desarrollo completo de una tienda online desde cero, creando una arquitectura escalable con React.js y Next.js. Implementé funcionalidades de e-commerce como carrito de compras, gestión de productos, sistema de pagos y autenticación de usuarios. Optimicé el rendimiento del sitio y apliqué buenas prácticas de SEO para mejorar la experiencia del usuario y la visibilidad en buscadores.",
     current: false,
   },
 ];
