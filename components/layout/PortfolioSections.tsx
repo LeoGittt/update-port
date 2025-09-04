@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
+import { TechnologiesSlider } from "@/components/sections/TechnologiesSlider";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
@@ -29,6 +30,7 @@ export default function PortfolioSections({
         scrollToSection={scrollToSection}
       />
       <Hero isVisible={true} />
+      <TechnologiesSlider />
       <Projects
         isVisible={true}
         projects={projects}

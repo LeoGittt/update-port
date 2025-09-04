@@ -313,3 +313,14 @@ a,
   filter: blur(0.1px) !important;
   opacity: 0.7 !important;
 }
+
+/* Infinite Slider Animation */
+@keyframes slide {
+  to {
+    transform: translateX(calc(-50% - calc(var(--gap) / 2)));
+  }
+}
+
+.animate-slide {
+  animation: slide var(--duration) linear infinite;
+}
