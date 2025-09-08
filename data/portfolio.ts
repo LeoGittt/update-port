@@ -841,10 +841,10 @@ export const experiences: Experience[] = [
   {
     title: "Frontend Developer",
     company: "Boostly",
-    period: "Jun. 2025 – Ago. 2025",
+    period: "Jun. 2025 – Sep. 2025",
     description:
       "Proyecto GesDev (Sistema de Gestión). Diseñé y construí la arquitectura y la lógica desde cero para un sistema de gestión modular, centrado en la escalabilidad y las buenas prácticas de código. Implementé funcionalidades clave como gestión de roles, facturación, geolocalización, y la creación de contratos, servicios y clientes. Utilicé componentes, hooks personalizados y servicios para una gestión de estado eficiente y un código limpio.",
-    current: false,
+    current: true,
   },
   {
     title: "Frontend Developer",
@@ -876,7 +876,7 @@ export const experiences: Experience[] = [
     period: "Ene 2025 – Ago. 2025",
     description:
       "Desarrollé sitios web para clientes utilizando múltiples tecnologías y plataformas. Trabajé con WordPress creando temas personalizados e integraciones con PHP, desarrollé tiendas online en Tienda Nube, y construí aplicaciones web con código puro usando Next.js. Creé plugins personalizados para WordPress y realicé integraciones complejas para ampliar la funcionalidad de los sitios, siempre enfocado en diseño responsivo y presencia digital efectiva.",
-    current: true,
+    current: false,
   },
   {
     title: "Frontend Developer Freelance",

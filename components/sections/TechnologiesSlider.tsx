@@ -106,9 +106,9 @@ export function TechnologiesSlider() {
   ];
 
   return (
-    <div className="w-full py-8 overflow-hidden">
-      <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold text-white mb-2">
+    <div className="w-full py-8 mb-8 overflow-hidden">
+      <div className="text-center mb-10">
+        <h3 className="text-2xl font-bold  text-white mb-2">
           Stack Tecnológico
         </h3>
         <p className="text-gray-500 text-sm max-w-md mx-auto">

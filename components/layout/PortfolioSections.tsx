@@ -30,12 +30,12 @@ export default function PortfolioSections({
         scrollToSection={scrollToSection}
       />
       <Hero isVisible={true} />
-      <TechnologiesSlider />
       <Projects
         isVisible={true}
         projects={projects}
         setSelectedProject={setSelectedProject}
       />
+      <TechnologiesSlider />
       <Experience isVisible={true} experiences={experiences} />
       <Education />
       <Contact isVisible={true} contactInfo={contactInfo} />

@@ -36,7 +36,7 @@ export default function Education() {
             </p>
             <div className="flex items-center gap-2 text-xs text-gray-400">
               <Calendar className="w-4 h-4 text-gray-500" />
-              <span>2025 – Actualidad</span>
+              <span>2025 – En curso</span>
             </div>
           </CardContent>
         </Card>
@@ -61,7 +61,7 @@ export default function Education() {
             </p>
             <div className="flex items-center gap-2 text-xs text-gray-400">
               <Calendar className="w-4 h-4 text-gray-500" />
-              <span>2024 • 800 horas</span>
+              <span>2024</span>
             </div>
           </CardContent>
         </Card>
