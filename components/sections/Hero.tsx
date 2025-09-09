@@ -135,7 +135,7 @@ export default function Hero({ isVisible }: HeroProps) {
             <DropdownMenu>
               <DropdownMenuTrigger className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-emerald-400/20 hover:border-emerald-400/35 text-emerald-400 hover:text-emerald-300 transition-all duration-500 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-400/20 backdrop-blur-md bg-gradient-to-r from-emerald-400/5 to-emerald-500/5 hover:from-emerald-400/10 hover:to-emerald-500/10 justify-center text-sm shadow-lg hover:shadow-xl hover:shadow-emerald-400/10 hover:scale-[1.01] origin-center w-full">
                 <Download className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-                <span className="font-light tracking-wide">CV</span>
+                <span className="font-light text-center tracking-wide">Ver o Descargar CV</span>
                 <ChevronDown className="w-3 h-3 group-data-[state=open]:rotate-180 transition-transform duration-300 ml-auto" aria-hidden="true" />
               </DropdownMenuTrigger>
               <DropdownMenuContent 
