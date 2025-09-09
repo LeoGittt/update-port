@@ -26,160 +26,163 @@ export default function Hero({ isVisible }: HeroProps) {
     <section
       id="inicio"
       aria-label="Sección de inicio"
-      className={`mt-10 sm:mt-24 px-6 sm:px-12 lg:px-24 pt-16 sm:pt-20 pb-16 transition-all duration-500 flex items-center justify-center min-h-[70vh] ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+      className={`px-6 sm:px-12 lg:px-24 py-20 sm:py-32 transition-all duration-700 flex items-center justify-center min-h-screen ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
-      <div className="max-w-4xl mx-auto w-full">
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-8 mb-12 text-center sm:text-left">
+      <div className="max-w-6xl mx-auto w-full">
+        {/* Main Content - Horizontal Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center justify-items-center">
+          
           {/* Profile Image */}
-          <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden bg-zinc-800 flex-shrink-0 mx-auto sm:mx-0 relative group">
-            <Image
-              src="/foto.jpg"
-              alt="Leonel González - Desarrollador Frontend"
-              width={320}
-              height={320}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              priority
-              quality={100}
-            />
-            <div className="absolute inset-0 bg-black/20 pointer-events-none" aria-hidden="true" />
+          <div className="lg:col-span-3 flex justify-center lg:justify-center">
+            <div className="relative group">
+              <div className="w-44 h-44 sm:w-48 sm:h-48 lg:w-52 lg:h-52 rounded-full overflow-hidden bg-zinc-800/40 backdrop-blur-sm relative border border-zinc-600/20 shadow-xl shadow-black/30">
+                <Image
+                  src="/foto.jpg"
+                  alt="Leonel González - Desarrollador Frontend"
+                  width={320}
+                  height={320}
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 filter group-hover:brightness-110"
+                  priority
+                  quality={100}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+            </div>
           </div>
 
-          {/* Info */}
-          <div className="flex-1 space-y-4 flex flex-col items-center sm:items-start justify-center mt-2">
-            <div>
-              <h1 className="text-4xl sm:text-5xl font-light text-white mb-2 flex items-center gap-2">
-                Hola, soy
-                <span className="relative ml-2 font-normal">
-                  <span className="text-white z-10 relative">Leonel</span>
-                  <span
-                    className="absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent rounded-full animate-[grow_1.2s_ease-in-out]"
-                    style={{ animationFillMode: "forwards" }}
-                    aria-hidden="true"
-                  ></span>
-                </span>
-              </h1>
-
-              <div className="mt-3 space-y-6">
-                <p className="text-emerald-400 text-xs font-mono tracking-wider bg-emerald-400/10 px-3 py-1 rounded-full inline-block" role="text">
+          {/* Main Info */}
+          <div className="lg:col-span-6 text-center space-y-8 flex flex-col items-center justify-center">
+            <div className="space-y-5 w-full max-w-lg mx-auto">
+              <div className="relative flex flex-col items-center">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white tracking-wide leading-tight text-center">
+                  <span className="bg-gradient-to-r from-white via-zinc-50 to-zinc-100 bg-clip-text text-transparent font-medium">
+                    Leonel González
+                  </span>
+                </h1>
+                <div className="mt-3 w-24 h-0.5 bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent rounded-full"></div>
+              </div>
+              
+              <div className="space-y-3 flex flex-col items-center">
+                <p className="text-zinc-300 text-base sm:text-lg font-light tracking-wider text-center">
                   Frontend Developer
                 </p>
+              </div>
+            </div>
 
-                <div className="flex items-center gap-2 font-medium text-gray-400 text-sm justify-center sm:justify-start">
-                  <MapPin className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-                  <span>San Juan, Argentina</span>
+            {/* About Section */}
+            <div className="space-y-6 w-full max-w-md mx-auto flex flex-col items-center">
+              <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-zinc-400/40 to-transparent rounded-full"></div>
+              
+              <div className="space-y-5 text-center">
+                <p className="text-zinc-200 text-xs font-light leading-relaxed tracking-wide">
+                  Desarrollador frontend con{" "}
+                  <span className="text-white font-medium bg-gradient-to-r from-white via-zinc-50 to-zinc-100 bg-clip-text text-transparent">React</span>,{" "}
+                  <span className="text-white font-medium bg-gradient-to-r from-white via-zinc-50 to-zinc-100 bg-clip-text text-transparent">Next.js</span> y{" "}
+                  <span className="text-white font-medium bg-gradient-to-r from-white via-zinc-50 to-zinc-100 bg-clip-text text-transparent">TypeScript</span>
+                </p>
+
+                <p className="text-zinc-400 text-xs font-light leading-relaxed opacity-80">
+                  Estudiante de Programación en la UTN, enfocado en crear experiencias
+                  web elegantes y funcionales
+                </p>
+
+                <div className="flex items-center justify-center gap-2 text-zinc-500 text-xs pt-1">
+                  <MapPin className="w-3 h-3 text-zinc-500" aria-hidden="true" />
+                  <span className="tracking-wide">San Juan, Argentina</span>
                 </div>
               </div>
             </div>
 
             {/* Contact */}
+            <div className="flex justify-center w-full">
+              <Link
+                href="mailto:leonel.gonzalez.dev@gmail.com"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-zinc-900/40 to-zinc-800/40 border border-zinc-600/20 text-zinc-200 hover:text-white hover:border-zinc-500/30 hover:from-zinc-800/50 hover:to-zinc-700/50 text-xs transition-all duration-500 group backdrop-blur-md shadow-lg hover:shadow-xl"
+                aria-label="Enviar correo electrónico a leonel.gonzalez.dev@gmail.com"
+              >
+                <Mail className="w-3 h-3 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
+                <span className="font-light tracking-wider">Contacto</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="lg:col-span-3 flex flex-col gap-3 w-full max-w-xs mx-auto">
             <Link
-              href="mailto:leonel.gonzalez.dev@gmail.com"
-              className="flex items-center font-medium gap-2 text-gray-300 hover:text-white text-sm transition-colors duration-200 justify-center sm:justify-start mt-1"
-              aria-label="Enviar correo electrónico a leonel.gonzalez.dev@gmail.com"
+              href="https://bit.ly/3NMKOVe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-600/25 hover:border-zinc-500/40 text-zinc-200 hover:text-white transition-all duration-500 backdrop-blur-md bg-gradient-to-r from-zinc-900/40 to-zinc-800/40 hover:from-zinc-800/60 hover:to-zinc-700/60 justify-center text-sm shadow-lg hover:shadow-xl hover:scale-[1.01] origin-center"
+              aria-label="Visitar perfil de GitHub"
             >
-              <Mail className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-              <span>leonel.gonzalez.dev@gmail.com</span>
+              <Github className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
+              <span className="font-light tracking-wide">GitHub</span>
             </Link>
+
+            <Link
+              href="https://bit.ly/40vJTjP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-600/25 hover:border-zinc-500/40 text-zinc-200 hover:text-white transition-all duration-500 backdrop-blur-md bg-gradient-to-r from-zinc-900/40 to-zinc-800/40 hover:from-zinc-800/60 hover:to-zinc-700/60 justify-center text-sm shadow-lg hover:shadow-xl hover:scale-[1.01] origin-center"
+              aria-label="Visitar perfil de LinkedIn"
+            >
+              <Linkedin className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
+              <span className="font-light tracking-wide">LinkedIn</span>
+            </Link>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-emerald-400/20 hover:border-emerald-400/35 text-emerald-400 hover:text-emerald-300 transition-all duration-500 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-400/20 backdrop-blur-md bg-gradient-to-r from-emerald-400/5 to-emerald-500/5 hover:from-emerald-400/10 hover:to-emerald-500/10 justify-center text-sm shadow-lg hover:shadow-xl hover:shadow-emerald-400/10 hover:scale-[1.01] origin-center w-full">
+                <Download className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
+                <span className="font-light tracking-wide">Descargar CV</span>
+                <ChevronDown className="w-3 h-3 group-data-[state=open]:rotate-180 transition-transform duration-300 ml-auto" aria-hidden="true" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent 
+                align="end" 
+                className="w-44 bg-gradient-to-b from-zinc-900/98 to-zinc-950/98 backdrop-blur-2xl border border-zinc-600/30 shadow-2xl shadow-black/60 rounded-xl overflow-hidden animate-in slide-in-from-top-2 duration-200"
+                sideOffset={8}
+                alignOffset={-8}
+              >
+                <div className="p-2 space-y-1">
+                  <DropdownMenuItem asChild className="group">
+                    <Link
+                      href="/CV_LEONEL_GONZALEZ.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer text-zinc-200 hover:text-emerald-300 transition-all duration-200 outline-none focus:outline-none"
+                    >
+                      <div className="p-1 rounded bg-zinc-800/50 transition-colors duration-200">
+                        <Eye className="w-3 h-3 group-hover:scale-110 transition-all duration-200" aria-hidden="true" />
+                      </div>
+                      <div className="flex flex-col flex-1">
+                        {/* <span className="font-medium text-xs tracking-wide">Ver CV</span> */}
+                        <span className="text-xs text-zinc-500 group-hover:text-emerald-400/70 transition-colors duration-200">Abrir en pestaña</span>
+                      </div>
+                    </Link>
+                  </DropdownMenuItem>
+                  
+                  <div className="h-px bg-gradient-to-r from-transparent via-zinc-700/50 to-transparent mx-1"></div>
+                  
+                  <DropdownMenuItem asChild className="group">
+                    <button
+                      onClick={handleDownloadCV}
+                      className="flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer text-zinc-200 hover:text-emerald-300 transition-all duration-200 outline-none focus:outline-none w-full text-left"
+                    >
+                      <div className="p-1 rounded bg-zinc-800/50 transition-colors duration-200">
+                        <Download className="w-3 h-3 group-hover:scale-110 transition-all duration-200" aria-hidden="true" />
+                      </div>
+                      <div className="flex flex-col flex-1">
+                        {/* <span className="font-medium text-xs tracking-wide">Descargar CV</span> */}
+                        <span className="text-xs text-zinc-500 group-hover:text-emerald-400/70 transition-colors duration-200">Guardar archivo</span>
+                      </div>
+                    </button>
+                  </DropdownMenuItem>
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
-
-        {/* About */}
-        <div className="flex justify-center">
-  <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-10 mb-14 max-w-5xl w-full">
-    <div className="lg:col-span-1">
-      <h2 className="text-white text-sm font-medium tracking-wider">
-        SOBRE MÍ
-      </h2>
-    </div>
-
-    <div className="lg:col-span-3 space-y-3">
-      <p className="text-zinc-300 text-sm leading-relaxed">
-        Desarrollador frontend con experiencia en{" "}
-        <span className="text-emerald-400 font-medium">React</span>,{" "}
-        <span className="text-emerald-400 font-medium">Next.js</span> y{" "}
-        <span className="text-emerald-400 font-medium">TypeScript</span>.
-      </p>
-
-      <p className="text-zinc-400 text-sm leading-relaxed">
-        Estudiante de Programación en la UTN, apasionado por crear experiencias
-        web elegantes y funcionales, combinando lógica, diseño y creatividad.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-        {/* Links */}
-        <div className="flex flex-wrap items-center gap-3 text-sm" role="navigation" aria-label="Enlaces de contacto y redes sociales">
-          <Link
-            href="https://bit.ly/3NMKOVe"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-emerald-300 transition-colors duration-200"
-            aria-label="Visitar perfil de GitHub"
-          >
-            <Github className="w-4 h-4" aria-hidden="true" />
-            <span>GitHub</span>
-          </Link>
-
-          <Link
-            href="https://bit.ly/40vJTjP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-emerald-300 transition-colors duration-200"
-            aria-label="Visitar perfil de LinkedIn"
-          >
-            <Linkedin className="w-4 h-4" aria-hidden="true" />
-            <span>LinkedIn</span>
-          </Link>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger className="group flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-400 hover:text-white transition-all duration-300 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-400/50 border border-emerald-400/20 hover:border-emerald-400/40 shadow-lg hover:shadow-emerald-400/20">
-              <Download className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
-              <span className="font-medium">CV</span>
-              <ChevronDown className="w-3 h-3 group-data-[state=open]:rotate-180 transition-transform duration-200" aria-hidden="true" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent 
-              align="start" 
-              className="w-52 bg-zinc-900/95 backdrop-blur-xl border border-zinc-700/50 shadow-2xl shadow-black/50 rounded-xl overflow-hidden animate-in slide-in-from-top-2 duration-200"
-              sideOffset={8}
-            >
-              <div className="p-1 space-y-1">
-                <DropdownMenuItem asChild className="group">
-                  <Link
-                    href="/CV_LEONEL_GONZALEZ.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-zinc-300 hover:text-emerald-400 hover:bg-emerald-400/10 transition-all duration-200 outline-none focus:outline-none focus:bg-emerald-400/10 focus:text-emerald-400"
-                  >
-                    <Eye className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
-                    <div className="flex flex-col">
-                      <span className="font-medium text-sm">Ver CV</span>
-                      <span className="text-xs text-zinc-500 group-hover:text-emerald-400/70">Abrir en nueva pestaña</span>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild className="group">
-                  <button
-                    onClick={handleDownloadCV}
-                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-zinc-300 hover:text-emerald-400 hover:bg-emerald-400/10 transition-all duration-200 outline-none focus:outline-none focus:bg-emerald-400/10 focus:text-emerald-400 w-full text-left"
-                  >
-                    <Download className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
-                    <div className="flex flex-col">
-                      <span className="font-medium text-sm">Descargar CV</span>
-                      <span className="text-xs text-zinc-500 group-hover:text-emerald-400/70">Guardar archivo PDF</span>
-                    </div>
-                  </button>
-                </DropdownMenuItem>
-              </div>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-
-        
       </div>
     </section>
   );
