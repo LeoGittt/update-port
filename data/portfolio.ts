@@ -889,22 +889,12 @@ export const experiences: Experience[] = [
 ];
 
 export const contactInfo: ContactInfo[] = [
-  {
-    icon: Phone,
-    title: "Teléfono",
-    value: "+54 264 584 1194",
-    href: "tel:2645841194",
-  },
+  
   {
     icon: Mail,
     title: "Email",
     value: "leonel.gonzalez.dev@gmail.com",
     href: "mailto:leonel.gonzalez.dev@gmail.com",
   },
-  {
-    icon: MapPin,
-    title: "Ubicación",
-    value: "San Juan, Argentina",
-    href: "#",
-  },
+ 
 ];

@@ -1,12 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Github, Linkedin, Download } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Download, Eye, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface HeroProps {
   isVisible: boolean;
 }
 
 export default function Hero({ isVisible }: HeroProps) {
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/CV_LEONEL_GONZALEZ.pdf';
+    link.download = 'CV_Leonel_Gonzalez.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="inicio"
@@ -82,7 +97,7 @@ export default function Hero({ isVisible }: HeroProps) {
 
     <div className="lg:col-span-3 space-y-3">
       <p className="text-zinc-300 text-sm leading-relaxed">
-        Desarrollador frontend especializado en{" "}
+        Desarrollador frontend con experiencia en{" "}
         <span className="text-emerald-400 font-medium">React</span>,{" "}
         <span className="text-emerald-400 font-medium">Next.js</span> y{" "}
         <span className="text-emerald-400 font-medium">TypeScript</span>.
@@ -121,17 +136,47 @@ export default function Hero({ isVisible }: HeroProps) {
             <span>LinkedIn</span>
           </Link>
 
-          <Link
-            href="/CV_LEONEL_GONZALEZ.pdf"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-400 hover:text-white transition-colors duration-200"
-            aria-label="Descargar currículum vitae"
-          >
-            <Download className="w-4 h-4" aria-hidden="true" />
-            <span>Descargar CV</span>
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="group flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-400 hover:text-white transition-all duration-300 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-400/50 border border-emerald-400/20 hover:border-emerald-400/40 shadow-lg hover:shadow-emerald-400/20">
+              <Download className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
+              <span className="font-medium">CV</span>
+              <ChevronDown className="w-3 h-3 group-data-[state=open]:rotate-180 transition-transform duration-200" aria-hidden="true" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent 
+              align="start" 
+              className="w-52 bg-zinc-900/95 backdrop-blur-xl border border-zinc-700/50 shadow-2xl shadow-black/50 rounded-xl overflow-hidden animate-in slide-in-from-top-2 duration-200"
+              sideOffset={8}
+            >
+              <div className="p-1 space-y-1">
+                <DropdownMenuItem asChild className="group">
+                  <Link
+                    href="/CV_LEONEL_GONZALEZ.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-zinc-300 hover:text-emerald-400 hover:bg-emerald-400/10 transition-all duration-200 outline-none focus:outline-none focus:bg-emerald-400/10 focus:text-emerald-400"
+                  >
+                    <Eye className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
+                    <div className="flex flex-col">
+                      <span className="font-medium text-sm">Ver CV</span>
+                      <span className="text-xs text-zinc-500 group-hover:text-emerald-400/70">Abrir en nueva pestaña</span>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="group">
+                  <button
+                    onClick={handleDownloadCV}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-zinc-300 hover:text-emerald-400 hover:bg-emerald-400/10 transition-all duration-200 outline-none focus:outline-none focus:bg-emerald-400/10 focus:text-emerald-400 w-full text-left"
+                  >
+                    <Download className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
+                    <div className="flex flex-col">
+                      <span className="font-medium text-sm">Descargar CV</span>
+                      <span className="text-xs text-zinc-500 group-hover:text-emerald-400/70">Guardar archivo PDF</span>
+                    </div>
+                  </button>
+                </DropdownMenuItem>
+              </div>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         
