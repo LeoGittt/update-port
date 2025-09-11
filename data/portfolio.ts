@@ -899,6 +899,36 @@ export const projects: Project[] = [
     "Express",
     
   ],
+},
+{
+  id: 30,
+  year: "2025",
+  title: "Flowers",
+  subtitle: "Tienda online de arreglos florales",
+  image: "/fotos-proyectos/30.PNG",
+  demoUrl: "#",
+  githubUrl: "#",
+  description:
+    "Flowers, una tienda de e-commerce especializada en la venta de arreglos florales, ramos y plantas. El proyecto fue diseñado para ofrecer una experiencia de compra intuitiva y fluida, con un enfoque en un catálogo visualmente atractivo y una gestión eficiente del carrito de compras.",
+  challenges:
+    "El principal desafío fue crear una interfaz que no solo fuera funcional, sino que también capturara la esencia estética de una floristería. La organización del catálogo con diferentes tipos de productos y la implementación de un carrito de compras interactivo, que permitiera a los usuarios añadir, modificar y eliminar productos fácilmente, fueron aspectos clave del desarrollo.",
+  solutions:
+    "El frontend se construyó con Next.js y React para asegurar un alto rendimiento y una navegación fluida. Se implementó una gestión de estado global para el carrito de compras, lo que permitió una sincronización en tiempo real de los productos. El diseño, desarrollado con **Tailwind CSS**, se centró en la estética y la usabilidad, destacando los productos con imágenes de alta calidad y una interfaz de usuario limpia.",
+  features: [
+    "Catálogo de productos con filtros por tipo de flor y ocasión.",
+    "Funcionalidad de carrito de compras interactivo (agregar, eliminar, modificar cantidades).",
+    "Página de detalle de producto con descripciones e imágenes.",
+    "Checkout y formulario de pedido optimizado.",
+    "Diseño responsive para una experiencia de compra consistente en cualquier dispositivo.",
+  ],
+  technologies: [
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Zustand",
+    "Framer Motion",
+  ],
 }
 
 ];
