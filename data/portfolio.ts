@@ -833,6 +833,72 @@ export const projects: Project[] = [
     "Tailwind CSS",
     "Framer Motion",
   ],
+},
+{
+  id: 28,
+  year: "2025",
+  title: "Gestión de Transferencias",
+  subtitle: "Control y logística de inventario",
+  image: "/fotos-proyectos/28.PNG",
+  demoUrl: "https://kzmo4qo21ioj7u8nzej0.lite.vusercontent.net/",
+  githubUrl: "",
+  description:
+    "Desarrollé un sistema de gestión de transferencias de pedidos diseñado para optimizar la logística de una pinturería con dos sucursales. La herramienta facilita la transferencia de mercadería entre una sucursal con depósito y otra de venta al público, mejorando el control de inventario y la eficiencia operativa.",
+  challenges:
+    "El principal desafío fue crear una plataforma que permitiera un control preciso del inventario entre dos ubicaciones, asegurando que las transferencias fueran rastreables y que los datos (como productos, cantidades y personal responsable) se registraran de forma segura. La generación de un PDF con el resumen de cada transferencia fue un reto adicional para automatizar la documentación.",
+  solutions:
+    "El sistema se diseñó con un enfoque en la experiencia de usuario para simplificar el proceso de transferencia. Se implementó una lógica que permite seleccionar la sucursal de origen y destino, así como la persona responsable del envío. Se utilizó una base de datos para la carga de productos mediante su código y nombre, y al finalizar la transferencia, se generaba automáticamente un PDF con un resumen completo del pedido.",
+  features: [
+    "Gestión de transferencias de mercadería entre sucursales.",
+    "Selección de sucursal de origen y destino.",
+    "Registro de la persona responsable del envío.",
+    "Carga de productos por código, nombre y cantidad.",
+    "Generación automática de PDF al completar la transferencia.",
+    "Sección de comisiones de ventas y productos facturados/entregados.",
+    "Registro de mercadería comprada a proveedores externos."
+  ],
+  technologies: [
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    
+  ],
+},
+{
+  id: 29,
+  year: "2025",
+  title: "Pedidos a Proveedores",
+  subtitle: "Control de faltantes y gestión de stock",
+  image: "/fotos-proyectos/29.PNG",
+  demoUrl: "https://v0-seo-wgq5fxq5ffz-uprnfk.vercel.app/",
+  githubUrl: "",
+  description:
+    "sistema de gestión de pedidos diseñado para optimizar el proceso de solicitud de mercadería faltante a proveedores. La plataforma permite a los usuarios seleccionar productos de manera intuitiva, con opciones dinámicas basadas en la categoría, y generar un pedido detallado y listo para ser compartido.",
+  challenges:
+    "El principal desafío fue crear una interfaz de usuario que se adaptara de forma dinámica a las selecciones del usuario. La lógica para mostrar opciones específicas (como medidas o litros) según la categoría del producto fue crucial para la usabilidad del sistema. Además, el desarrollo de un módulo para la generación automática de un documento final fue un reto técnico para asegurar la precisión del pedido.",
+  solutions:
+    "Se implementó una arquitectura de componentes modulares con lógica condicional para controlar la visualización de las opciones de productos. El sistema permite seleccionar la categoría (ej. pinceles, rodillos), y las opciones de atributos (ej. medidas, litros) se cargan dinámicamente. La aplicación registra cada ítem en una lista visible para el usuario, y al finalizar, genera un PDF o permite compartir el pedido con el proveedor.",
+  features: [
+    "Selección de productos por categoría (ej. pinceles, rodillos).",
+    "Opciones dinámicas de productos (ej. medidas, litros) basadas en la categoría seleccionada.",
+    "Funcionalidad para añadir la cantidad de cada producto.",
+    "Lista de pedido en tiempo real a medida que se agregan ítems.",
+    "Campo para ingresar el nombre del proveedor y añadir comentarios adicionales.",
+    "Generación de un PDF o opción para compartir el pedido final.",
+  ],
+  technologies: [
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Express",
+    
+  ],
 }
 
 ];
