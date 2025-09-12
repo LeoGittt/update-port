@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { BorderTrail } from "@/components/core/border-trail";
 
 interface HeroProps {
   isVisible: boolean;
@@ -37,6 +38,9 @@ export default function Hero({ isVisible }: HeroProps) {
           {/* Profile Image */}
           <div className="lg:col-span-3 flex justify-center lg:justify-center">
             <div className="relative group">
+              <BorderTrail
+                size={100}
+              />
               <div className="w-44 h-44 sm:w-48 sm:h-48 lg:w-52 lg:h-52 rounded-full overflow-hidden bg-zinc-800/40 backdrop-blur-sm relative border border-zinc-600/20 shadow-xl shadow-black/30">
                 <Image
                   src="/foto.jpg"

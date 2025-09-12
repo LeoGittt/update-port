@@ -935,29 +935,27 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Frontend Developer",
-    company: "Boostly",
-    period: "Jun. 2025 – Sep. 2025",
-    description:
-      "Proyecto GesDev (Sistema de Gestión). Diseñé y construí la arquitectura y la lógica desde cero para un sistema de gestión modular, centrado en la escalabilidad y las buenas prácticas de código. Implementé funcionalidades clave como gestión de roles, facturación, geolocalización, y la creación de contratos, servicios y clientes. Utilicé componentes, hooks personalizados y servicios para una gestión de estado eficiente y un código limpio.",
-    current: true,
-  },
+  title: "Frontend Developer",
+  company: "Boostly",
+  period: "Jun. 2025 – Sep. 2025",
+  description:
+    "GesDev (Sistema de Gestión). Lideré el desarrollo del frontend desde cero, diseñando toda la arquitectura y la estructura de la aplicación para que fuera escalable y fácil de mantener. Creé un sistema de roles y permisos para controlar quién puede hacer qué dentro del sistema, optimicé los componentes para que la interfaz fuera rápida y eficiente, y desarrollé herramientas internas (hooks y servicios) para gestionar la información de manera ordenada y confiable. Implementé funcionalidades clave como facturación, geolocalización, administración de contratos, servicios y clientes. El proyecto resultó en un sistema modular y robusto, que combina buenas prácticas de ingeniería con una experiencia de usuario intuitiva, manteniendo el código limpio y reutilizable.",
+  current: true,
+},
   {
-    title: "Frontend Developer",
-    company: "EmpreId",
-    period: "Mar. 2025 – Jun. 2025",
-    description:
-      "Proyecto SIMU (Sistema Integral Municipal Unificado). Lideré la implementación del frontend, diseñando la arquitectura de un sistema que procesa miles de reportes diarios. Desarrollé la interfaz de usuario con Next.js, React.js y TypeScript, lo que simplificó la gestión de reclamos y mejoró la eficiencia del personal municipal.",
-    current: false,
-  },
+  title: "Frontend Developer",
+  company: "EmpreId",
+  period: "Mar. 2025 – Jun. 2025",
+  description: "Lideré el rediseño completo del sistema SIMU (Sistema Integral Municipal Unificado) y de todos los flujos de trabajo, incluyendo gestión de roles, distintos módulos, geolocalización, búsquedas avanzadas, paginación y otras funcionalidades críticas. Desarrollé la arquitectura del frontend y la interfaz de usuario con Next.js, React.js y TypeScript, logrando un sistema más intuitivo, eficiente y escalable, capaz de procesar miles de reportes diarios y mejorar la gestión del personal municipal.",
+  current: false
+},
   {
-    title: "SEO Developer",
-    company: "Easy Life (España)",
-    period: "Dic. 2024 – Feb. 2025",
-    description:
-      "Desarrollé y optimicé sitios web y e-commerce en plataformas como WordPress, Tienda Nube y Shopify. Creé plugins personalizados y realicé integraciones con PHP y JavaScript para ampliar la funcionalidad de los sitios. Mejoré el rendimiento y el posicionamiento SEO de los sitios usando Google Search Console y PageSpeed Insights.",
-    current: false,
-  },
+  title: "SEO Developer",
+  company: "Easy Life (España)",
+  period: "Dic. 2024 – Feb. 2025",
+  description: "Desarrollé y optimicé sitios web y e-commerce en plataformas como WordPress, Tienda Nube y Shopify. Creé plugins personalizados e integraciones con PHP y JavaScript para ampliar la funcionalidad de los sitios. Realicé rediseños de webs, diseñé interfaces y elaboré reportes sobre optimizaciones y mejoras de rendimiento. Mejoré el posicionamiento SEO usando Google Search Console y PageSpeed Insights.",
+  current: false
+},
   {
     title: "Frontend Developer",
     company: "CarDev",
