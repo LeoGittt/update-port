@@ -6,21 +6,18 @@ import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
-import { projects, experiences, contactInfo } from "@/data/portfolio";
-import { Project } from "@/types/project";
+import { experiences, contactInfo } from "@/data/portfolio";
 
 interface Props {
   activeSection: string;
   scrollY: number;
   scrollToSection: (sectionId: string) => void;
-  setSelectedProject: (project: Project | null) => void;
 }
 
 export default function PortfolioSections({
   activeSection,
   scrollY,
   scrollToSection,
-  setSelectedProject,
 }: Props) {
   return (
     <>
@@ -30,11 +27,7 @@ export default function PortfolioSections({
         scrollToSection={scrollToSection}
       />
       <Hero isVisible={true} />
-      <Projects
-        isVisible={true}
-        projects={projects}
-        setSelectedProject={setSelectedProject}
-      />
+      <Projects isVisible={true} />
       <TechnologiesSlider />
       <Experience isVisible={true} experiences={experiences} />
       <Education />

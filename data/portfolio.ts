@@ -906,7 +906,7 @@ export const projects: Project[] = [
   title: "Flowers",
   subtitle: "Tienda online de arreglos florales",
   image: "/fotos-proyectos/30.PNG",
-  demoUrl: "#",
+  demoUrl: "https://antonietayrigoyen.netlify.app/",
   githubUrl: "#",
   description:
     "Flowers, una tienda de e-commerce especializada en la venta de arreglos florales, ramos y plantas. El proyecto fue diseñado para ofrecer una experiencia de compra intuitiva y fluida, con un enfoque en un catálogo visualmente atractivo y una gestión eficiente del carrito de compras.",
@@ -929,7 +929,39 @@ export const projects: Project[] = [
     "Zustand",
     "Framer Motion",
   ],
-}
+},
+{
+  id: 31,
+  year: "2025",
+  title: "AVZ - Muebles y Sillones",
+  subtitle: "Tienda online de sillones y mobiliario de diseño",
+  image: "/fotos-proyectos/31.PNG",
+  demoUrl: "https://sillones.vercel.app/",
+  githubUrl: "#",
+  description:
+    "AVZ, una plataforma de e-commerce enfocada en la venta de **sillones, sofás y mobiliario** de diseño moderno y contemporáneo. El proyecto fue concebido para proporcionar una navegación de catálogo inmersiva y una gestión de pedidos simplificada, priorizando la visualización de texturas y acabados.",
+  challenges:
+    "El reto principal fue diseñar una interfaz que destacara la **calidad y el diseño** de los sillones, a menudo elementos de alto valor. Esto implicó crear un sistema de visualización de productos robusto que permitiera **múltiples vistas, opciones de color/tapizado** y dimensiones detalladas, además de implementar un carrito que manejara opciones de personalización.",
+  solutions:
+    "El frontend se desarrolló con **Next.js** y **React** para asegurar una carga rápida y una experiencia de usuario (UX) de alto nivel. Se utilizó una gestión de estado global para el carrito, permitiendo a los usuarios configurar sillones y guardar estas personalizaciones. El diseño con **Tailwind CSS** se centró en la elegancia y la usabilidad, utilizando galerías de imágenes de alta resolución y un diseño limpio para poner el foco en el mobiliario.",
+  features: [
+    "Catálogo de productos con filtros por tipo de sillón (ej. 2-cuerpos, reclinable), material y estilo.",
+    "Opciones de personalización de producto (selección de tapizado, color y patas) en la página de detalle.",
+    "Funcionalidad de carrito de compras interactivo con resumen de las personalizaciones.",
+    "Galería de imágenes de alta calidad con vistas 360° o múltiples ángulos para cada sillón.",
+    "Diseño responsive adaptado a la navegación en tablets y móviles, ideal para la visualización de grandes productos.",
+    "Formulario de contacto o solicitud de presupuesto optimizado.",
+  ],
+  technologies: [
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Zustand",
+    "Framer Motion",
+  ],
+},
+
 
 ];
 

@@ -1,15 +1,11 @@
 import { Code } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import ZoomBlurCard from "@/components/ZoomBlurCard";
-import { Project } from "@/types/project";
+import { ProjectsGrid } from "./projects-grid";
 
 interface ProjectsProps {
   isVisible: boolean;
-  projects: Project[];
-  setSelectedProject: (project: Project | null) => void;
 }
 
-export default function Projects({ isVisible, projects, setSelectedProject }: ProjectsProps) {
+export default function Projects({ isVisible }: ProjectsProps) {
   return (
     <section
       id="proyectos"
@@ -25,62 +21,7 @@ export default function Projects({ isVisible, projects, setSelectedProject }: Pr
         <h2 className="text-xl font-bold">Proyectos</h2>
       </div>
 
-      <div 
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8"
-        role="list"
-        aria-label="Lista de proyectos"
-      >
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="relative group overflow-hidden rounded-2xl"
-            role="listitem"
-          >
-            <ZoomBlurCard
-              title={project.title}
-              description={project.subtitle}
-              imageUrl={project.image}
-            />
-            {/* Overlay con botones */}
-            <div 
-              className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/80 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 p-4"
-              role="group"
-              aria-label={`Acciones para el proyecto ${project.title}`}
-            >
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {project.title}
-              </h3>
-              <div className="flex flex-col gap-2 w-full">
-                <Button
-                  size="sm"
-                  className="w-full px-3 py-1.5 text-xs rounded-xl font-medium bg-emerald-600 hover:bg-emerald-700 text-white transition-all duration-200"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    window.open(project.demoUrl, "_blank");
-                  }}
-                  aria-label={`Ver demo del proyecto ${project.title}`}
-                >
-                  Ver Demo
-                </Button>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="w-full px-3 py-1.5 text-xs rounded-xl font-medium border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white transition-all duration-200"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    setSelectedProject(project);
-                  }}
-                  aria-label={`Ver detalles del proyecto ${project.title}`}
-                >
-                  Ver Detalles
-                </Button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <ProjectsGrid />
     </section>
   );
 } 
