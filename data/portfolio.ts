@@ -935,7 +935,7 @@ export const projects: Project[] = [
   year: "2025",
   title: "AVZ - Muebles y Sillones",
   subtitle: "Tienda online de sillones y mobiliario de diseño",
-  image: "/fotos-proyectos/31.PNG?height=120&width=200",
+  image: "/fotos-proyectos/31.PNG",
   demoUrl: "https://sillones.vercel.app/",
   githubUrl: "#",
   description:
