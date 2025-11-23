@@ -1,70 +1,85 @@
-import { Calendar, Award } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
+
+import { Award } from "lucide-react";
+
+const educationData = [
+  {
+    title: "Tecnicatura Universitaria en Programación",
+    institution: "Universidad Tecnológica Nacional - UTN",
+    period: "2025 – En curso",
+    status: "En curso",
+    current: true,
+  },
+  {
+    title: "Full Stack Developer",
+    institution: "Henry Bootcamp",
+    period: "2024",
+    status: "Completado",
+    current: false,
+  },
+];
 
 export default function Education() {
   return (
     <section
       id="educacion"
-      className="px-4 sm:px-8 py-8 sm:py-12 border-t rounded-md border-gray-800/40"
+      className="px-6 sm:px-12 lg:px-24 py-24 sm:py-32 border-t border-zinc-900/50"
     >
-      <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
-        <div className="p-2 rounded-lg ">
-          <Award className="w-5 h-5 text-emerald-600" />
+      <div className="max-w-3xl mx-auto">
+        {/* Minimal Header */}
+        <div className="flex items-center gap-4 mb-20">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-900/50 border border-zinc-800/50">
+            <Award className="w-4 h-4 text-emerald-500/80" />
+          </div>
+          <h2 className="text-2xl font-light text-zinc-100 tracking-wide">
+            Educación<span className="text-emerald-500">.</span>
+          </h2>
         </div>
-        <h2 className="text-xl font-bold">Educación</h2>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
-        {/* Card 1 - En curso */}
-        <Card className="bg-gradient-to-br from-gray-900/30 to-gray-900/10 border border-gray-800/40 rounded-xl backdrop-blur-sm hover:border-gray-700/50 hover:bg-gray-900/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-900/20 group overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <CardContent className="relative p-5 sm:p-7">
-            <div className="flex items-start justify-between mb-5">
-              <div className="p-3 rounded-xl bg-blue-500/10 border border-blue-500/30 shadow-sm shadow-blue-500/10">
-                <Award className="w-6 h-6 text-blue-400/90" />
-              </div>
-              <Badge className="bg-blue-500/20 text-blue-300/90 text-xs px-3 py-1 border border-blue-500/40 shadow-inner shadow-blue-500/10">
-                En curso
-              </Badge>
-            </div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-200 group-hover:text-white transition-colors">
-              Programación
-            </h3>
-            <p className="text-sm text-gray-300/90 mb-3 font-medium">
-              Universidad Tecnológica Nacional - UTN
-            </p>
-            <div className="flex items-center gap-2 text-xs text-gray-400">
-              <Calendar className="w-4 h-4 text-gray-500" />
-              <span>2025 – En curso</span>
-            </div>
-          </CardContent>
-        </Card>
+        {/* Minimal Timeline */}
+        <div className="relative space-y-16">
+          {/* Ultra thin line */}
+          <div className="absolute left-[19px] top-2 bottom-2 w-px bg-zinc-800/50" />
 
-        {/* Card 2 - Completado */}
-        <Card className="bg-gradient-to-br from-gray-900/30 to-gray-900/10 border border-gray-800/40 rounded-xl backdrop-blur-sm hover:border-gray-700/50 hover:bg-gray-900/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-green-900/20 group overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <CardContent className="relative p-5 sm:p-7">
-            <div className="flex items-start justify-between mb-5">
-              <div className="p-3 rounded-xl bg-green-500/10 border border-green-500/30 shadow-sm shadow-green-500/10">
-                <Award className="w-6 h-6 text-green-400/90" />
+          {educationData.map((edu, index) => (
+            <div key={index} className="relative pl-16 group">
+              {/* Minimal Node */}
+              <div
+                className={`absolute left-[15px] top-2 w-[9px] h-[9px] rounded-full border-2 z-10 transition-all duration-500 ${
+                  edu.current
+                    ? "bg-emerald-500 border-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.3)]"
+                    : "bg-zinc-950 border-zinc-700 group-hover:border-zinc-500"
+                }`}
+              />
+
+              {/* Clean Content */}
+              <div className="flex flex-col gap-3 transition-all duration-500">
+                {/* Header: Title & Institution */}
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+                  <div className="space-y-1">
+                    <h3 className="text-lg font-medium text-zinc-100 group-hover:text-emerald-300 transition-colors duration-300">
+                      {edu.title}
+                    </h3>
+                    <p className="text-sm text-zinc-400 font-light">
+                      {edu.institution}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-3 shrink-0">
+                    {edu.current && (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/10 tracking-wide">
+                        EN CURSO
+                      </span>
+                    )}
+                    <span className="text-xs text-zinc-600 font-mono tracking-tight">
+                      {edu.period}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <Badge className="bg-green-500/20 text-green-300/90 text-xs px-3 py-1 border border-green-500/40 shadow-inner shadow-green-500/10">
-                Completado
-              </Badge>
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-200 group-hover:text-white transition-colors">
-              Full Stack Developer
-            </h3>
-            <p className="text-sm text-gray-300/90 mb-3 font-medium">
-              Henry Bootcamp
-            </p>
-            <div className="flex items-center gap-2 text-xs text-gray-400">
-              <Calendar className="w-4 h-4 text-gray-500" />
-              <span>2024</span>
-            </div>
-          </CardContent>
-        </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

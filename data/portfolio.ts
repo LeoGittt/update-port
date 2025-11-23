@@ -967,49 +967,43 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-  title: "Frontend Developer",
-  company: "Boostly",
-  period: "Jun. 2025 – Sep. 2025",
-  description:
-    "GesDev (Sistema de Gestión). Lideré el desarrollo del frontend desde cero, diseñando toda la arquitectura y la estructura de la aplicación para que fuera escalable y fácil de mantener. Creé un sistema de roles y permisos para controlar quién puede hacer qué dentro del sistema, optimicé los componentes para que la interfaz fuera rápida y eficiente, y desarrollé herramientas internas (hooks y servicios) para gestionar la información de manera ordenada y confiable. Implementé funcionalidades clave como facturación, geolocalización, administración de contratos, servicios y clientes. El proyecto resultó en un sistema modular y robusto, que combina buenas prácticas de ingeniería con una experiencia de usuario intuitiva, manteniendo el código limpio y reutilizable.",
-  current: true,
-},
-  {
-  title: "Frontend Developer",
-  company: "EmpreId",
-  period: "Mar. 2025 – Jun. 2025",
-  description: "Lideré el rediseño completo del sistema SIMU (Sistema Integral Municipal Unificado) y de todos los flujos de trabajo, incluyendo gestión de roles, distintos módulos, geolocalización, búsquedas avanzadas, paginación y otras funcionalidades críticas. Desarrollé la arquitectura del frontend y la interfaz de usuario con Next.js, React.js y TypeScript, logrando un sistema más intuitivo, eficiente y escalable, capaz de procesar miles de reportes diarios y mejorar la gestión del personal municipal.",
-  current: false
-},
-  {
-  title: "SEO Developer",
-  company: "Easy Life (España)",
-  period: "Dic. 2024 – Feb. 2025",
-  description: "Desarrollé y optimicé sitios web y e-commerce en plataformas como WordPress, Tienda Nube y Shopify. Creé plugins personalizados e integraciones con PHP y JavaScript para ampliar la funcionalidad de los sitios. Realicé rediseños de webs, diseñé interfaces y elaboré reportes sobre optimizaciones y mejoras de rendimiento. Mejoré el posicionamiento SEO usando Google Search Console y PageSpeed Insights.",
-  current: false
-},
+    title: "Frontend Developer",
+    company: "Boostly (SaaS ERP: GesDev)",
+    period: "Sep 2025 ",
+    description:
+      "Desarrollo integral del Frontend para un sistema ERP modular (GesDev). Lideré la arquitectura desde cero en Next.js (orientada a dominios), implementando seguridad RBAC (Control de Roles) para Administradores y Empleados. Desarrollé flujos complejos (facturación, inventario) con manejo de estado global (Zustand) y validaciones robustas. Logré la digitalización y automatización de procesos de RRHH y Logística, garantizando escalabilidad y código limpio.",
+    current: false,
+  },
   {
     title: "Frontend Developer",
-    company: "CarDev",
-    period: "Sep. 2024 – Mar. 2025",
+    company: "EmpreId (Proyecto: SIMU)",
+    period: "Jun 2025 – Ago 2025",
     description:
-      "Proyecto CarDev (Sistema de Gestión de Concesionarias). Participé en el desarrollo de una solución integral de gestión de ventas y stock para concesionarias. Colaboré en la construcción de un sistema escalable utilizando Next.js, React.js y TypeScript.",
+      "Construcción integral desde cero del sistema SIMU (Sistema Municipal) para la gestión de incidentes urbanos (alumbrado, limpieza). Implementé arquitectura de roles jerárquicos (RBAC), geolocalización en tiempo real con Leaflet y módulos de carga multimedia. Optimicé el renderizado en Next.js para tableros de alta densidad, logrando una reducción del 40% en el tiempo de resolución de reclamos.",
     current: false,
   },
   {
-    title: "Frontend Developer Freelance",
+    title: "Web Performance & SEO Developer",
+    company: "Easy Life (E-commerce Europa)",
+    period: "Ene 2025 – May 2025",
+    description:
+      "Consultoría técnica y desarrollo web para e-commerce en el mercado europeo. Lideré la estrategia de optimización (Core Web Vitals), logrando 90/100 en PageSpeed Insights (Mobile). Extendí funcionalidades nativas de Shopify y WordPress con scripts personalizados en JavaScript Vanilla y PHP. Generé reportes estratégicos para stakeholders sobre SEO On/Off-page y conversión.",
+    current: false,
+  },
+  {
+    title: "Frontend Developer",
+    company: "CarDev (Automotriz)",
+    period: "Sep 2024 – Mar 2025",
+    description:
+      "Desarrollo de dashboard de control de stock y ventas para concesionarias. Colaboración en la integración de endpoints y manejo de estado global con Next.js y TypeScript. Enfocado en la construcción de un sistema escalable y mantenible.",
+    current: false,
+  },
+  {
+    title: "Frontend Developer (Agencia de Proyectos)",
     company: "Nexium Solutions",
-    period: "Ene 2025 – Ago. 2025",
+    period: "Jun 2024 – Dic 2024",
     description:
-      "Desarrollé sitios web para clientes utilizando múltiples tecnologías y plataformas. Trabajé con WordPress creando temas personalizados e integraciones con PHP, desarrollé tiendas online en Tienda Nube, y construí aplicaciones web con código puro usando Next.js. Creé plugins personalizados para WordPress y realicé integraciones complejas para ampliar la funcionalidad de los sitios, siempre enfocado en diseño responsivo y presencia digital efectiva.",
-    current: false,
-  },
-  {
-    title: "Frontend Developer Freelance",
-    company: "La Marina",
-    period: "2024",
-    description:
-      "Lideré el desarrollo completo de una tienda online desde cero, creando una arquitectura escalable con React.js y Next.js. Implementé funcionalidades de e-commerce como carrito de compras, gestión de productos, sistema de pagos y autenticación de usuarios. Optimicé el rendimiento del sitio y apliqué buenas prácticas de SEO para mejorar la experiencia del usuario y la visibilidad en buscadores.",
+      "Ejecución Full Cycle de proyectos asignados para clientes PyMEs (e-commerce, landing pages y sitios corporativos), cubriendo desde requerimientos y diseño UI/UX hasta el despliegue. Enfoque constante en optimización SEO técnica para maximizar la visibilidad orgánica.",
     current: false,
   },
 ];
