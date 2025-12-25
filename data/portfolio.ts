@@ -933,34 +933,64 @@ export const projects: Project[] = [
 {
   id: 31,
   year: "2025",
-  title: "AVZ - Muebles y Sillones",
-  subtitle: "Tienda online de sillones y mobiliario de diseño",
-  image: "/fotos-proyectos/31.PNG",
-  demoUrl: "https://sillones.vercel.app/",
-  githubUrl: "#",
+  title: "Ventury",
+  subtitle: "E-commerce especializado en insumos odontológicos",
+  image: "/fotos-proyectos/3111.PNG", // Asegúrate de que la ruta sea correcta
+  demoUrl: "https://ventury-livid.vercel.app", // O la URL que corresponda
+  githubUrl: "#", 
   description:
-    "AVZ, una plataforma de e-commerce enfocada en la venta de **sillones, sofás y mobiliario** de diseño moderno y contemporáneo. El proyecto fue concebido para proporcionar una navegación de catálogo inmersiva y una gestión de pedidos simplificada, priorizando la visualización de texturas y acabados.",
+    "Ventury es una plataforma de comercio electrónico de alto rendimiento diseñada para el mercado odontológico chileno. A diferencia de las soluciones prefabricadas, este proyecto fue desarrollado íntegramente a medida, ofreciendo una experiencia de compra premium, un catálogo técnico especializado y una infraestructura escalable para el comercio internacional.",
   challenges:
-    "El reto principal fue diseñar una interfaz que destacara la **calidad y el diseño** de los sillones, a menudo elementos de alto valor. Esto implicó crear un sistema de visualización de productos robusto que permitiera **múltiples vistas, opciones de color/tapizado** y dimensiones detalladas, además de implementar un carrito que manejara opciones de personalización.",
+    "El mayor desafío fue replicar y superar la complejidad funcional de CMS tradicionales como WordPress, pero manteniendo un control total sobre el código y el rendimiento. Se requirió diseñar una arquitectura que integrara una gestión de inventario compleja, procesos de pago seguros y una estrategia de SEO técnico agresiva para posicionar en un nicho competitivo.",
   solutions:
-    "El frontend se desarrolló con **Next.js** y **React** para asegurar una carga rápida y una experiencia de usuario (UX) de alto nivel. Se utilizó una gestión de estado global para el carrito, permitiendo a los usuarios configurar sillones y guardar estas personalizaciones. El diseño con **Tailwind CSS** se centró en la elegancia y la usabilidad, utilizando galerías de imágenes de alta resolución y un diseño limpio para poner el foco en el mobiliario.",
+    "Se implementó una arquitectura Fullstack moderna utilizando Next.js y TypeScript para el frontend, garantizando un renderizado híbrido óptimo para SEO. Para el backend y la persistencia de datos, se utilizó Supabase, permitiendo una gestión de usuarios y base de datos en tiempo real. La interfaz se construyó con Shadcn/UI, logrando una estética profesional y limpia, alineada con el sector salud.",
   features: [
-    "Catálogo de productos con filtros por tipo de sillón (ej. 2-cuerpos, reclinable), material y estilo.",
-    "Opciones de personalización de producto (selección de tapizado, color y patas) en la página de detalle.",
-    "Funcionalidad de carrito de compras interactivo con resumen de las personalizaciones.",
-    "Galería de imágenes de alta calidad con vistas 360° o múltiples ángulos para cada sillón.",
-    "Diseño responsive adaptado a la navegación en tablets y móviles, ideal para la visualización de grandes productos.",
-    "Formulario de contacto o solicitud de presupuesto optimizado.",
+    "Arquitectura Fullstack customizada con gestión de inventario en tiempo real.",
+    "Optimización SEO avanzada (Core Web Vitals, metadatos dinámicos y SSR).",
+    "Pasarela de pagos segura e integración de checkout optimizado.",
+    "Panel de administración personalizado para la gestión de productos y pedidos.",
+    "Diseño UI/UX orientado a la conversión utilizando componentes de Shadcn/UI.",
   ],
   technologies: [
     "Next.js",
-    "React.js",
+    "Supabase",
     "TypeScript",
+    "React",
+    "Shadcn/UI",
     "Tailwind CSS",
-    "Zustand",
-    "Framer Motion",
   ],
 },
+{
+  id: 32, // Siguiendo la secuencia
+  year: "2025",
+  title: "PE Autos",
+  subtitle: "CRM integral para gestión de concesionaria automotriz",
+  image: "/fotos-proyectos/32.PNG", 
+  demoUrl: "https://peautos.vercel.app/", // Generalmente los CRM son privados, puedes poner "#" o un video demo
+  githubUrl: "#",
+  description:
+    "PE Autos es un ecosistema administrativo diseñado específicamente para agencias de vehículos. Este CRM centraliza toda la operación comercial, desde el ingreso técnico de unidades hasta el seguimiento detallado de clientes y la gestión de documentación legal, reemplazando procesos manuales por un flujo de trabajo digital automatizado y seguro.",
+  challenges:
+    "El principal reto fue estructurar una base de datos relacional compleja que pudiera vincular vehículos, clientes y presupuestos de forma coherente. Además, se buscó crear una interfaz administrativa que fuera extremadamente rápida y funcional para el uso diario, permitiendo la carga masiva de archivos y el seguimiento de estados de documentación sin fricciones.",
+  solutions:
+    "Utilicé Supabase para manejar las relaciones complejas de datos y el almacenamiento de documentación sensible mediante sus buckets de storage. El frontend, desarrollado con Next.js y Shadcn/UI, se enfocó en la eficiencia operativa, utilizando tablas dinámicas con filtros avanzados y formularios validados con TypeScript para garantizar que la información ingresada sea siempre precisa.",
+  features: [
+    "Gestión de inventario de vehículos con ficha técnica y estado de unidad.",
+    "Módulo de clientes (CRM) con historial de interacciones y preferencias.",
+    "Generador de presupuestos dinámicos vinculados a la base de datos de productos.",
+    "Sistema de gestión documental para el seguimiento de transferencias y papeles legales.",
+    "Dashboard con métricas clave y reportes de ventas en tiempo real.",
+  ],
+  technologies: [
+    "Next.js",
+    "Supabase (Auth, Database, Storage)",
+    "TypeScript",
+    "React",
+    "Shadcn/UI",
+    "Zustand",
+  ],
+},
+
 
 
 ];
