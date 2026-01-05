@@ -12,7 +12,7 @@ interface NavbarProps {
 export default function Navbar({ activeSection, scrollY, scrollToSection }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
+//hola
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 640);
