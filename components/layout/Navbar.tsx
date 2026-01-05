@@ -1,7 +1,9 @@
 "use client";
 
+// import Background from "@/components/layout/Background"; 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import TrueFocus from "@/components/ui/true-focus";
 
 interface NavbarProps {
   activeSection: string;
@@ -12,7 +14,7 @@ interface NavbarProps {
 export default function Navbar({ activeSection, scrollY, scrollToSection }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-//hola
+
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 640);
@@ -43,8 +45,18 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
       <div className="px-4 sm:px-8 py-4 sm:py-4">
         {/* Mobile Navigation */}
         <div className="flex items-center justify-between sm:hidden">
-          <div className="text-sm font-semibold text-white tracking-wide bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent" role="banner">
-            Leonel González
+          <div className="text-sm font-semibold text-white tracking-wide" role="banner">
+             <div className="scale-75 origin-left">
+                <TrueFocus 
+                    sentence="Leonel González"
+                    manualMode={false}
+                    blurAmount={3}
+                    borderColor="#b8b8b8"
+                    glowColor="rgba(255,255,255,0.3)"
+                    animationDuration={0.5}
+                    pauseBetweenAnimations={2}
+                />
+            </div>
           </div>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -63,8 +75,18 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
 
         {/* Desktop Navigation */}
         <div className="hidden sm:flex items-center justify-between">
-          <div className="text-sm font-semibold tracking-wide bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent" role="banner">
-            Leonel González
+          <div className="text-sm font-semibold tracking-wide" role="banner">
+             <div className="scale-75 origin-left">
+                <TrueFocus 
+                    sentence="Leonel González"
+                    manualMode={false}
+                    blurAmount={5}
+                    borderColor="white"
+                    glowColor="rgba(255,255,255,0.4)"
+                    animationDuration={0.3}
+                    pauseBetweenAnimations={1.5}
+                />
+            </div>
           </div>
           <div className="flex items-center space-x-8" role="menubar">
             {["inicio", "proyectos", "experiencia", "contacto"].map(

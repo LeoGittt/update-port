@@ -37,7 +37,7 @@ export default function Hero({ isVisible }: HeroProps) {
           
           {/* Profile Image */}
           <div className="lg:col-span-3 flex justify-center lg:justify-center">
-            <div className="relative group">
+            <div className="relative group rounded-full">
               <BorderTrail
                 size={100}
               />
