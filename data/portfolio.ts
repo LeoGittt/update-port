@@ -935,7 +935,7 @@ export const projects: Project[] = [
   year: "2025",
   title: "Ventury",
   subtitle: "E-commerce especializado en insumos odontológicos",
-  image: "/fotos-proyectos/3111.PNG", // Asegúrate de que la ruta sea correcta
+  image: "/fotos-proyectos/31.PNG", // Asegúrate de que la ruta sea correcta
   demoUrl: "https://ventury-livid.vercel.app", // O la URL que corresponda
   githubUrl: "#", 
   description:

@@ -151,7 +151,7 @@ export default function Hero({ isVisible }: HeroProps) {
                 <div className="p-2 space-y-1">
                   <DropdownMenuItem asChild className="group">
                     <Link
-                      href="/Leonel_Gonzalez_CV.pdf"
+                      href="/CV_LEONEL_GONZALEZ.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer text-zinc-200 hover:text-emerald-300 transition-all duration-200 outline-none focus:outline-none"
