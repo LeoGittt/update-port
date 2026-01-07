@@ -935,7 +935,7 @@ export const projects: Project[] = [
   year: "2025",
   title: "Ventury",
   subtitle: "E-commerce especializado en insumos odontológicos",
-  image: "/fotos-proyectos/31.PNG", // Asegúrate de que la ruta sea correcta
+  image: "/fotos-proyectos/31.png", // Asegúrate de que la ruta sea correcta
   demoUrl: "https://ventury-livid.vercel.app", // O la URL que corresponda
   githubUrl: "#", 
   description:
@@ -965,7 +965,7 @@ export const projects: Project[] = [
   year: "2025",
   title: "PE Autos",
   subtitle: "CRM integral para gestión de concesionaria automotriz",
-  image: "/fotos-proyectos/32.PNG", 
+  image: "/fotos-proyectos/32.png", 
   demoUrl: "https://peautos.vercel.app/", // Generalmente los CRM son privados, puedes poner "#" o un video demo
   githubUrl: "#",
   description:
