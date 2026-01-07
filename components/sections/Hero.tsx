@@ -136,55 +136,16 @@ export default function Hero({ isVisible }: HeroProps) {
               <span className="font-light tracking-wide">LinkedIn</span>
             </Link>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-emerald-400/20 hover:border-emerald-400/35 text-emerald-400 hover:text-emerald-300 transition-all duration-500 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-400/20 backdrop-blur-md bg-gradient-to-r from-emerald-400/5 to-emerald-500/5 hover:from-emerald-400/10 hover:to-emerald-500/10 justify-center text-sm shadow-lg hover:shadow-xl hover:shadow-emerald-400/10 hover:scale-[1.01] origin-center w-full">
-                <Download className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-                <span className="font-light text-center tracking-wide">Ver o Desc. CV</span>
-                <ChevronDown className="w-3 h-3 group-data-[state=open]:rotate-180 transition-transform duration-300 ml-auto" aria-hidden="true" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent 
-                align="end" 
-                className="w-44 bg-gradient-to-b from-zinc-900/98 to-zinc-950/98 backdrop-blur-2xl border border-zinc-600/30 shadow-2xl shadow-black/60 rounded-xl overflow-hidden animate-in slide-in-from-top-2 duration-200"
-                sideOffset={8}
-                alignOffset={-8}
-              >
-                <div className="p-2 space-y-1">
-                  <DropdownMenuItem asChild className="group">
-                    <Link
-                      href="/CV_LEONEL_GONZALEZ.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer text-zinc-200 hover:text-emerald-300 transition-all duration-200 outline-none focus:outline-none"
-                    >
-                      <div className="p-1 rounded bg-zinc-800/50 transition-colors duration-200">
-                        <Eye className="w-3 h-3 group-hover:scale-110 transition-all duration-200" aria-hidden="true" />
-                      </div>
-                      <div className="flex flex-col flex-1">
-                        {/* <span className="font-medium text-xs tracking-wide">Ver CV</span> */}
-                        <span className="text-xs text-zinc-500 group-hover:text-emerald-400/70 transition-colors duration-200">Abrir en pestaña</span>
-                      </div>
-                    </Link>
-                  </DropdownMenuItem>
-                  
-                  <div className="h-px bg-gradient-to-r from-transparent via-zinc-700/50 to-transparent mx-1"></div>
-                  
-                  <DropdownMenuItem asChild className="group">
-                    <button
-                      onClick={handleDownloadCV}
-                      className="flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer text-zinc-200 hover:text-emerald-300 transition-all duration-200 outline-none focus:outline-none w-full text-left"
-                    >
-                      <div className="p-1 rounded bg-zinc-800/50 transition-colors duration-200">
-                        <Download className="w-3 h-3 group-hover:scale-110 transition-all duration-200" aria-hidden="true" />
-                      </div>
-                      <div className="flex flex-col flex-1">
-                        {/* <span className="font-medium text-xs tracking-wide">Descargar CV</span> */}
-                        <span className="text-xs text-zinc-500 group-hover:text-emerald-400/70 transition-colors duration-200">Guardar archivo</span>
-                      </div>
-                    </button>
-                  </DropdownMenuItem>
-                </div>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Link
+              href="/CV_LEONEL_GONZALEZ.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-emerald-400/20 hover:border-emerald-400/35 text-emerald-400 hover:text-emerald-300 transition-all duration-500 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-400/20 backdrop-blur-md bg-gradient-to-r from-emerald-400/5 to-emerald-500/5 hover:from-emerald-400/10 hover:to-emerald-500/10 justify-center text-sm shadow-lg hover:shadow-xl hover:shadow-emerald-400/10 hover:scale-[1.01] origin-center w-full"
+              aria-label="Ver CV"
+            >
+              <Eye className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
+              <span className="font-light text-center tracking-wide">Ver CV</span>
+            </Link>
           </div>
         </div>
       </div>
