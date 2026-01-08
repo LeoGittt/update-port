@@ -1,7 +1,7 @@
 "use client";
 
-// import Background from "@/components/layout/Background"; 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import TrueFocus from "@/components/ui/true-focus";
 
@@ -12,9 +12,10 @@ interface NavbarProps {
 }
 
 export default function Navbar({ activeSection, scrollY, scrollToSection }: NavbarProps) {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
+  
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 640);
@@ -30,6 +31,10 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
       window.removeEventListener('resize', checkIfMobile);
     };
   }, []);
+
+  const isProjectPage = pathname?.startsWith('/proyecto/');
+
+  if (isProjectPage) return null;
 
   return (
     <nav

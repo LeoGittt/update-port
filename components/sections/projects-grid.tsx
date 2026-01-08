@@ -1,9 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { projects } from "@/data/projects"
 import { MagicBento, BentoCardProps } from "./magic-bento"
-import { ProjectModal } from "./project-modal"
+// import { ProjectModal } from "./project-modal" // NO MORE MODAL
 import { ProjectsListModal } from "../modals/projects-list-modal"
 import type { Project } from "@/types/project"
 import {
@@ -18,7 +19,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export function ProjectsGrid() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const router = useRouter()
+  // const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [showAllProjects, setShowAllProjects] = useState(false)
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
@@ -85,9 +87,10 @@ export function ProjectsGrid() {
                     color={item.color}
                     glowColor={item.glowColor}
                     image={item.image}
-                    onClick={() => setSelectedProject(item.project)}
+                    onClick={() => router.push(`/proyecto/${item.id}`)}
                     // Forzamos altura completa para que todas las cards se vean uniformes
                     colSpan="h-full" 
+                    animateInView={false}
                   />
                 </div>
               </CarouselItem>
@@ -135,12 +138,15 @@ export function ProjectsGrid() {
         </div>
       </div>
 
-      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      {/* <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} /> */}
       
       <ProjectsListModal 
         isOpen={showAllProjects} 
         onClose={() => setShowAllProjects(false)} 
-        onSelectProject={(p) => setSelectedProject(p)}
+        onSelectProject={(p) => {
+          router.push(`/proyecto/${p.id}`)
+          setShowAllProjects(false)
+        }}
         getGlowColor={getGlowColor}
       />
     </>
