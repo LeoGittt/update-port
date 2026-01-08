@@ -29,12 +29,17 @@ export default function ProjectPage() {
   const id = params.id
   const [isMounted, setIsMounted] = useState(false)
   const [activeImage, setActiveImage] = useState(0)
+  const [isScrolled, setIsScrolled] = useState(false)
   const heroRef = useRef<HTMLDivElement>(null)
   
-  // Efecto de montaje para asegurar renderizado correcto y scroll
   useEffect(() => {
     setIsMounted(true)
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    window.scrollTo({ top: 0, behavior: "instant" })
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [id])
 
   const projectIndex = projects.findIndex(p => p.id.toString() === id)
@@ -48,7 +53,7 @@ export default function ProjectPage() {
 
   // Animaciones cinemáticas filtradas por scroll
   const heroOpacity = useTransform(heroScroll, [0, 0.7], [1, 0])
-  const heroScale = useTransform(heroScroll, [0, 1], [1, 1.05])
+  const heroScale = useTransform(heroScroll, [0, 1], [1, 1.1])
   const heroY = useTransform(heroScroll, [0, 1], [0, 100])
   const textBlur = useTransform(heroScroll, [0, 0.5], ["blur(0px)", "blur(10px)"])
 
@@ -78,36 +83,30 @@ export default function ProjectPage() {
   return (
     <div className="min-h-screen bg-[#050505] text-zinc-100 selection:bg-emerald-500/30 font-sans overflow-x-hidden">
       
-      {/* Barra de Navegación Flotante Ultra-Premium */}
-      <nav className="fixed top-0 left-0 right-0 z-[100] px-4 md:px-8 py-6 md:py-8 flex justify-between items-center pointer-events-none">
-        <motion.div 
-          initial={{ x: -20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          className="pointer-events-auto"
-        >
-          <button 
-            onClick={() => router.push('/#proyectos')}
-            className="group flex items-center gap-3 px-6 py-3 bg-zinc-950/80 backdrop-blur-2xl border border-white/10 rounded-full text-xs font-black text-white hover:bg-emerald-500 hover:text-black hover:border-emerald-400 transition-all duration-500 shadow-2xl"
+      {/* Barra de Navegación Flotante Ultra-Premium - Se oculta en el top */}
+      <AnimatePresence>
+        {isScrolled && (
+          <motion.nav 
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -100, opacity: 0 }}
+            className="fixed top-0 left-0 right-0 z-[100] px-4 md:px-8 py-6 flex justify-between items-center pointer-events-none"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            <span className="tracking-widest">REGRESAR</span>
-          </button>
-        </motion.div>
+            <div className="pointer-events-auto">
+              <button 
+                onClick={() => router.push('/#proyectos')}
+                className="group flex items-center gap-3 px-6 py-3 bg-zinc-950/90 backdrop-blur-2xl border border-white/10 rounded-full text-xs font-black text-white hover:bg-emerald-500 hover:text-black hover:border-emerald-400 transition-all duration-500 shadow-2xl"
+              >
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                <span className="tracking-widest">REGRESAR</span>
+              </button>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
 
-        <motion.div 
-          initial={{ x: 20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          className="hidden md:flex pointer-events-auto gap-4"
-        >
-           <div className="px-6 py-3 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full flex items-center gap-3">
-              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[10px] uppercase tracking-[0.4em] font-black text-zinc-400">Viewing: <span className="text-white">{project.title}</span></span>
-           </div>
-        </motion.div>
-      </nav>
-
-      {/* Hero Section: Editorial & Cinemático */}
-      <section ref={heroRef} className="relative h-[60vh] md:h-screen min-h-[500px] flex items-center justify-center overflow-hidden pt-20">
+      {/* Hero Section: Editorial & Cinemático - FULL SCREEN MOBILE */}
+      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div 
            style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
            className="absolute inset-0 z-0"

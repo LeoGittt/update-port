@@ -1,154 +1,163 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Github, Linkedin, Download, Eye, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { BorderTrail } from "@/components/core/border-trail";
+import { Mail, MapPin, Github, Linkedin, ArrowRight } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 interface HeroProps {
   isVisible: boolean;
 }
 
 export default function Hero({ isVisible }: HeroProps) {
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/CV_LEONEL_GONZALEZ.pdf';
-    link.download = 'CV_Leonel_Gonzalez.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  // Efectos de scroll refinados
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
     <section
       id="inicio"
-      aria-label="Sección de inicio"
-      className={`px-6 sm:px-12 lg:px-24 py-20 sm:py-32 transition-all duration-700 flex items-center justify-center min-h-screen ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
+      ref={containerRef}
+      className="relative min-h-screen flex items-end sm:items-center justify-center overflow-hidden bg-black pb-24 sm:pb-0"
     >
-      <div className="max-w-6xl mx-auto w-full">
-        {/* Main Content - Horizontal Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center justify-items-center">
+      {/* MOBILE REFINED BACKGROUND - Adjusted to show face better */}
+      <motion.div 
+        style={{ scale, opacity }}
+        className="absolute inset-0 z-0 sm:hidden"
+      >
+        <Image
+          src="/foto.jpg"
+          alt="Leonel González"
+          fill
+          className="object-cover object-top opacity-50 grayscale"
+          priority
+        />
+        {/* Superior Gradient for contrast on top */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black" />
+        {/* Massive Bottom Gradient to hide background under text */}
+        <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-black via-black/80 to-transparent" />
+      </motion.div>
+
+      {/* AMBIENT GLOW - Subtle desktop ambient */}
+      <div className="absolute top-[10%] right-[15%] w-[30%] h-[30%] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none hidden sm:block" />
+      <div className="absolute bottom-[10%] left-[15%] w-[30%] h-[30%] bg-white/5 blur-[120px] rounded-full pointer-events-none hidden sm:block" />
+
+      <div className={`container relative z-10 px-6 max-w-6xl mx-auto transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+      }`}>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
-          {/* Profile Image */}
-          <div className="lg:col-span-3 flex justify-center lg:justify-center">
-            <div className="relative group rounded-full">
-              <BorderTrail
-                size={100}
-              />
-              <div className="w-44 h-44 sm:w-48 sm:h-48 lg:w-52 lg:h-52 rounded-full overflow-hidden bg-zinc-800/40 backdrop-blur-sm relative border border-zinc-600/20 shadow-xl shadow-black/30">
+          {/* PHOTO COLUMN - Desktop Only */}
+          <div className="hidden lg:flex lg:col-span-4 justify-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2 }}
+              className="relative group"
+            >
+              <div className="w-64 h-64 md:w-[20rem] md:h-[20rem] rounded-[3.5rem] overflow-hidden bg-zinc-900 border border-white/5 shadow-2xl relative">
                 <Image
                   src="/foto.jpg"
-                  alt="Leonel González - Desarrollador Frontend"
-                  width={320}
-                  height={320}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 filter group-hover:brightness-110"
+                  alt="Leonel González"
+                  fill
+                  className="object-cover transition-all duration-1000 group-hover:scale-105"
                   priority
-                  quality={100}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Info */}
-          <div className="lg:col-span-6 text-center space-y-8 flex flex-col items-center justify-center">
-            <div className="space-y-5 w-full max-w-lg mx-auto">
-              <div className="relative flex flex-col items-center">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white tracking-wide leading-tight text-center">
-                  <span className="bg-gradient-to-r from-white via-zinc-50 to-zinc-100 bg-clip-text text-transparent font-medium">
-                    Leonel González
-                  </span>
-                </h1>
-                <div className="mt-3 w-24 h-0.5 bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent rounded-full"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
               
-              <div className="space-y-3 flex flex-col items-center">
-                <p className="text-zinc-300 text-base sm:text-lg font-light tracking-wider text-center">
-                  Frontend Developer
-                </p>
-              </div>
-            </div>
-
-            {/* About Section */}
-            <div className="space-y-6 w-full max-w-md mx-auto flex flex-col items-center">
-              <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-zinc-400/40 to-transparent rounded-full"></div>
-              
-              <div className="space-y-5 text-center">
-                <p className="text-zinc-200 text-xs font-light leading-relaxed tracking-wide">
-                  Desarrollador frontend con{" "}
-                  <span className="text-white font-medium bg-gradient-to-r from-white via-zinc-50 to-zinc-100 bg-clip-text text-transparent">React</span>,{" "}
-                  <span className="text-white font-medium bg-gradient-to-r from-white via-zinc-50 to-zinc-100 bg-clip-text text-transparent">Next.js</span> y{" "}
-                  <span className="text-white font-medium bg-gradient-to-r from-white via-zinc-50 to-zinc-100 bg-clip-text text-transparent">TypeScript</span>
-                </p>
-
-                <p className="text-zinc-400 text-xs font-light leading-relaxed opacity-80">
-                  Estudiante de Programación en la UTN, enfocado en crear experiencias
-                  web elegantes y funcionales
-                </p>
-
-                <div className="flex items-center justify-center gap-2 text-zinc-500 text-xs pt-1">
-                  <MapPin className="w-3 h-3 text-zinc-500" aria-hidden="true" />
-                  <span className="tracking-wide">San Juan, Argentina</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact */}
-            <div className="flex justify-center w-full">
-              <Link
-                href="mailto:leonel.gonzalez.dev@gmail.com"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-zinc-900/40 to-zinc-800/40 border border-zinc-600/20 text-zinc-200 hover:text-white hover:border-zinc-500/30 hover:from-zinc-800/50 hover:to-zinc-700/50 text-xs transition-all duration-500 group backdrop-blur-md shadow-lg hover:shadow-xl"
-                aria-label="Enviar correo electrónico a leonel.gonzalez.dev@gmail.com"
+              <motion.div 
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -bottom-6 -right-6 bg-emerald-500 text-black px-6 py-3 rounded-2xl font-black text-[9px] tracking-widest shadow-xl uppercase"
               >
-                <Mail className="w-3 h-3 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-                <span className="font-light tracking-wider">Contacto</span>
-              </Link>
-            </div>
+                Open to Work
+              </motion.div>
+            </motion.div>
           </div>
 
-          {/* Action Buttons */}
-          <div className="lg:col-span-3 flex flex-col gap-3 w-full max-w-xs mx-auto">
-            <Link
-              href="https://bit.ly/3NMKOVe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-600/25 hover:border-zinc-500/40 text-zinc-200 hover:text-white transition-all duration-500 backdrop-blur-md bg-gradient-to-r from-zinc-900/40 to-zinc-800/40 hover:from-zinc-800/60 hover:to-zinc-700/60 justify-center text-sm shadow-lg hover:shadow-xl hover:scale-[1.01] origin-center"
-              aria-label="Visitar perfil de GitHub"
-            >
-              <Github className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-              <span className="font-light tracking-wide">GitHub</span>
-            </Link>
+          {/* CONTENT COLUMN - Bottom aligned on mobile */}
+          <div className="lg:col-span-8 space-y-8 md:space-y-10 text-center lg:text-left">
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+                className="inline-flex items-center gap-3 text-emerald-500 justify-center lg:justify-start"
+              >
+                <div className="w-8 h-px bg-emerald-500/40" />
+                <span className="text-[9px] font-black tracking-[0.4em] uppercase">Frontend Developer</span>
+              </motion.div>
 
-            <Link
-              href="https://bit.ly/40vJTjP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-600/25 hover:border-zinc-500/40 text-zinc-200 hover:text-white transition-all duration-500 backdrop-blur-md bg-gradient-to-r from-zinc-900/40 to-zinc-800/40 hover:from-zinc-800/60 hover:to-zinc-700/60 justify-center text-sm shadow-lg hover:shadow-xl hover:scale-[1.01] origin-center"
-              aria-label="Visitar perfil de LinkedIn"
-            >
-              <Linkedin className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-              <span className="font-light tracking-wide">LinkedIn</span>
-            </Link>
+              <div className="relative">
+                <motion.h1 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-[12vw] sm:text-6xl md:text-[5rem] lg:text-[7.5rem] font-black text-white leading-tight lg:leading-[0.9] tracking-tighter uppercase"
+                >
+                  LEONEL <br />
+                  <span className="text-zinc-600 italic">GONZÁLEZ</span>
+                </motion.h1>
+              </div>
+            </div>
 
-            <Link
-              href="/CV_LEONEL_GONZALEZ.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-emerald-400/20 hover:border-emerald-400/35 text-emerald-400 hover:text-emerald-300 transition-all duration-500 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-400/20 backdrop-blur-md bg-gradient-to-r from-emerald-400/5 to-emerald-500/5 hover:from-emerald-400/10 hover:to-emerald-500/10 justify-center text-sm shadow-lg hover:shadow-xl hover:shadow-emerald-400/10 hover:scale-[1.01] origin-center w-full"
-              aria-label="Ver CV"
+            {/* CTA Group */}
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="flex justify-center lg:justify-start gap-4"
             >
-              <Eye className="w-4 h-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-              <span className="font-light text-center tracking-wide">Ver CV</span>
-            </Link>
+              <Link
+                href="#proyectos"
+                className="group relative flex items-center justify-center gap-4 px-10 py-5 bg-white text-black font-black rounded-2xl hover:bg-emerald-500 transition-all duration-500"
+              >
+                <span className="tracking-widest text-[10px]">VER PROYECTOS</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
+              </Link>
+            </motion.div>
+
+            {/* Social & Location Micro Footer */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+              className="pt-10 flex flex-col md:flex-row items-center justify-center lg:justify-start gap-8 border-t border-white/5"
+            >
+              <div className="flex items-center gap-3 opacity-60">
+                <MapPin className="w-3.5 h-3.5 text-emerald-500" />
+                <span className="text-[9px] font-black uppercase tracking-[0.2em] text-zinc-400">San Juan, AR</span>
+              </div>
+              
+              <div className="flex gap-6">
+                {[
+                  { icon: Github, href: "https://bit.ly/3NMKOVe" },
+                  { icon: Linkedin, href: "https://bit.ly/40vJTjP" },
+                  { icon: Mail, href: "mailto:leonel.gonzalez.dev@gmail.com" }
+                ].map((social, i) => (
+                  <Link 
+                    key={i} 
+                    href={social.href} 
+                    target="_blank" 
+                    className="text-zinc-600 hover:text-white transition-all duration-400 hover:scale-110"
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
+
+      {/* Subtle Layout Lines */}
+      <div className="absolute left-[8%] top-0 h-full w-px bg-gradient-to-b from-transparent via-white/5 to-transparent hidden lg:block" />
     </section>
   );
 }

@@ -42,8 +42,10 @@ export default function Navbar({ activeSection, scrollY, scrollToSection }: Navb
       aria-label="Navegación principal"
       className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out w-full max-w-6xl px-4 sm:px-6 ${
         scrollY > 20
-          ? "bg-black/85 backdrop-blur-xl border border-gray-700/40 rounded-none sm:rounded-2xl mt-0 sm:mt-2 shadow-2xl shadow-black/50"
-          : "bg-black/40 backdrop-blur-md border border-gray-700/20 rounded-none sm:rounded-2xl mt-0 sm:mt-2 shadow-lg shadow-black/30"
+          ? "bg-black/85 backdrop-blur-xl border border-gray-700/40 rounded-none sm:rounded-2xl mt-0 sm:mt-2 shadow-2xl shadow-black/50 opacity-100"
+          : isMobile 
+            ? "opacity-0 -translate-y-10 pointer-events-none" 
+            : "bg-black/40 backdrop-blur-md border border-gray-700/20 rounded-none sm:rounded-2xl mt-0 sm:mt-2 shadow-lg shadow-black/30 opacity-100"
       }`}
       style={scrollY > 20 ? { borderColor: "#23272f" } : { borderColor: "#23272f40" }}
     >
