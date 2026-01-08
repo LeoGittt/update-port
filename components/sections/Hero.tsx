@@ -23,7 +23,7 @@ export default function Hero({ isVisible }: HeroProps) {
     <section
       id="inicio"
       ref={containerRef}
-      className="relative min-h-screen flex items-end sm:items-center justify-center overflow-hidden bg-black pb-24 sm:pb-0"
+      className="relative min-h-screen flex items-end justify-center overflow-hidden bg-black pb-12 sm:pb-32"
     >
       {/* MOBILE REFINED BACKGROUND - Adjusted to show face better */}
       <motion.div 
@@ -99,7 +99,7 @@ export default function Hero({ isVisible }: HeroProps) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-4xl sm:text-6xl md:text-[5rem] lg:text-[7.5rem] font-black text-white leading-tight lg:leading-[0.9] tracking-tighter uppercase"
+                  className="text-3xl sm:text-6xl md:text-[5rem] lg:text-[7.5rem] font-black text-white leading-tight lg:leading-[0.9] tracking-tighter uppercase"
                 >
                   LEONEL <br />
                   <span className="text-zinc-600 italic">GONZÁLEZ</span>
@@ -116,7 +116,7 @@ export default function Hero({ isVisible }: HeroProps) {
             >
               <Link
                 href="#proyectos"
-                className="group relative h-14 w-56 bg-neutral-900 border border-white/10 text-gray-50 text-[10px] font-black tracking-widest rounded-xl overflow-hidden transition-all duration-500 flex items-center justify-center gap-3 hover:border-emerald-300 hover:text-emerald-300 before:absolute before:w-10 before:h-10 before:content-[''] before:right-1 before:top-1 before:z-10 before:bg-emerald-500 before:rounded-full before:blur-lg before:duration-500 group-hover:before:duration-500 group-hover:before:right-12 group-hover:before:-bottom-8 group-hover:before:blur group-hover:before:[box-shadow:_20px_20px_20px_30px_#10b981] after:absolute after:z-10 after:w-16 after:h-16 after:content-[''] after:bg-emerald-300 after:right-8 after:top-3 after:rounded-full after:blur-lg after:duration-500 group-hover:after:duration-500 group-hover:after:-right-8"
+                className="group relative h-11 w-48 sm:h-14 sm:w-56 bg-neutral-900 border border-white/10 text-gray-50 text-[9px] sm:text-[10px] font-black tracking-widest rounded-xl overflow-hidden transition-all duration-500 flex items-center justify-center gap-3 hover:border-emerald-300 hover:text-emerald-300 before:absolute before:w-10 before:h-10 before:content-[''] before:right-1 before:top-1 before:z-10 before:bg-emerald-500 before:rounded-full before:blur-lg before:duration-500 group-hover:before:duration-500 group-hover:before:right-12 group-hover:before:-bottom-8 group-hover:before:blur group-hover:before:[box-shadow:_20px_20px_20px_30px_#10b981] after:absolute after:z-10 after:w-16 after:h-16 after:content-[''] after:bg-emerald-300 after:right-8 after:top-3 after:rounded-full after:blur-lg after:duration-500 group-hover:after:duration-500 group-hover:after:-right-8"
               >
                 <span className="relative z-20">VER PROYECTOS</span>
                 <ArrowRight className="w-4 h-4 relative z-20 group-hover:translate-x-1 transition-transform duration-500" />
