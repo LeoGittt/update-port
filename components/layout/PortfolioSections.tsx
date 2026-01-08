@@ -29,8 +29,8 @@ export default function PortfolioSections({
       <Hero isVisible={true} />
       <Projects isVisible={true} />
       <TechnologiesSlider />
-      {/* <Experience isVisible={true} experiences={experiences} />
-      <Education /> */}
+      <Experience isVisible={true} experiences={experiences} />
+      <Education />
       <Contact isVisible={true} contactInfo={contactInfo} />
       <Footer />
     </>
