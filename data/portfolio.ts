@@ -999,41 +999,57 @@ export const experiences: Experience[] = [
   {
     title: "Frontend Developer",
     company: "Boostly (SaaS ERP: GesDev)",
-    period: "Sep 2025 ",
+    period: "Sep 2025",
     description:
-      "Desarrollo integral del Frontend para un sistema ERP modular (GesDev). Lideré la arquitectura desde cero en Next.js (orientada a dominios), implementando seguridad RBAC (Control de Roles) para Administradores y Empleados. Desarrollé flujos complejos (facturación, inventario) con manejo de estado global (Zustand) y validaciones robustas. Logré la digitalización y automatización de procesos de RRHH y Logística, garantizando escalabilidad y código limpio.",
-    current: false,
+      "Diseñé una estructura modular en Next.js orientada a dominios e implementé control de acceso basado en roles (RBAC). Desarrollé flujos complejos de facturación e inventario utilizando Zustand y formularios avanzados. Logré la digitalización de procesos de RRHH y Logística, asegurando la escalabilidad del sistema.",
+    current: true,
   },
   {
     title: "Frontend Developer",
     company: "EmpreId (Proyecto: SIMU)",
     period: "Jun 2025 – Ago 2025",
     description:
-      "Construcción integral desde cero del sistema SIMU (Sistema Municipal) para la gestión de incidentes urbanos (alumbrado, limpieza). Implementé arquitectura de roles jerárquicos (RBAC), geolocalización en tiempo real con Leaflet y módulos de carga multimedia. Optimicé el renderizado en Next.js para tableros de alta densidad, logrando una reducción del 40% en el tiempo de resolución de reclamos.",
+      "Desarrollo integral de SIMU, plataforma para gestión de incidentes urbanos. Implementé permisos jerárquicos y vistas dinámicas. Integré Leaflet para geolocalización en tiempo real y desarrollé módulos de carga de evidencia multimedia y chat interno entre sectores operativos.",
     current: false,
   },
   {
     title: "Web Performance & SEO Developer",
     company: "Easy Life (E-commerce Europa)",
-    period: "Ene 2025 – May 2025",
+    period: "Sep 2024 – Mar 2025",
     description:
-      "Consultoría técnica y desarrollo web para e-commerce en el mercado europeo. Lideré la estrategia de optimización (Core Web Vitals), logrando 90/100 en PageSpeed Insights (Mobile). Extendí funcionalidades nativas de Shopify y WordPress con scripts personalizados en JavaScript Vanilla y PHP. Generé reportes estratégicos para stakeholders sobre SEO On/Off-page y conversión.",
+      "Consultoría técnica para el mercado europeo. Lideré la optimización de Core Web Vitals logrando 90/100 en Mobile. Extendí funcionalidades nativas de Shopify y WordPress con JavaScript Vanilla y PHP, traduciendo métricas de GSC y Analytics en mejoras de conversión.",
     current: false,
   },
   {
     title: "Frontend Developer",
-    company: "CarDev (Automotriz)",
-    period: "Sep 2024 – Mar 2025",
-    description:
-      "Desarrollo de dashboard de control de stock y ventas para concesionarias. Colaboración en la integración de endpoints y manejo de estado global con Next.js y TypeScript. Enfocado en la construcción de un sistema escalable y mantenible.",
-    current: false,
-  },
-  {
-    title: "Frontend Developer (Agencia de Proyectos)",
     company: "Nexium Solutions",
     period: "Jun 2024 – Dic 2024",
     description:
-      "Ejecución Full Cycle de proyectos asignados para clientes PyMEs (e-commerce, landing pages y sitios corporativos), cubriendo desde requerimientos y diseño UI/UX hasta el despliegue. Enfoque constante en optimización SEO técnica para maximizar la visibilidad orgánica.",
+      "Ejecución Full Cycle de proyectos para PyMEs (e-commerce y landing pages). Gestión integral desde el diseño hasta el despliegue, con un enfoque constante en la optimización SEO técnica para maximizar la visibilidad orgánica de cada sitio.",
+    current: false,
+  },
+  {
+    title: "IT Support & Developer",
+    company: "Colorshop",
+    period: "Ago 2021 – May 2024",
+    description:
+      "Identificación de ineficiencias operativas y diseño de soluciones mediante programación. Desarrollé scripts para automatizar procesos manuales y migré la gestión de documentos físicos a entornos digitales centralizados. Brindé soporte técnico integral de nivel 1 y 2.",
+    current: false,
+  },
+  {
+    title: "Analista de Sistemas y Datos de Logística",
+    company: "Maxiklak S.a.",
+    period: "Feb 2020 – Dic 2020",
+    description:
+      "Lideré la transición de procesos críticos de Excel hacia plataformas robustas. Desarrollé herramientas de automatización de reportes logísticos en tiempo real y administré bases de datos de personal a gran escala, optimizando el seguimiento de asistencia y métricas de desempeño.",
+    current: false,
+  },
+  {
+    title: "Asistente de Sistemas y Gestión",
+    company: "Sindicato de Luz y Fuerza",
+    period: "Nov 2017 – Ene 2018",
+    description:
+      "Soporte operativo y tecnológico centrado en software de gestión (facturación y control de stock). Responsable de la resolución de incidencias técnicas básicas y la gestión de herramientas digitales en un entorno de alta precisión.",
     current: false,
   },
 ];

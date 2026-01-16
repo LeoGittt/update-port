@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Github, Linkedin, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, ArrowRight, FileText } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -112,7 +112,7 @@ export default function Hero({ isVisible }: HeroProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex justify-center lg:justify-start gap-4"
+              className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 items-center"
             >
               <Link
                 href="#proyectos"
@@ -120,6 +120,15 @@ export default function Hero({ isVisible }: HeroProps) {
               >
                 <span className="relative z-20">VER PROYECTOS</span>
                 <ArrowRight className="w-4 h-4 relative z-20 group-hover:translate-x-1 transition-transform duration-500" />
+              </Link>
+              
+              <Link
+                href="/CV_Leonel_Gonzalez.pdf"
+                target="_blank"
+                className="group h-11 w-48 sm:h-14 sm:w-56 border border-white/10 hover:border-white/20 text-gray-400 hover:text-white text-[9px] sm:text-[10px] font-black tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center gap-3"
+              >
+                <span>VER MI CV</span>
+                <FileText className="w-4 h-4" />
               </Link>
             </motion.div>
 

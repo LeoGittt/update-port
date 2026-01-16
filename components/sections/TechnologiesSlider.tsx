@@ -18,7 +18,8 @@ import {
   SiFigma, 
   SiWordpress,
   SiHtml5,
-  SiCss3
+  SiCss3,
+  SiJavascript
 } from 'react-icons/si';
 
 export function TechnologiesSlider() {
@@ -43,11 +44,11 @@ export function TechnologiesSlider() {
       icon: SiPython,
       color: '#3776AB'
     },
-    // {
-    //   name: 'Java',
-    //   icon: SiSpring,
-    //   color: '#6DB33F'
-    // },
+    {
+      name: 'JavaScript',
+      icon: SiJavascript,
+      color: '#e9d629ff'
+    },
     {
       name: 'HTML',
       icon: SiHtml5,
@@ -68,11 +69,11 @@ export function TechnologiesSlider() {
       icon: SiNodedotjs,
       color: '#339933'
     },
-    {
-      name: 'Express',
-      icon: SiExpress,
-      color: '#ffffff'
-    },
+    // {
+    //   name: 'Express',
+    //   icon: SiExpress,
+    //   color: '#ffffff'
+    // },
     {
       name: 'MongoDB',
       icon: SiMongodb,
@@ -93,16 +94,16 @@ export function TechnologiesSlider() {
       icon: SiRedux,
       color: '#764ABC'
     },
-    {
-      name: 'Figma',
-      icon: SiFigma,
-      color: '#F24E1E'
-    },
-    {
-      name: 'WordPress',
-      icon: SiWordpress,
-      color: '#21759B'
-    }
+    // {
+    //   name: 'Figma',
+    //   icon: SiFigma,
+    //   color: '#F24E1E'
+    // },
+    // {
+    //   name: 'WordPress',
+    //   icon: SiWordpress,
+    //   color: '#21759B'
+    // }
   ];
 
   return (
