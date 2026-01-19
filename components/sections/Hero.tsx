@@ -71,13 +71,13 @@ export default function Hero({ isVisible }: HeroProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
               
-              <motion.div 
+              {/* <motion.div 
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-6 -right-6 bg-emerald-500 text-black px-6 py-3 rounded-2xl font-black text-[9px] tracking-widest shadow-xl uppercase"
               >
                 Open to Work
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
 
@@ -122,14 +122,14 @@ export default function Hero({ isVisible }: HeroProps) {
                 <ArrowRight className="w-4 h-4 relative z-20 group-hover:translate-x-1 transition-transform duration-500" />
               </Link>
               
-              <Link
+              {/* <Link
                 href="/CV_Leonel_Gonzalez.pdf"
                 target="_blank"
                 className="group h-11 w-48 sm:h-14 sm:w-56 border border-white/10 hover:border-white/20 text-gray-400 hover:text-white text-[9px] sm:text-[10px] font-black tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center gap-3"
               >
                 <span>VER MI CV</span>
                 <FileText className="w-4 h-4" />
-              </Link>
+              </Link> */}
             </motion.div>
 
             {/* Social & Location Micro Footer */}
