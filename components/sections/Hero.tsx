@@ -123,7 +123,7 @@ export default function Hero({ isVisible }: HeroProps) {
               </Link>
               
               <Link
-                href="/CV_Leonel_Gonzalez.pdf"
+                 href="/CV_LEONEL_GONZALEZ.pdf"
                 target="_blank"
                 className="group h-11 w-48 sm:h-14 sm:w-56 border border-white/10 hover:border-white/20 text-gray-400 hover:text-white text-[9px] sm:text-[10px] font-black tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center gap-3"
               >
