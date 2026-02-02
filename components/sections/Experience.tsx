@@ -2,27 +2,49 @@
 
 import { Briefcase } from "lucide-react";
 import type { Experience } from "@/types/experience";
+import { useState, useEffect, useRef } from "react";
 
 interface ExperienceProps {
   isVisible: boolean;
   experiences: Experience[];
 }
 
-export default function Experience({ isVisible, experiences }: ExperienceProps) {
+export default function Experience({ experiences }: ExperienceProps) {
+  const [isVisibleState, setIsVisibleState] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisibleState(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="experiencia"
-      className={`px-6 sm:px-12 lg:px-24 py-24 sm:py-32 border-t border-zinc-900/50 transition-all duration-1000 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+      ref={sectionRef}
+      className={`px-6 sm:px-12 lg:px-24 py-24 sm:py-32 bg-black transition-all duration-1000 ease-out ${
+        isVisibleState
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-12"
       }`}
     >
       <div className="max-w-3xl mx-auto">
         {/* Minimal Header */}
         <div className="flex items-center gap-4 mb-20">
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-900/50 border border-zinc-800/50">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-900/50">
             <Briefcase className="w-4 h-4 text-emerald-500/80" />
           </div>
-          <h2 className="text-2xl font-light text-zinc-100 tracking-wide">
+          <h2 className="text-2xl font-black text-zinc-100 tracking-[0.2em] uppercase">
             Experiencia<span className="text-emerald-500">.</span>
           </h2>
         </div>
@@ -33,10 +55,7 @@ export default function Experience({ isVisible, experiences }: ExperienceProps) 
           <div className="absolute left-[19px] top-2 bottom-2 w-px bg-zinc-800/50" />
 
           {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="relative pl-16 group"
-            >
+            <div key={index} className="relative pl-16 group">
               {/* Minimal Node */}
               <div
                 className={`absolute left-[15px] top-2 w-[9px] h-[9px] rounded-full border-2 z-10 transition-all duration-500 ${
@@ -48,7 +67,6 @@ export default function Experience({ isVisible, experiences }: ExperienceProps) 
 
               {/* Clean Content */}
               <div className="flex flex-col gap-3 transition-all duration-500">
-                
                 {/* Header: Title & Company */}
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
                   <div className="space-y-1">

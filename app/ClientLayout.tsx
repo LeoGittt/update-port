@@ -4,14 +4,13 @@ import { useState, useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
 import SkipToContent from "@/components/ui/SkipToContent";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-import { useDynamicScrollbar } from "@/hooks/useDynamicScrollbar";
-
-export default function ClientLayout({ children }: { children: React.ReactNode }) {
+export default function ClientLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [activeSection, setActiveSection] = useState("");
   const [scrollY, setScrollY] = useState(0);
-
-  // Aplicar el hook para la barra de scroll dinámica
-  useDynamicScrollbar();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,10 +32,10 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   return (
     <>
       <SkipToContent />
-      <Navbar 
-        activeSection={activeSection} 
-        scrollY={scrollY} 
-        scrollToSection={scrollToSection} 
+      <Navbar
+        activeSection={activeSection}
+        scrollY={scrollY}
+        scrollToSection={scrollToSection}
       />
       <main id="main-content" tabIndex={-1}>
         {children}
@@ -44,4 +43,4 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <ScrollToTop />
     </>
   );
-} 
+}

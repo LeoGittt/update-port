@@ -22,7 +22,7 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
   return (
     <section
       id="contacto"
-      className={`px-6 sm:px-12 lg:px-24 py-24 sm:py-32 border-t border-zinc-900/50 transition-all duration-1000 ease-out relative overflow-hidden ${
+      className={`px-6 sm:px-12 lg:px-24 py-24 sm:py-32 bg-black transition-all duration-1000 ease-out relative overflow-hidden ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       }`}
     >
@@ -32,10 +32,10 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
       <div className="max-w-3xl mx-auto relative z-10">
         {/* Minimal Header */}
         <div className="flex items-center justify-center gap-4 mb-20">
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-900/50 border border-zinc-800/50">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-900/50">
             <Mail className="w-4 h-4 text-emerald-500/80" />
           </div>
-          <h2 className="text-2xl font-light text-zinc-100 tracking-wide">
+          <h2 className="text-2xl font-black text-zinc-100 tracking-[0.2em] uppercase">
             Contacto<span className="text-emerald-500">.</span>
           </h2>
         </div>
@@ -44,11 +44,13 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
           <div className="space-y-8 text-center">
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight tracking-tight">
               ¿Tienes una idea? <br />
-              <span className="text-zinc-500 font-light">Hagámosla realidad.</span>
+              <span className="text-zinc-500 font-light">
+                Hagámosla realidad.
+              </span>
             </h3>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link 
+              <Link
                 href="mailto:leonel.gonzalez.dev@gmail.com"
                 className="group flex items-center gap-4 text-zinc-100 hover:text-emerald-400 transition-colors duration-300"
               >
@@ -76,7 +78,7 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 border-t border-zinc-900/50">
             {contactInfo.map((info) => {
               if (info.title === "Email") return null;
-              
+
               const Icon = info.icon;
               return (
                 <Link

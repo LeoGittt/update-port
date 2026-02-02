@@ -11,4 +11,5 @@ export interface Project {
   challenges?: string;
   solutions?: string;
   features?: string[];
-} 
+  featured?: boolean;
+}

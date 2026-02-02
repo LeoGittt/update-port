@@ -21,14 +21,9 @@ export default function PortfolioSections({
 }: Props) {
   return (
     <>
-      <Navbar
-        activeSection={activeSection}
-        scrollY={scrollY}
-        scrollToSection={scrollToSection}
-      />
       <Hero isVisible={true} />
-      <Projects isVisible={true} />
       <TechnologiesSlider />
+      <Projects isVisible={true} />
       <Experience isVisible={true} experiences={experiences} />
       <Education />
       <Contact isVisible={true} contactInfo={contactInfo} />

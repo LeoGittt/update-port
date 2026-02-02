@@ -21,6 +21,7 @@ export const skills = [
 export const projects: Project[] = [
   {
     id: 1,
+    featured: true,
     year: "2025",
     title: "S I M U",
     subtitle: "Sistema Municipal Integral",
@@ -59,6 +60,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    featured: true,
     year: "2025",
     title: "AutoWeb",
     subtitle: "Plataforma para Concesionarias",
@@ -96,6 +98,7 @@ export const projects: Project[] = [
     id: 3,
     year: "2024",
     title: "EvenTop",
+    featured: true,
     subtitle: "Gestión y Venta de Tickets",
     image: "/fotos-proyectos/1.PNG?height=120&width=200",
     demoUrl: "https://eventop-frontend.vercel.app/",
@@ -136,6 +139,7 @@ export const projects: Project[] = [
     id: 4,
     year: "2024",
     title: "La Marina",
+    featured: true,
     subtitle: "Ecommerce de Bazar y Limpieza",
     image: "/fotos-proyectos/3.PNG?height=120&width=200",
     demoUrl: "https://frontend-la-marina.vercel.app/",
@@ -627,11 +631,12 @@ export const projects: Project[] = [
   {
     id: 21,
     year: "2024",
+    featured: true,
     title: "Permay",
     subtitle: "Catálogo Web de Perfumería",
     image: "/fotos-proyectos/21.PNG?height=120&width=200",
-    demoUrl: "https://perfumeria-tau.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/empreid-frontend",
+    demoUrl: "https://www.permayperfumeria.com",
+    githubUrl: "#",
     description:
       "Sitio web diseñado para mostrar el catálogo completo de la perfumería Permay. Presenta los productos de forma clara, visual y categorizada, sin funciones de compra.",
     challenges:
@@ -657,12 +662,13 @@ export const projects: Project[] = [
   },
   {
     id: 22,
+   
     year: "2025",
     title: "AutoDev",
     subtitle: "Sistema de Gestión para Concesionaria de Autos",
     image: "/fotos-proyectos/22.PNG?height=120&width=200",
     demoUrl: "#",
-    githubUrl: "https://github.com/leonelgonzalezdev/autodev-frontend",
+    githubUrl: "#",
     description:
       "AutoDev es una plataforma integral diseñada para gestionar todos los aspectos operativos de una concesionaria de autos. Desde la administración de vehículos y mantenimiento hasta el control de empleados y sueldos, todo centralizado en un sistema con roles diferenciados y respaldado por un backend robusto en Nest.js.",
     challenges:
@@ -697,7 +703,7 @@ export const projects: Project[] = [
     subtitle: "Catálogo interactivo de panchos artesanales",
     image: "/fotos-proyectos/23.PNG?height=120&width=200",
     demoUrl: "https://elclubdelpancho.vercel.app/",
-    githubUrl: "https://github.com/tuusuario/el-club-del-pancho",
+    githubUrl: "#",
     description:
       "El Club del Pancho es un catálogo digital pensado para destacar los panchos artesanales y combinaciones únicas de una panchería gourmet. Ofrece una experiencia visual atractiva y simple para que los clientes puedan explorar el menú, conocer los ingredientes y personalizar su pedido.",
     challenges:
@@ -729,7 +735,7 @@ export const projects: Project[] = [
   subtitle: "Centro de kinesiología y bienestar integral",
   image: "/fotos-proyectos/24.PNG?height=120&width=200",
   demoUrl: "https://soma-kinesiologia.vercel.app/",
-  githubUrl: "https://github.com/tuusuario/soma-kinesiologia",
+  githubUrl: "#",
   description:
     "SOMA es un sitio web diseñado para un centro de kinesiología que busca promover el bienestar físico y emocional de sus pacientes. Ofrece información clara sobre los servicios, profesionales y enfoque terapéutico, con un diseño moderno y cercano.",
   challenges:
@@ -788,7 +794,7 @@ export const projects: Project[] = [
   subtitle: "Empresa de ambulancias",
   image: "/fotos-proyectos/26.PNG?height=120&width=200",
   demoUrl: "https://cardio-medic.netlify.app/",
-  githubUrl: "",
+  githubUrl: "#",
   description:
     "Cardio Medic es una empresa de ambulancias y servicios de salud. La web, desarrollada con **Next.js**, fue diseñada para ser ultrarrápida, escalable y SEO-friendly. El estilo se creó utilizando **Tailwind CSS**, lo que permitió un desarrollo ágil y una gran personalización de cada componente, manteniendo una estética profesional y moderna. El uso de **Framer Motion** aportó animaciones suaves que mejoran la experiencia de usuario, proyectando confianza y modernidad. El sitio informa de manera clara sobre sus servicios, priorizando la facilidad de contacto en situaciones críticas.",
   challenges:
@@ -841,7 +847,7 @@ export const projects: Project[] = [
   subtitle: "Control y logística de inventario",
   image: "/fotos-proyectos/28.PNG",
   demoUrl: "https://kzmo4qo21ioj7u8nzej0.lite.vusercontent.net/",
-  githubUrl: "",
+  githubUrl: "#",
   description:
     "Desarrollé un sistema de gestión de transferencias de pedidos diseñado para optimizar la logística de una pinturería con dos sucursales. La herramienta facilita la transferencia de mercadería entre una sucursal con depósito y otra de venta al público, mejorando el control de inventario y la eficiencia operativa.",
   challenges:
@@ -875,7 +881,7 @@ export const projects: Project[] = [
   subtitle: "Control de faltantes y gestión de stock",
   image: "/fotos-proyectos/29.PNG",
   demoUrl: "https://v0-seo-wgq5fxq5ffz-uprnfk.vercel.app/",
-  githubUrl: "",
+  githubUrl: "#",
   description:
     "sistema de gestión de pedidos diseñado para optimizar el proceso de solicitud de mercadería faltante a proveedores. La plataforma permite a los usuarios seleccionar productos de manera intuitiva, con opciones dinámicas basadas en la categoría, y generar un pedido detallado y listo para ser compartido.",
   challenges:
@@ -933,6 +939,7 @@ export const projects: Project[] = [
 {
   id: 31,
   year: "2025",
+  featured: true,
   title: "Ventury",
   subtitle: "E-commerce especializado en insumos odontológicos",
   image: "/fotos-proyectos/31.png", // Asegúrate de que la ruta sea correcta
@@ -964,6 +971,7 @@ export const projects: Project[] = [
   id: 32, // Siguiendo la secuencia
   year: "2025",
   title: "PE Autos",
+  featured: true,
   subtitle: "CRM integral para gestión de concesionaria automotriz",
   image: "/fotos-proyectos/32.png", 
   demoUrl: "https://peautos.vercel.app/", // Generalmente los CRM son privados, puedes poner "#" o un video demo
@@ -990,6 +998,70 @@ export const projects: Project[] = [
     "Zustand",
   ],
 },
+{
+  id: 33,
+  year: "2025",
+  title: "Fotexo",
+  featured: true,
+  subtitle: "E-commerce y Portfolio para fotógrafos",
+  image: "/fotos-proyectos/33.png", 
+  demoUrl: "https://fotexo.site/",
+  githubUrl: "#", 
+  description:
+    "Fotexo transforma el portfolio convencional en una unidad de negocio completa. Es una plataforma donde los fotógrafos no solo exhiben su arte, sino que lo comercializan directamente. El sistema integra un flujo de compra completo, permitiendo la venta de servicios, sesiones fotográficas y productos digitales de manera automatizada y segura.",
+  challenges:
+    "El reto técnico principal fue integrar una pasarela de pagos segura que mantuviera la fluidez de la experiencia de usuario. Además, se desarrolló un sistema de gestión de pedidos y carrito de compras sincronizado en tiempo real, asegurando que el proceso desde la selección de la foto hasta la transacción final sea intuitivo y sin fricciones.",
+  solutions:
+    "Implementé un flujo de checkout optimizado integrando APIs de pago (como Stripe o Mercado Pago), manejando estados globales con Zustand para el carrito de compras. La arquitectura en Next.js permite procesar las transacciones de forma segura mediante Serverless Functions, mientras que Supabase gestiona el historial de pedidos, estados de pago y la entrega de activos digitales tras la compra.",
+  features: [
+    "Sistema de carrito de compras y checkout integrado.",
+    "Pasarela de pagos configurada para transacciones nacionales e internacionales.",
+    "Gestión de inventario de servicios y productos digitales (presets, fotos en HD).",
+    "Dashboard para el fotógrafo con métricas de ventas y tracking de pedidos.",
+    "Galerías dinámicas con opción de compra directa por imagen.",
+    "Automatización de facturación y confirmación de compra vía email.",
+  ],
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Supabase (Auth, Database, Storage)",
+    "Pasarelas de Pago (Stripe/Mercado Pago)",
+    "Zustand",
+    "Tailwind CSS",
+  ],
+},
+{
+  id: 34,
+  year: "2025",
+  title: "Asynca",
+  featured: true,
+  subtitle: "Landing Page corporativa y plataforma de servicios de software",
+  image: "/fotos-proyectos/34.png", 
+  demoUrl: "https://asynca.site/", 
+  githubUrl: "#",
+  description:
+    "Asynca es el ecosistema digital de mi marca personal de desarrollo web. El sitio funciona como una plataforma de servicios de software de alto rendimiento, diseñada para captar clientes corporativos y emprendedores que buscan soluciones escalables. Está enfocado en convertir visitantes en leads mediante una narrativa técnica clara y una interfaz moderna que refleja profesionalismo y vanguardia tecnológica.",
+  challenges:
+    "El principal desafío fue lograr un equilibrio entre un diseño visualmente impactante y un rendimiento excepcional (Core Web Vitals). Al ser la carta de presentación de mi trabajo, era fundamental implementar técnicas avanzadas de SEO técnico y una arquitectura de componentes reutilizables que permitiera escalar el contenido de servicios y casos de éxito rápidamente.",
+  solutions:
+    "Desarrollé la plataforma utilizando Next.js para aprovechar el Static Site Generation (SSG), lo que garantiza tiempos de carga casi instantáneos. Implementé un sistema de gestión de contactos eficiente y utilicé Tailwind CSS junto con Shadcn/UI para mantener una consistencia visual impecable. La estructura está pensada para ser el núcleo donde convergen mis otros desarrollos como CRM y E-commerce.",
+  features: [
+    "Presentación de servicios especializados (Frontend, E-commerce, CRM personalizados).",
+    "Blog técnico integrado para posicionamiento de marca y autoridad en el sector.",
+    "Sistema de agendamiento y formularios de contacto con validación avanzada.",
+    "Optimización SEO avanzada (Metatags dinámicos, JSON-LD, Sitemap).",
+    "Sección de portfolio dinámico que consume datos en tiempo real.",
+    "Arquitectura modular preparada para la expansión de servicios internacionales.",
+  ],
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Framer Motion",
+    "Tailwind CSS",
+    "Shadcn/UI",
+    "Vercel Analytics",
+  ],
+},
 
 
 
@@ -1002,7 +1074,7 @@ export const experiences: Experience[] = [
     period: "Sep 2025",
     description:
       "Diseñé una estructura modular en Next.js orientada a dominios e implementé control de acceso basado en roles (RBAC). Desarrollé flujos complejos de facturación e inventario utilizando Zustand y formularios avanzados. Logré la digitalización de procesos de RRHH y Logística, asegurando la escalabilidad del sistema.",
-    current: true,
+    current: false,
   },
   {
     title: "Frontend Developer",

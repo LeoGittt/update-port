@@ -1,18 +1,19 @@
-import React from "react"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export interface BentoCardProps {
-  title: string
-  description: string
-  label: string
-  color: string
-  glowColor?: string
-  image?: string
-  onClick?: () => void
-  colSpan?: string
-  animateInView?: boolean
+  title: string;
+  description: string;
+  label: string;
+  color: string;
+  glowColor?: string;
+  image?: string;
+  onClick?: () => void;
+  colSpan?: string;
+  animateInView?: boolean;
+  isFeatured?: boolean;
 }
 
 export function MagicBento({
@@ -25,16 +26,17 @@ export function MagicBento({
   onClick,
   colSpan = "col-span-1",
   animateInView = true,
+  isFeatured,
 }: BentoCardProps) {
   // Simplificar variantes para evitar que se queden en opacity 0
   const variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 260, damping: 20 }
-    }
-  }
+      transition: { type: "spring", stiffness: 260, damping: 20 },
+    },
+  };
 
   return (
     <motion.div
@@ -43,16 +45,18 @@ export function MagicBento({
       animate="visible"
       viewport={{ once: true }}
       onClick={onClick}
-      className={`group relative flex flex-col h-full rounded-[24px] bg-zinc-950 border border-white/5 cursor-pointer overflow-hidden transition-all duration-500 hover:border-[var(--glow-color-soft)] ${colSpan}`}
-      style={{
-        "--glow-color": glowColor,
-        "--glow-color-soft": `${glowColor}40`,
-      } as React.CSSProperties}
+      className={`group relative flex flex-col h-full rounded-[24px] bg-black cursor-pointer overflow-hidden transition-all duration-500 ${colSpan}`}
+      style={
+        {
+          "--glow-color": glowColor,
+          "--glow-color-soft": `${glowColor}40`,
+        } as React.CSSProperties
+      }
     >
       {/* Dynamic Hover Glow (Shadow & Border) */}
-      <div 
+      <div
         className="absolute inset-0 rounded-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"
-        style={{ 
+        style={{
           boxShadow: `0 0 40px -10px ${glowColor}30`,
         }}
       />
@@ -89,11 +93,13 @@ export function MagicBento({
 
         {/* Active Footer */}
         <div className="mt-auto flex items-center justify-between group/footer">
-           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-emerald-400 transition-colors">
-              <span>{label}</span>
-           </div>
-           <div className="flex items-center gap-2 text-sm font-medium text-zinc-500 group-hover:text-white transition-colors duration-300">
-            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">Ver más</span>
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-emerald-400 transition-colors">
+            <span>{label}</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm font-medium text-zinc-500 group-hover:text-white transition-colors duration-300">
+            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
+              Ver más
+            </span>
             <div className="p-1.5 rounded-full bg-white/5 border border-white/10 group-hover:bg-emerald-500 group-hover:text-black group-hover:border-emerald-400 transition-all duration-300">
               <ArrowRight className="w-3.5 h-3.5 group-hover:-rotate-45 transition-transform duration-300" />
             </div>
@@ -101,5 +107,5 @@ export function MagicBento({
         </div>
       </div>
     </motion.div>
-  )
+  );
 }

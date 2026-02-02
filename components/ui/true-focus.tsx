@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+"use client";
+
+import { useEffect, useRef, useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface TrueFocusProps {
   sentence?: string;
@@ -20,29 +22,34 @@ interface FocusRect {
 }
 
 const TrueFocus: React.FC<TrueFocusProps> = ({
-  sentence = 'True Focus',
-  separator = ' ',
+  sentence = "True Focus",
+  separator = " ",
   manualMode = false,
   blurAmount = 5,
-  borderColor = 'green',
-  glowColor = 'rgba(0, 255, 0, 0.6)',
+  borderColor = "#22c55e",
+  glowColor = "rgba(34, 197, 94, 0.3)",
   animationDuration = 0.5,
-  pauseBetweenAnimations = 1
+  pauseBetweenAnimations = 1,
 }) => {
-  const words = sentence.split(separator);
+  const words = useMemo(() => sentence.split(separator), [sentence, separator]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [lastActiveIndex, setLastActiveIndex] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
-  const [focusRect, setFocusRect] = useState<FocusRect>({ x: 0, y: 0, width: 0, height: 0 });
+  const [focusRect, setFocusRect] = useState<FocusRect>({
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0,
+  });
 
   useEffect(() => {
     if (!manualMode) {
       const interval = setInterval(
         () => {
-          setCurrentIndex(prev => (prev + 1) % words.length);
+          setCurrentIndex((prev) => (prev + 1) % words.length);
         },
-        (animationDuration + pauseBetweenAnimations) * 1000
+        (animationDuration + pauseBetweenAnimations) * 1000,
       );
 
       return () => clearInterval(interval);
@@ -59,9 +66,9 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
       x: activeEl.offsetLeft,
       y: activeEl.offsetTop,
       width: activeEl.offsetWidth,
-      height: activeEl.offsetHeight
+      height: activeEl.offsetHeight,
     });
-  }, [currentIndex, words.length]);
+  }, [currentIndex, words]);
 
   const handleMouseEnter = (index: number) => {
     if (manualMode) {
@@ -80,30 +87,24 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
     <div
       className="relative flex gap-4 justify-center items-center flex-wrap"
       ref={containerRef}
-      style={{ outline: 'none', userSelect: 'none' }}
+      style={{ outline: "none", userSelect: "none" }}
     >
       {words.map((word, index) => {
         const isActive = index === currentIndex;
         return (
           <span
             key={index}
-            ref={el => {
+            ref={(el) => {
               wordRefs.current[index] = el;
             }}
-            // Adjusted classes for Navbar usage: smaller text, flexible weighting
-            className="relative text-2xl font-bold cursor-pointer"
+            className="relative text-2xl font-black cursor-pointer uppercase tracking-tighter"
             style={
               {
-                filter: manualMode
-                  ? isActive
-                    ? `blur(0px)`
-                    : `blur(${blurAmount}px)`
-                  : isActive
-                    ? `blur(0px)`
-                    : `blur(${blurAmount}px)`,
-                transition: `filter ${animationDuration}s ease`,
-                outline: 'none',
-                userSelect: 'none'
+                filter: isActive ? `blur(0px)` : `blur(${blurAmount}px)`,
+                transition: `filter ${animationDuration}s ease-out`,
+                willChange: "filter",
+                outline: "none",
+                userSelect: "none",
               } as React.CSSProperties
             }
             onMouseEnter={() => handleMouseEnter(index)}
@@ -121,44 +122,46 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
           y: focusRect.y,
           width: focusRect.width,
           height: focusRect.height,
-          opacity: currentIndex >= 0 ? 1 : 0
+          opacity: currentIndex >= 0 ? 1 : 0,
         }}
         transition={{
-          duration: animationDuration
+          duration: animationDuration,
+          ease: "easeOut",
         }}
         style={
           {
-            '--border-color': borderColor,
-            '--glow-color': glowColor
+            "--border-color": borderColor,
+            "--glow-color": glowColor,
+            willChange: "transform, width, height, opacity",
           } as React.CSSProperties
         }
       >
         <span
           className="absolute w-3 h-3 border-[2px] rounded-[3px] top-[-5px] left-[-5px] border-r-0 border-b-0"
           style={{
-            borderColor: 'var(--border-color)',
-            filter: 'drop-shadow(0 0 4px var(--border-color))'
+            borderColor: "var(--border-color)",
+            filter: "drop-shadow(0 0 4px var(--border-color))",
           }}
         ></span>
         <span
           className="absolute w-3 h-3 border-[2px] rounded-[3px] top-[-5px] right-[-5px] border-l-0 border-b-0"
           style={{
-            borderColor: 'var(--border-color)',
-            filter: 'drop-shadow(0 0 4px var(--border-color))'
+            borderColor: "var(--border-color)",
+            filter: "drop-shadow(0 0 4px var(--border-color))",
           }}
         ></span>
         <span
           className="absolute w-3 h-3 border-[2px] rounded-[3px] bottom-[-5px] left-[-5px] border-r-0 border-t-0"
           style={{
-            borderColor: 'var(--border-color)',
-            filter: 'drop-shadow(0 0 4px var(--border-color))'
+            borderColor: "var(--border-color)",
+            filter: "drop-shadow(0 0 4px var(--border-color))",
           }}
         ></span>
         <span
           className="absolute w-3 h-3 border-[2px] rounded-[3px] bottom-[-5px] right-[-5px] border-l-0 border-t-0"
           style={{
-            borderColor: 'var(--border-color)',
-            filter: 'drop-shadow(0 0 4px var(--border-color))'
+            borderColor: "var(--border-color)",
+            filter: "drop-shadow(0 0 4px var(--border-color))",
           }}
         ></span>
       </motion.div>
