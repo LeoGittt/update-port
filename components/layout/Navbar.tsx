@@ -9,15 +9,18 @@ interface NavbarProps {
   activeSection: string;
   scrollY: number;
   scrollToSection: (sectionId: string) => void;
+  isMobileMenuOpen: boolean;
+  setIsMobileMenuOpen: (isOpen: boolean) => void;
 }
 
 export default function Navbar({
   activeSection,
   scrollY,
   scrollToSection,
+  isMobileMenuOpen,
+  setIsMobileMenuOpen,
 }: NavbarProps) {
   const pathname = usePathname();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -52,7 +55,11 @@ export default function Navbar({
             : "bg-black/40 backdrop-blur-md rounded-none sm:rounded-2xl mt-0 sm:mt-2 opacity-100"
       }`}
     >
-      <div className="px-4 sm:px-8 py-4 sm:py-4">
+      {/* Soft gradient edge for mobile */}
+      <div
+        className={`absolute -bottom-12 left-0 right-0 h-12 bg-gradient-to-b from-black/85 to-transparent pointer-events-none sm:hidden transition-opacity duration-500 ${scrollY > 20 ? "opacity-100" : "opacity-0"}`}
+      />
+      <div className="px-4 sm:px-8 py-4 sm:py-4 relative z-10">
         {/* Mobile Navigation */}
         <div className="flex items-center justify-between sm:hidden">
           <div

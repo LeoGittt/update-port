@@ -26,9 +26,6 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       }`}
     >
-      {/* Subtle Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
-
       <div className="max-w-3xl mx-auto relative z-10">
         {/* Minimal Header */}
         <div className="flex items-center justify-center gap-4 mb-20">
@@ -54,7 +51,7 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
                 href="mailto:leonel.gonzalez.dev@gmail.com"
                 className="group flex items-center gap-4 text-zinc-100 hover:text-emerald-400 transition-colors duration-300"
               >
-                <span className="text-xl sm:text-2xl font-light border-b border-zinc-700 group-hover:border-emerald-500/50 pb-1 transition-all">
+                <span className="text-xl sm:text-2xl font-light pb-1 transition-all">
                   leonel.gonzalez.dev@gmail.com
                 </span>
                 <ArrowUpRight className="w-6 h-6 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
@@ -75,7 +72,7 @@ export default function Contact({ isVisible, contactInfo }: ContactProps) {
           </div>
 
           {/* Social Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 border-t border-zinc-900/50">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10">
             {contactInfo.map((info) => {
               if (info.title === "Email") return null;
 

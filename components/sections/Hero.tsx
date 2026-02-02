@@ -17,7 +17,7 @@ export default function Hero({ isVisible }: HeroProps) {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100svh] flex flex-col justify-end lg:flex-row lg:items-center overflow-hidden bg-black pb-12 sm:pb-24 lg:pb-0"
+      className="relative min-h-[100svh] flex flex-col justify-end lg:flex-row lg:items-center overflow-hidden bg-black pb-8 sm:pb-24 lg:pb-0"
       style={{ contain: "paint" }}
     >
       {/* MOBILE BACKGROUND - Optimized for vertical viewports */}
@@ -26,12 +26,12 @@ export default function Hero({ isVisible }: HeroProps) {
           src="/foto.jpg"
           alt="Leonel González"
           fill
-          className="object-cover object-top opacity-50 grayscale"
+          className="object-cover object-top opacity-60 grayscale"
           priority
           sizes="100vw"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/90 to-transparent" />
       </div>
 
@@ -73,8 +73,8 @@ export default function Hero({ isVisible }: HeroProps) {
           </div>
 
           {/* CONTENT COLUMN - Adapts to center on mobile and left on desktop */}
-          <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center text-center lg:text-left space-y-8 md:space-y-12">
-            <div className="space-y-4">
+          <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center text-center lg:text-left space-y-6 md:space-y-12">
+            <div className="space-y-3">
               <div
                 className={`inline-flex items-center gap-3 text-emerald-500 justify-center lg:justify-start transition-all duration-700 delay-200 ${
                   isVisible
@@ -89,7 +89,7 @@ export default function Hero({ isVisible }: HeroProps) {
               </div>
 
               <h1
-                className={`text-[12vw] sm:text-7xl lg:text-[6rem] xl:text-[8.5rem] font-black text-white leading-[0.9] tracking-tighter uppercase transition-all duration-700 delay-300 ${
+                className={`text-5xl sm:text-7xl lg:text-[6rem] xl:text-[8.5rem] font-black text-white leading-[0.9] tracking-tighter uppercase transition-all duration-700 delay-300 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-4"
@@ -127,7 +127,7 @@ export default function Hero({ isVisible }: HeroProps) {
             </div>
 
             <div
-              className={`pt-10 flex flex-col md:flex-row items-center justify-center lg:justify-start gap-8 transition-opacity duration-1000 delay-500 ${
+              className={`pt-6 md:pt-10 flex flex-col md:flex-row items-center justify-center lg:justify-start gap-8 transition-opacity duration-1000 delay-500 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}
             >
