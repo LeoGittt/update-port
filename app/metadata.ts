@@ -8,23 +8,23 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Leonel González | Desarrollador Frontend",
-  description: "Portfolio de Leonel González, desarrollador frontend especializado en React, Next.js y TypeScript. Creando experiencias digitales de alto impacto.",
-  keywords: ["desarrollador frontend", "React", "Next.js", "TypeScript", "portfolio", "Leonel González"],
+  title: "Leonel González | Desarrollador FullStack",
+  description: "Portfolio de Leonel González, desarrollador FullStack especializado en React, Next.js y TypeScript. Creando experiencias digitales de alto impacto.",
+  keywords: ["desarrollador FullStack", "React", "Next.js", "TypeScript", "portfolio", "Leonel González"],
   authors: [{ name: "Leonel González" }],
   creator: "Leonel González",
   openGraph: {
     type: "website",
     locale: "es_ES",
     url: "https://leonelgonzalez.dev", // Update with real URL if possible
-    title: "Leonel González | Desarrollador Frontend",
-    description: "Desarrollador frontend especializado en crear interfaces modernas y eficientes.",
+    title: "Leonel González | Desarrollador FullStack",
+    description: "Desarrollador FullStack especializado en crear interfaces modernas y eficientes.",
     siteName: "Portfolio de Leonel González",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leonel González | Desarrollador Frontend",
-    description: "Desarrollador frontend especializado en React y Next.js.",
+    title: "Leonel González | Desarrollador FullStack",
+    description: "Desarrollador FullStack especializado en React y Next.js.",
   },
   robots: {
     index: true,

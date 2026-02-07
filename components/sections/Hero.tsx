@@ -84,7 +84,7 @@ export default function Hero({ isVisible }: HeroProps) {
               >
                 <div className="w-8 h-px bg-emerald-500" />
                 <span className="text-[10px] sm:text-xs font-black tracking-[0.4em] uppercase">
-                  Frontend Developer
+                  Full Stack Developer
                 </span>
               </div>
 

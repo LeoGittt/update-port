@@ -27,7 +27,7 @@ export const projects: Project[] = [
     subtitle: "Sistema Municipal Integral",
     image: "/fotos-proyectos/10.PNG?height=120&width=200",
     demoUrl: "https://reclamos-frontend.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/simu-frontend",
+    githubUrl: "#",
     description:
       "Plataforma municipal integral, desarrollada bajo metodologías ágiles (SCRUM), que permite a los vecinos registrar y seguir reclamos, mientras los distintos roles administrativos gestionan usuarios, beneficios, eventos, estadísticas y acceso a módulos desde dashboards personalizados.",
     challenges:
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     subtitle: "Gestión y Venta de Tickets",
     image: "/fotos-proyectos/1.PNG?height=120&width=200",
     demoUrl: "https://eventop-frontend.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/eventop-frontend",
+    githubUrl: "#",
     description:
       "Aplicación para la gestión y venta de entradas a eventos. Permite crear eventos, controlar la asistencia y vender tickets de forma segura y escalable. Se utilizó Auth0 para autenticación y un enfoque centrado en la experiencia del usuario.",
     challenges:
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     subtitle: "Ecommerce de Bazar y Limpieza",
     image: "/fotos-proyectos/3.PNG?height=120&width=200",
     demoUrl: "https://frontend-la-marina.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/la-marina-frontend",
+    githubUrl: "#",
     description:
       "Tienda online de productos de bazar y limpieza. Ofrece una experiencia de compra clara y atractiva, con funcionalidades completas para administración, stock, usuarios y notificaciones por email.",
     challenges:
@@ -180,7 +180,7 @@ export const projects: Project[] = [
     subtitle: "Agencia de Marketing Digital",
     image: "/fotos-proyectos/7.PNG?height=120&width=200",
     demoUrl: "https://boostly-t749.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/boostly-frontend",
+    githubUrl: "#",
     description:
       "Sitio web para agencia de marketing digital especializada en SEO y redes sociales, con estética minimalista black & white inspirada en Vercel.",
     challenges:
@@ -210,7 +210,7 @@ export const projects: Project[] = [
     subtitle: "Web Contable",
     image: "/fotos-proyectos/6.PNG?height=120&width=200",
     demoUrl: "https://contables.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/aura-frontend",
+    githubUrl: "#",
     description:
       "Web para estudios y empresas contables, que presenta información sobre facturación, gastos, clientes e informes financieros de manera ordenada y profesional.",
     challenges:
@@ -240,7 +240,7 @@ export const projects: Project[] = [
     subtitle: "Web de Ingeniería",
     image: "/fotos-proyectos/8.PNG?height=120&width=200",
     demoUrl: "https://www.byas.com.ar/",
-    githubUrl: "https://github.com/leonelgonzalezdev/byas-frontend",
+    githubUrl: "#",
     description:
       "Web para un estudio de ingeniería civil que presenta más de 50 años de experiencia, proyectos, servicios y documentación técnica de forma clara y organizada.",
     challenges:
@@ -271,7 +271,7 @@ export const projects: Project[] = [
     subtitle: "Web de Muebles",
     image: "/fotos-proyectos/9.PNG?height=120&width=200",
     demoUrl: "https://art-ydeisgn.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/mueblito-frontend",
+    githubUrl: "#",
     description:
       "Tienda online familiar de muebles artesanales, con catálogo dinámico de productos personalizados y sistema de pedidos a medida.",
     challenges:
@@ -302,7 +302,7 @@ export const projects: Project[] = [
     subtitle: "Gestión de Remitos",
     image: "/fotos-proyectos/4.PNG?height=120&width=200",
     demoUrl: "https://v0-colorshop-remitos-jdu4ku.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/colorshop-frontend",
+    githubUrl: "https://github.com/leonelgonzalezdev/colorshop-",
     description:
       "Sistema de gestión de remitos para tiendas de pintura, que facilita el control de entregas, stock y el historial de pedidos entre sucursales y empresas.",
     challenges:
@@ -333,7 +333,7 @@ export const projects: Project[] = [
     subtitle: "Agencia de Marketing",
     image: "/fotos-proyectos/5.PNG?height=120&width=200",
     demoUrl: "https://www.soulsdigitals.blog/",
-    githubUrl: "https://github.com/leonelgonzalezdev/souls-digitals-frontend",
+    githubUrl: "#",
     description:
       "Landing page para agencia digital. Destaca servicios de contenido, posicionamiento y blog corporativo optimizado para SEO.",
     challenges:
@@ -364,7 +364,7 @@ export const projects: Project[] = [
     subtitle: "Servicio Técnico",
     image: "/fotos-proyectos/15.PNG?height=120&width=200",
     demoUrl: "https://servisplit.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/servisplit-frontend",
+    githubUrl: "#",
     description:
       "Gestión de servicios técnicos de aire acondicionado. Agenda de visitas, historial de clientes y seguimiento de reparaciones.",
     challenges:
@@ -395,7 +395,7 @@ export const projects: Project[] = [
     subtitle: "Servicios Automotriz",
     image: "/fotos-proyectos/14.PNG?height=120&width=200",
     demoUrl: "https://isr-ebon.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/isr-frontend",
+    githubUrl: "#",
     description:
       "Sistema para talleres mecánicos. Controla turnos, servicios realizados, clientes y repuestos utilizados.",
     challenges:
@@ -426,7 +426,7 @@ export const projects: Project[] = [
     subtitle: "Estudio Contable",
     image: "/fotos-proyectos/11.PNG?height=120&width=200",
     demoUrl: "https://cuatro-aestudio.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/cuatro-a-frontend",
+    githubUrl: "#",
     description:
       "Sitio institucional para estudio contable. Gestión documental, atención a clientes y administración tributaria.",
     challenges:
@@ -457,7 +457,7 @@ export const projects: Project[] = [
     subtitle: "Masajes Terapéuticos",
     image: "/fotos-proyectos/2.PNG?height=120&width=200",
     demoUrl: "https://kzmgzmwe3mc3vfn7llk6.lite.vusercontent.net/",
-    githubUrl: "https://github.com/leonelgonzalezdev/clinica-frontend",
+    githubUrl: "#",
     description:
       "Sistema de turnos y gestión de pacientes para una clínica de masajes. Permite agendar citas y llevar el historial de tratamientos.",
     challenges:
@@ -511,7 +511,7 @@ export const projects: Project[] = [
     subtitle: "Menú Digital",
     image: "/fotos-proyectos/17.PNG?height=120&width=200",
     demoUrl: "https://menu-hamurguesa.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/space-burguer-frontend",
+    githubUrl: "https://github.com/leonelgonzalezdev/space-burguer-",
     description:
       "Menú interactivo para hamburguesería. Diseño atractivo y funcional con sistema de pedidos online.",
     challenges:
@@ -542,7 +542,7 @@ export const projects: Project[] = [
     subtitle: "Control de Gastos",
     image: "/fotos-proyectos/18.PNG?height=120&width=200",
     demoUrl: "https://v0-seo-osppm1n6y44-t4tbw2.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/amigos-frontend",
+    githubUrl: "#",
     description:
       "Aplicación para dividir y llevar el control de gastos entre amigos. Ideal para viajes, salidas y proyectos compartidos.",
     challenges:
@@ -573,7 +573,7 @@ export const projects: Project[] = [
     subtitle: "Juego de Cartas",
     image: "/fotos-proyectos/19.PNG?height=120&width=200",
     demoUrl: "https://truco-ten.vercel.app/",
-    githubUrl: "https://github.com/leonelgonzalezdev/truco-frontend",
+    githubUrl: "#",
     description:
       "Guía digital para aprender a jugar al truco. Reglas explicadas, jugadas y práctica interactiva para nuevos jugadores.",
     challenges:
@@ -604,7 +604,7 @@ export const projects: Project[] = [
     subtitle: "Software Factory",
     image: "/fotos-proyectos/20.PNG?height=120&width=200",
     demoUrl: "https://www.boostlyagency.online/",
-    githubUrl: "https://github.com/leonelgonzalezdev/empreid-frontend",
+    githubUrl: "#",
     description:
       "Sitio corporativo para una fábrica de software. Presenta servicios, proyectos y enfoque profesional de desarrollo.",
     challenges:
@@ -1069,7 +1069,7 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Frontend Developer",
+    title: "FullStack Developer",
     company: "Boostly (SaaS ERP: GesDev)",
     period: "Sep 2025",
     description:
@@ -1077,7 +1077,7 @@ export const experiences: Experience[] = [
     current: false,
   },
   {
-    title: "Frontend Developer",
+    title: "FullStack Developer",
     company: "EmpreId (Proyecto: SIMU)",
     period: "Jun 2025 – Ago 2025",
     description:
@@ -1093,7 +1093,7 @@ export const experiences: Experience[] = [
     current: false,
   },
   {
-    title: "Frontend Developer",
+    title: "FullStack Developer",
     company: "Nexium Solutions",
     period: "Jun 2024 – Dic 2024",
     description:
