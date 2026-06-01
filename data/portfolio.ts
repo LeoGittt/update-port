@@ -1062,6 +1062,135 @@ export const projects: Project[] = [
     "Vercel Analytics",
   ],
 },
+{
+  id: 35,
+  year: "2025",
+  title: "AdoptaSanJuan",
+  subtitle: "App de adopción de animales estilo Tinder",
+  image: "/fotos-proyectos/35.PNG",
+  demoUrl: "https://www.adoptasanjuan.site/",
+  githubUrl: "#",
+  description:
+    "AdoptaSanJuan es una plataforma que reinventa la adopción de animales con una experiencia tipo Tinder: los usuarios descubren mascotas en adopción mediante un sistema de swipe intuitivo y dinámico. La app conecta a refugios y rescatistas de San Juan con potenciales adoptantes, facilitando el match entre las personas y los animales que buscan un hogar.",
+  challenges:
+    "El principal desafío fue diseñar una mecánica de swipe fluida y atractiva que funcionara perfectamente en dispositivos móviles, replicando la experiencia adictiva de las apps de citas pero aplicada a la adopción responsable. Además, había que estructurar los perfiles de los animales con información clara y gestionar el flujo de contacto entre adoptantes y refugios.",
+  solutions:
+    "Implementé una interfaz de tarjetas con gestos de swipe y animaciones suaves mediante Framer Motion, garantizando una experiencia táctil natural. La arquitectura en Next.js asegura tiempos de carga rápidos y un diseño 100% responsive, mientras que los perfiles de los animales presentan fotos, características y datos de contacto del refugio para concretar la adopción de forma directa.",
+  features: [
+    "Sistema de swipe estilo Tinder para descubrir animales en adopción",
+    "Perfiles detallados de mascotas con fotos y características",
+    "Match y contacto directo con refugios y rescatistas",
+    "Animaciones fluidas e interacciones táctiles con Framer Motion",
+    "Diseño 100% responsive optimizado para mobile",
+    "Enfoque local en la comunidad de San Juan",
+  ],
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+  ],
+},
+{
+  id: 36,
+  year: "2025",
+  featured: true,
+  title: "CRM Comercial",
+  subtitle: "Sistema de gestión a medida para comercio retail",
+  image: "/fotos-proyectos/36.PNG",
+  demoUrl: "https://crm-five-smoky.vercel.app/",
+  githubUrl: "#",
+  description:
+    "CRM 100% adaptado a las necesidades de una tienda de comercio, diseñado para centralizar toda la operación del negocio en una sola plataforma. El sistema integra facturación electrónica con ARCA (ex AFIP), cobros mediante Mercado Pago, control de stock, gestión de clientes y planillas operativas, reemplazando procesos manuales y dispersos por un flujo de trabajo digital, ordenado y trazable.",
+  challenges:
+    "El mayor reto fue integrar la facturación electrónica con ARCA respetando la normativa fiscal y vincular la pasarela de pagos de Mercado Pago de forma segura, manteniendo la sincronización en tiempo real entre ventas, stock y caja. Además, había que construir un sistema totalmente a medida que se adaptara al flujo real del comercio, con planillas de stock dinámicas y una gestión de clientes que se vinculara a cada operación.",
+  solutions:
+    "Desarrollé una arquitectura fullstack que conecta la facturación con la API de ARCA para emitir comprobantes válidos y la API de Mercado Pago para procesar y conciliar los pagos automáticamente. Implementé un módulo de control de stock con planillas dinámicas que descuentan inventario en cada venta, junto a un CRM de clientes con historial de operaciones y datos de contacto. La interfaz se enfocó en la eficiencia operativa diaria, con tablas filtrables y formularios validados.",
+  features: [
+    "Facturación electrónica integrada con ARCA (ex AFIP)",
+    "Cobros y conciliación automática con Mercado Pago",
+    "Control de stock en tiempo real con planillas dinámicas",
+    "Gestión de clientes (CRM) con historial y datos de contacto",
+    "Descuento automático de inventario por cada venta",
+    "Reportes y planillas operativas exportables",
+    "Sistema 100% adaptado al flujo del comercio",
+  ],
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "API ARCA (AFIP)",
+    "API Mercado Pago",
+  ],
+},
+{
+  id: 37,
+  year: "2025",
+  featured: true,
+  title: "Chatbot Municipal",
+  subtitle: "Gestión de reclamos por áreas con asistente conversacional",
+  image: "/fotos-proyectos/37.PNG",
+  demoUrl: "https://chatbot-virid-eight-71.vercel.app/",
+  githubUrl: "#",
+  description:
+    "Chatbot diseñado para municipios que permite a los vecinos registrar y dar seguimiento a sus reclamos a través de una conversación guiada e intuitiva. Cada reclamo se deriva automáticamente al área responsable, mientras un panel de superadministrador centraliza la gestión de áreas, usuarios y el seguimiento integral de cada solicitud.",
+  challenges:
+    "El principal desafío fue diseñar un flujo conversacional que guiara al vecino de forma natural hasta clasificar correctamente su reclamo y derivarlo al área correspondiente. Además, había que construir un panel de administración con múltiples niveles de acceso que permitiera al superadministrador gestionar áreas, usuarios y el estado de cada reclamo sin fricciones.",
+  solutions:
+    "Desarrollé un asistente conversacional que categoriza los reclamos y los asigna automáticamente al área responsable. Implementé un sistema de roles con un panel de superadministrador para gestionar áreas, usuarios y permisos, junto a vistas de seguimiento por estado que permiten dar trazabilidad a cada solicitud desde su ingreso hasta su resolución, todo con una interfaz moderna y 100% responsive.",
+  features: [
+    "Asistente conversacional para registrar reclamos paso a paso",
+    "Derivación automática del reclamo al área responsable",
+    "Panel de superadministrador con gestión de áreas y usuarios",
+    "Sistema de roles y control de acceso por nivel",
+    "Seguimiento de reclamos por estado y categoría",
+    "Trazabilidad completa desde el ingreso hasta la resolución",
+    "Diseño moderno y 100% responsive",
+  ],
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Framer Motion",
+  ],
+},
+{
+  id: 38,
+  year: "2025",
+  featured: true,
+  title: "Samsa Configurator",
+  subtitle: "Configurador 3D de maletas personalizables",
+  image: "/fotos-proyectos/38.PNG",
+  demoUrl: "https://samsa-configurator.vercel.app/",
+  githubUrl: "#",
+  description:
+    "Configurador 3D interactivo que permite personalizar una maleta en tiempo real sobre un modelo tridimensional. El usuario puede modificar colores, materiales y detalles de la maleta y ver los cambios reflejados al instante sobre el modelo 3D, logrando una experiencia de compra inmersiva y diferencial.",
+  challenges:
+    "El principal desafío fue renderizar un modelo 3D en el navegador con buen rendimiento y permitir su personalización en tiempo real sin sacrificar fluidez. Había que sincronizar las opciones del configurador (colores, materiales, texturas) con el modelo, gestionar la iluminación y los controles de cámara, y mantener una experiencia ágil tanto en desktop como en mobile.",
+  solutions:
+    "Implementé la escena 3D con React Three Fiber y Three.js, integrando controles de órbita para que el usuario rote y explore la maleta libremente. Cada opción del configurador actualiza dinámicamente los materiales del modelo mediante estado global, con iluminación y entorno cuidados para un acabado realista. La arquitectura en Next.js asegura una carga optimizada del modelo y una interfaz responsive.",
+  features: [
+    "Modelo 3D interactivo con rotación libre (controles de órbita)",
+    "Personalización en tiempo real de colores y materiales",
+    "Renderizado realista con iluminación y entorno cuidados",
+    "Sincronización instantánea entre el configurador y el modelo",
+    "Experiencia inmersiva optimizada para desktop y mobile",
+    "Carga optimizada del modelo 3D",
+  ],
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Three.js",
+    "React Three Fiber",
+    "Tailwind CSS",
+  ],
+},
 
 
 
@@ -1069,60 +1198,28 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "FullStack Developer",
-    company: "Boostly (SaaS ERP: GesDev)",
-    period: "Sep 2025",
+    title: "Full Stack Developer",
+    company: "IGA - Instituto Gastronómico de las Américas",
+    period: "Nov 2025 – Jun 2026",
     description:
-      "Diseñé una estructura modular en Next.js orientada a dominios e implementé control de acceso basado en roles (RBAC). Desarrollé flujos complejos de facturación e inventario utilizando Zustand y formularios avanzados. Logré la digitalización de procesos de RRHH y Logística, asegurando la escalabilidad del sistema.",
-    current: false,
-  },
-  {
-    title: "FullStack Developer",
-    company: "EmpreId (Proyecto: SIMU)",
-    period: "Jun 2025 – Ago 2025",
-    description:
-      "Desarrollo integral de SIMU, plataforma para gestión de incidentes urbanos. Implementé permisos jerárquicos y vistas dinámicas. Integré Leaflet para geolocalización en tiempo real y desarrollé módulos de carga de evidencia multimedia y chat interno entre sectores operativos.",
-    current: false,
+      "Diseñé e implementé la migración completa de un sistema heredado hacia un ecosistema moderno con NestJS y Vite + TypeScript, soportando franquicias distribuidas en 5 países y más de 50 provincias de América. Desarrollé un administrador global de conexiones que centralizó la persistencia, reduciendo la latencia de las consultas y garantizando la integridad de los datos. Reconstruí desde cero los módulos de CRM (Interesados), Gestión de Cobros y Publicaciones con tableros Kanban y filtros dinámicos. Estandaricé los entornos con Docker para paridad con producción, gestionando despliegues y revisiones de código vía Bitbucket bajo metodología Scrum y seguimiento en Jira, colaborando con QA para entregas continuas sin regresiones.",
+    current: true,
   },
   {
     title: "Web Performance & SEO Developer",
-    company: "Easy Life (E-commerce Europa)",
+    company: "Easy Life (E-commerce Europa) · Contractor (Remoto)",
     period: "Sep 2024 – Mar 2025",
     description:
-      "Consultoría técnica para el mercado europeo. Lideré la optimización de Core Web Vitals logrando 90/100 en Mobile. Extendí funcionalidades nativas de Shopify y WordPress con JavaScript Vanilla y PHP, traduciendo métricas de GSC y Analytics en mejoras de conversión.",
+      "Lideré la estrategia de optimización de Core Web Vitals, logrando puntajes de 90/100 en Mobile y mejorando la retención de usuarios mediante auditorías técnicas. Extendí funcionalidades nativas de Shopify y WordPress desarrollando scripts personalizados en JavaScript y PHP para resolver limitaciones críticas de logística y UX. Asesoré a stakeholders traduciendo métricas complejas de Google Search Console y Analytics en decisiones de negocio rentables para el mercado europeo. Tech Stack: JavaScript, PHP, Google Search Console, Semrush.",
     current: false,
   },
   {
-    title: "FullStack Developer",
-    company: "Nexium Solutions",
-    period: "Jun 2024 – Dic 2024",
+    title: "Full Stack Developer / Technical Lead",
+    company: "Colorshop · Híbrido",
+    period: "Nov 2022 – Presente",
     description:
-      "Ejecución Full Cycle de proyectos para PyMEs (e-commerce y landing pages). Gestión integral desde el diseño hasta el despliegue, con un enfoque constante en la optimización SEO técnica para maximizar la visibilidad orgánica de cada sitio.",
-    current: false,
-  },
-  {
-    title: "IT Support & Developer",
-    company: "Colorshop",
-    period: "Ago 2021 – May 2024",
-    description:
-      "Identificación de ineficiencias operativas y diseño de soluciones mediante programación. Desarrollé scripts para automatizar procesos manuales y migré la gestión de documentos físicos a entornos digitales centralizados. Brindé soporte técnico integral de nivel 1 y 2.",
-    current: false,
-  },
-  {
-    title: "Analista de Sistemas y Datos de Logística",
-    company: "Maxiklak S.a.",
-    period: "Feb 2020 – Dic 2020",
-    description:
-      "Lideré la transición de procesos críticos de Excel hacia plataformas robustas. Desarrollé herramientas de automatización de reportes logísticos en tiempo real y administré bases de datos de personal a gran escala, optimizando el seguimiento de asistencia y métricas de desempeño.",
-    current: false,
-  },
-  {
-    title: "Asistente de Sistemas y Gestión",
-    company: "Sindicato de Luz y Fuerza",
-    period: "Nov 2017 – Ene 2018",
-    description:
-      "Soporte operativo y tecnológico centrado en software de gestión (facturación y control de stock). Responsable de la resolución de incidencias técnicas básicas y la gestión de herramientas digitales en un entorno de alta precisión.",
-    current: false,
+      "Diseñé e implementé un sistema a medida para la digitalización del flujo de remitos, reemplazando el método manual por una solución automatizada que eliminó errores de transcripción y agilizó los tiempos de despacho. Creé una base de datos centralizada y un sistema de gestión para el almacenamiento y consulta de muestras de color por cliente, mejorando la fidelización en el punto de venta. Desarrollé un módulo para la gestión integral de mercadería, control de stock físico y automatización de pedidos de reposición, garantizando la trazabilidad de los productos. Introduje metodologías ágiles (Scrum) y capacité al personal, optimizando la comunicación interna y reduciendo los tiempos de entrega. Tech Stack: React, Node.js, SQL, Scrum, Git.",
+    current: true,
   },
 ];
 

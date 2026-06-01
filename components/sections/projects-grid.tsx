@@ -1,41 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import { MagicBento, BentoCardProps } from "./magic-bento";
-import { ProjectsListModal } from "../modals/projects-list-modal";
 import type { Project } from "@/types/project";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+
+const PROJECTS_PER_PAGE = 6;
 
 export function ProjectsGrid() {
   const router = useRouter();
-  const [showAllProjects, setShowAllProjects] = useState(false);
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
+  const [page, setPage] = useState(0);
 
   // Función para determinar el color del glow basado en la tecnología principal
   const getGlowColor = (tech: string) => {
@@ -53,7 +30,7 @@ export function ProjectsGrid() {
     return "#a1a1aa"; // Gris default
   };
 
-  // Mapeo y ordenamiento de datos para Bento
+  // Mapeo y ordenamiento: destacados primero, luego los más nuevos
   const cardData: (BentoCardProps & { id: number; project: Project })[] = [
     ...projects,
   ]
@@ -74,92 +51,103 @@ export function ProjectsGrid() {
       isFeatured: p.featured,
     }));
 
+  const totalPages = Math.ceil(cardData.length / PROJECTS_PER_PAGE);
+  const start = page * PROJECTS_PER_PAGE;
+  const visibleCards = cardData.slice(start, start + PROJECTS_PER_PAGE);
+
+  const goTo = (next: number) => {
+    setPage(Math.max(0, Math.min(totalPages - 1, next)));
+  };
+
   return (
-    <>
-      <div className="w-full px-4 sm:px-8">
-        <Carousel
-          setApi={setApi}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-4">
-            {cardData.map((item) => (
-              <CarouselItem
-                key={item.id}
-                className="pl-4 md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="h-full">
-                  <MagicBento
-                    title={item.title}
-                    description={item.description}
-                    label={item.label}
-                    color={item.color}
-                    glowColor={item.glowColor}
-                    image={item.image}
-                    isFeatured={item.isFeatured}
-                    onClick={() => router.push(`/proyecto/${item.id}`)}
-                    // Forzamos altura completa para que todas las cards se vean uniformes
-                    colSpan="h-full"
-                    animateInView={false}
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="hidden md:block">
-            <CarouselPrevious className="-left-4 lg:-left-12 border-white/10 hover:bg-white/10 hover:text-white bg-black/50 backdrop-blur-sm" />
-            <CarouselNext className="-right-4 lg:-right-12 border-white/10 hover:bg-white/10 hover:text-white bg-black/50 backdrop-blur-sm" />
-          </div>
-        </Carousel>
-
-        {/* Mobile Navigation Arrows */}
-        <div className="flex justify-center gap-4 mt-8 md:hidden">
-          <Button
-            variant="outline"
-            size="icon"
-            className="rounded-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-white"
-            onClick={() => api?.scrollPrev()}
-            disabled={!api?.canScrollPrev()}
-            aria-label="Previous slide"
-          >
-            <ArrowRight className="h-4 w-4 rotate-180" />
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            className="rounded-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-white"
-            onClick={() => api?.scrollNext()}
-            disabled={!api?.canScrollNext()}
-            aria-label="Next slide"
-          >
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <Button
-            onClick={() => setShowAllProjects(true)}
-            variant="ghost"
-            className="group bg-zinc-900/50 text-zinc-400 hover:bg-emerald-500 hover:text-black px-10 py-7 rounded-2xl text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 active:scale-95 shadow-2xl"
-          >
-            Ver todos los proyectos
-            <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </div>
-      </div>
-
-      <ProjectsListModal
-        isOpen={showAllProjects}
-        onClose={() => setShowAllProjects(false)}
-        onSelectProject={(p) => {
-          router.push(`/proyecto/${p.id}`);
-          setShowAllProjects(false);
+    <div className="w-full">
+      <motion.div
+        key={page}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: { staggerChildren: 0.06, delayChildren: 0.05 },
+          },
         }}
-        getGlowColor={getGlowColor}
-      />
-    </>
+      >
+        {visibleCards.map((item) => (
+          <motion.div
+            key={item.id}
+            variants={{
+              hidden: { opacity: 0, y: 24 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { type: "spring", stiffness: 220, damping: 24 },
+              },
+            }}
+            className="h-full"
+          >
+            <MagicBento
+              title={item.title}
+              description={item.description}
+              label={item.label}
+              color={item.color}
+              glowColor={item.glowColor}
+              image={item.image}
+              isFeatured={item.isFeatured}
+              onClick={() => router.push(`/proyecto/${item.id}`)}
+              colSpan="h-full"
+              animateInView={false}
+            />
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Paginación */}
+      {totalPages > 1 && (
+        <div className="mt-14 flex items-center justify-center gap-3">
+          <button
+            onClick={() => goTo(page - 1)}
+            disabled={page === 0}
+            aria-label="Página anterior"
+            className="flex items-center justify-center w-11 h-11 rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:bg-emerald-500 hover:text-black hover:border-emerald-400 disabled:opacity-30 disabled:pointer-events-none active:scale-95"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+
+          <div className="flex items-center gap-2">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goTo(i)}
+                aria-label={`Ir a la página ${i + 1}`}
+                aria-current={i === page}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  i === page
+                    ? "w-8 bg-emerald-500"
+                    : "w-2.5 bg-zinc-700 hover:bg-zinc-500"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={() => goTo(page + 1)}
+            disabled={page === totalPages - 1}
+            aria-label="Página siguiente"
+            className="flex items-center justify-center w-11 h-11 rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:bg-emerald-500 hover:text-black hover:border-emerald-400 disabled:opacity-30 disabled:pointer-events-none active:scale-95"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      )}
+
+      {/* Contador */}
+      {totalPages > 1 && (
+        <p className="mt-5 text-center text-xs font-mono uppercase tracking-[0.2em] text-zinc-600">
+          {start + 1}–{Math.min(start + PROJECTS_PER_PAGE, cardData.length)} de{" "}
+          {cardData.length} proyectos
+        </p>
+      )}
+    </div>
   );
 }

@@ -30,11 +30,11 @@ export function MagicBento({
 }: BentoCardProps) {
   // Simplificar variantes para evitar que se queden en opacity 0
   const variants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 24 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 260, damping: 20 },
+      transition: { type: "spring", stiffness: 220, damping: 24 },
     },
   };
 
@@ -42,10 +42,12 @@ export function MagicBento({
     <motion.div
       variants={variants}
       initial={animateInView ? "hidden" : "visible"}
-      animate="visible"
-      viewport={{ once: true }}
+      whileInView={animateInView ? "visible" : undefined}
+      animate={animateInView ? undefined : "visible"}
+      viewport={{ once: true, amount: 0.2 }}
+      whileHover={{ y: -6 }}
       onClick={onClick}
-      className={`group relative flex flex-col h-full rounded-[24px] bg-black cursor-pointer overflow-hidden transition-all duration-500 ${colSpan}`}
+      className={`group relative flex flex-col h-full rounded-[24px] bg-black cursor-pointer overflow-hidden border border-white/[0.06] transition-all duration-500 hover:border-white/15 ${colSpan}`}
       style={
         {
           "--glow-color": glowColor,
@@ -57,7 +59,7 @@ export function MagicBento({
       <div
         className="absolute inset-0 rounded-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"
         style={{
-          boxShadow: `0 0 40px -10px ${glowColor}30`,
+          boxShadow: `0 0 60px -10px ${glowColor}40, inset 0 0 0 1px ${glowColor}20`,
         }}
       />
 
