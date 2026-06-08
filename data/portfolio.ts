@@ -1191,6 +1191,39 @@ export const projects: Project[] = [
     "Tailwind CSS",
   ],
 },
+{
+  id: 39,
+  year: "2026",
+  featured: true,
+  title: "Prode Mundial 2026",
+  subtitle: "Juego de pronósticos del Mundial para Chevrolet (Grupo París)",
+  image: "/fotos-proyectos/39.PNG",
+  demoUrl: "https://www.prodegrupoparis.com/",
+  githubUrl: "#",
+  description:
+    "Prode oficial de la Copa Mundial 2026 desarrollado para Chevrolet (Grupo París) como acción de marketing y fidelización. Los usuarios se registran, pronostican los resultados de cada partido del Mundial y compiten en un ranking en vivo por premios de la marca. La plataforma combina una landing de alto impacto visual con un sistema completo de gestión de pronósticos, puntajes y posiciones.",
+  challenges:
+    "El principal desafío fue construir un sistema de puntuación confiable que calculara automáticamente los aciertos de cada usuario a medida que se cargaban los resultados reales, manteniendo un ranking sincronizado en tiempo real. Además, había que soportar picos de tráfico durante los partidos y entregar una experiencia visualmente alineada con la identidad de Chevrolet, con countdown al inicio del torneo y un flujo de registro y participación sin fricciones.",
+  solutions:
+    "Desarrollé una arquitectura con Next.js que combina una landing optimizada con un módulo de pronósticos por partido y un motor de puntajes que actualiza el ranking automáticamente. Implementé autenticación de usuarios, un panel para la carga de resultados oficiales y vistas de posiciones en vivo. El diseño se construyó con Tailwind CSS respetando la marca, con animaciones y un countdown dinámico hacia el comienzo del Mundial.",
+  features: [
+    "Registro e inicio de sesión de participantes",
+    "Pronóstico de resultados partido por partido del Mundial 2026",
+    "Ranking en vivo con cálculo automático de puntajes",
+    "Sección de premios de la marca Chevrolet",
+    "Countdown dinámico hacia el inicio del torneo",
+    "Sección 'Cómo funciona' para guiar al usuario",
+    "Diseño branded de alto impacto y 100% responsive",
+  ],
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Framer Motion",
+  ],
+},
 
 
 
